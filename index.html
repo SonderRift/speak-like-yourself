@@ -132,6 +132,13 @@
   blockquote{max-width:700px;margin:0 auto;text-align:center;font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.3rem,3.2vw,1.75rem);font-weight:600;color:var(--heading);position:relative;padding-top:54px}
   blockquote::before{content:"\201C";position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-size:6rem;color:var(--gold);font-style:normal;line-height:1}
   blockquote footer{margin-top:20px;font-family:'Inter',sans-serif;font-style:normal;font-size:.9rem;color:var(--muted);font-weight:400}
+  .rev-carousel{position:relative;min-height:250px}
+  .rev-slide{position:absolute;left:0;right:0;top:0;margin:0 auto;opacity:0;visibility:hidden;transition:opacity .7s ease}
+  .rev-slide.active{opacity:1;visibility:visible}
+  .rev-dots{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:center;gap:10px}
+  .rev-dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;cursor:pointer;background:rgba(239,233,216,.25);transition:background .3s,transform .3s}
+  .rev-dots button.on{background:var(--gold);transform:scale(1.25)}
+  @media (max-width:640px){.rev-carousel{min-height:340px}}
 
   .about{display:flex;gap:38px;align-items:center;flex-wrap:wrap;justify-content:center;background:var(--panel);border:1px solid var(--linha);border-radius:28px;padding:52px 40px;box-shadow:0 12px 30px rgba(0,0,0,.2)}
   .avatar{flex:0 0 150px;width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:50% 12%;border:4px solid var(--gold);box-shadow:0 14px 34px rgba(0,0,0,.35)}
@@ -301,11 +308,34 @@
 </section>
 
 <section class="wrap reveal" style="padding:36px 0 90px">
-  <!-- RAFAEL: replace this paraphrase with the exact text of your favorite Preply review -->
-  <blockquote>
-    The pronunciation methods finally made Portuguese click for me. Real, everyday Portuguese, and the lessons are genuinely fun.
-    <footer>Verified student review on Preply</footer>
-  </blockquote>
+  <!-- Real reviews pulled from Rafael's public Preply profile -->
+  <div class="rev-carousel" id="revCarousel">
+    <blockquote class="rev-slide active">
+      He has a natural way of teaching that goes beyond grammar, he helps you sound Brazilian, not robotic. Every class feels tailored, engaging, and focused on real-life language use.
+      <footer>Michael · verified student review on Preply</footer>
+    </blockquote>
+    <blockquote class="rev-slide">
+      He has great methods for teaching pronunciation and focuses on the real, everyday Portuguese spoken in Brazil. He&rsquo;s also a really nice and funny guy, which makes every lesson enjoyable.
+      <footer>Szymon · verified student review on Preply</footer>
+    </blockquote>
+    <blockquote class="rev-slide">
+      I love how he makes sure I learn local sayings every day, making sure the language I learn is alive, not only the textbook Portuguese.
+      <footer>Aiste · verified student review on Preply</footer>
+    </blockquote>
+    <blockquote class="rev-slide">
+      His lessons are always well-structured, with helpful activities and materials that make learning enjoyable and effective. Rafael also challenges me to keep improving, which has really boosted my confidence and progress.
+      <footer>Sean · verified student review on Preply</footer>
+    </blockquote>
+    <blockquote class="rev-slide">
+      Each class focuses on a specific topic, which makes learning feel clear and organized, but over time, you start to notice how everything connects naturally.
+      <footer>Daniela · verified student review on Preply</footer>
+    </blockquote>
+    <blockquote class="rev-slide">
+      I am very surprised by how well and how quickly things are progressing. The teaching style is fluid and makes sense in a way that I can conceptualize the language.
+      <footer>Charles · verified student review on Preply</footer>
+    </blockquote>
+    <div class="rev-dots" role="tablist" aria-label="Student reviews"></div>
+  </div>
 </section>
 
 <section class="wrap reveal" style="padding-top:0">
@@ -322,7 +352,7 @@
   </div>
 </section>
 
-<section class="wrap" id="magnet" style="padding-top:64px">
+<section class="wrap" id="magnet" style="padding-top:110px">
   <div class="magnet reveal">
     <span class="kicker">Free download</span>
     <h2>The Survival Phrases<br>starter pack</h2>
@@ -386,6 +416,35 @@
     if (s.lessons) document.getElementById('stat-lessons').textContent = s.lessons;
     if (s.reviews) document.getElementById('stat-reviews').textContent = s.reviews;
   }).catch(() => {});
+
+  /* review carousel: auto-loops, pauses on hover, dots to jump */
+  (() => {
+    const car = document.getElementById('revCarousel');
+    if (!car) return;
+    const slides = car.querySelectorAll('.rev-slide');
+    const dotsBox = car.querySelector('.rev-dots');
+    let i = 0, timer;
+    slides.forEach((_, n) => {
+      const b = document.createElement('button');
+      b.setAttribute('aria-label', 'Review ' + (n + 1));
+      b.addEventListener('click', () => { show(n); restart(); });
+      dotsBox.appendChild(b);
+    });
+    const dots = dotsBox.querySelectorAll('button');
+    function show(n) {
+      i = n;
+      slides.forEach((s, k) => s.classList.toggle('active', k === i));
+      dots.forEach((d, k) => d.classList.toggle('on', k === i));
+    }
+    function restart() {
+      clearInterval(timer);
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches)
+        timer = setInterval(() => show((i + 1) % slides.length), 6000);
+    }
+    car.addEventListener('mouseenter', () => clearInterval(timer));
+    car.addEventListener('mouseleave', restart);
+    show(0); restart();
+  })();
 </script>
 
 </body>
