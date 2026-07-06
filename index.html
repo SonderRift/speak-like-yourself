@@ -438,7 +438,7 @@
     function restart() {
       clearInterval(timer);
       if (!matchMedia('(prefers-reduced-motion: reduce)').matches)
-        timer = setInterval(() => show((i + 1) % slides.length), 6000);
+        timer = setInterval(() => show((i + 1) % slides.length), 8000);
     }
     car.addEventListener('mouseenter', () => clearInterval(timer));
     car.addEventListener('mouseleave', restart);
