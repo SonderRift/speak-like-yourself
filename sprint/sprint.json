@@ -5,12 +5,13 @@
     "goal": "Survival Kit live for sale, Starter System assembled, funnel measurable",
     "start": "2026-07-08",
     "end": "2026-07-12",
-    "updated": "2026-07-08T10:30:00+07:00",
+    "updated": "2026-07-08T11:05:00+07:00",
     "updatedBy": "Claude Code"
   },
   "owners": {
     "claude": { "label": "Claude Code", "color": "#FF6B4A" },
     "hermes": { "label": "Hermes", "color": "#D9B94F" },
+    "codex": { "label": "Codex", "color": "#6FC7C0" },
     "rafael": { "label": "Rafael", "color": "#7BC796" }
   },
   "columns": [
@@ -24,7 +25,7 @@
     { "id": "T01", "title": "Parse corpus into Kit data model", "detail": "127 phrases / 11 categories + 7 game sets + 7 marker groups from corpus_extract_core.json", "owner": "claude", "points": 2, "col": "done", "tags": ["kit"], "doneDate": "2026-07-08" },
     { "id": "T02", "title": "Survival Kit PDF workbook", "detail": "13-page branded workbook, dark + light themes, clickable trial CTA", "owner": "claude", "points": 5, "col": "done", "tags": ["kit"], "doneDate": "2026-07-08" },
     { "id": "T03", "title": "Sprint board build + deploy", "detail": "This board: sprint.json + kanban page on GitHub Pages, agents push updates", "owner": "claude", "points": 3, "col": "done", "tags": ["ops"], "doneDate": "2026-07-08" },
-    { "id": "T04", "title": "Audio pack (edge-tts)", "detail": "Per-category MP3 tracks for all 127 phrases + game audio, pt-BR voice, slow + gaps", "owner": "claude", "points": 5, "col": "todo", "tags": ["kit"] },
+    { "id": "T04", "title": "Audio pack (edge-tts)", "detail": "Per-category MP3 tracks for all 127 phrases + game audio, pt-BR voice, slow + gaps. Codex leg: spec in codex-task-T04-audio.md", "owner": "codex", "points": 5, "col": "doing", "tags": ["kit"] },
     { "id": "T05", "title": "Package Kit zip + readme", "detail": "Both PDFs + audio pack + buyer readme, ready for Payhip upload", "owner": "claude", "points": 2, "col": "todo", "tags": ["kit"], "blockedBy": ["T04"] },
     { "id": "T06", "title": "Payhip listing copy", "detail": "Title, description, $19 price anchor copy, product thumbnail", "owner": "claude", "points": 3, "col": "todo", "tags": ["launch"] },
     { "id": "T07", "title": "Kit language QA pass", "detail": "Review both PDFs: naturalness, register, accents, answer-key correctness", "owner": "hermes", "points": 2, "col": "todo", "tags": ["kit"] },
@@ -40,6 +41,7 @@
   "log": [
     { "date": "2026-07-08", "who": "claude", "what": "Sprint opened. Kit data model parsed (T01 done)." },
     { "date": "2026-07-08", "who": "claude", "what": "Survival Kit PDFs built: dark + light, 13 pages, linked trial CTA (T02 done)." },
-    { "date": "2026-07-08", "who": "claude", "what": "Sprint board built and deployed (T03 done)." }
+    { "date": "2026-07-08", "who": "claude", "what": "Sprint board built and deployed (T03 done)." },
+    { "date": "2026-07-08", "who": "claude", "what": "Model routing set: Codex takes T04 (audio pack, single-scope leg); Claude keeps T06/T10; Hermes keeps T07/T15. Codex dispatched, T04 -> Doing." }
   ]
 }
