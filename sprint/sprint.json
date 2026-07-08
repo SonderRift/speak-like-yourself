@@ -5,8 +5,8 @@
                    "goal":  "Survival Kit live for sale, Starter System assembled, funnel measurable",
                    "start":  "2026-07-08",
                    "end":  "2026-07-12",
-                   "updated":  "2026-07-08T15:47:54+07:00",
-                   "updatedBy":  "Orchestrator"
+                   "updated":  "2026-07-08T23:05:00+07:00",
+                   "updatedBy":  "Claude Code"
                },
     "owners":  {
                    "claude":  {
@@ -88,7 +88,7 @@
                   {
                       "id":  "T04",
                       "title":  "Audio pack (edge-tts)",
-                      "detail":  "Per-category MP3 tracks for all 127 phrases + game audio, pt-BR voice, slow + gaps. Codex leg: spec in codex-task-T04-audio.md",
+                      "detail":  "399 MP3s: 127 normal + 127 slow + 127 slower + 11 tracks + 7 game, pt-BR voice, 0 failures. Codex leg: spec in codex-task-T04-audio.md",
                       "owner":  "codex",
                       "points":  5,
                       "col":  "done",
@@ -348,6 +348,16 @@
                     "date":  "2026-07-08",
                     "who":  "hermes",
                     "what":  "T15 backlog -> doing; Reddit/Quora mining notes created from corpus themes with queue-ready drafts under Approval Queue/2026-07-08 Batch 01/reddit-quora/."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "codex",
+                    "what":  "T04 rev2: added slower audio tier (+127 files). Pack now 399 MP3s (127 normal + 127 slow + 127 slower + 11 tracks + 7 game), 0 failures."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "T10 progress: Starter System structure staged (manifest, buyer 90-day TOC + Noite Carioca cover concept, gap list). Component builds still missing (Eu-series, conjugation sheets, scenario packs, vocab list); worker was write-blocked so artifacts staged, not in products/. Stays Doing."
                 }
             ]
 }
