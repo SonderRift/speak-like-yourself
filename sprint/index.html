@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Shipping Sprint · Speak Like Yourself</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#08281B; --panel:#0D3A27; --panel-d:#052015; --card:#0A2E1F;
+  --ink:#EFE9D8; --muted:#A8BFB1; --gold:#D9B94F; --coral:#FF6B4A;
+  --line:#1C5238; --green:#7BC796;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;min-height:100vh}
+.wrap{max-width:1280px;margin:0 auto;padding:34px 26px 60px}
+
+/* ---------- header ---------- */
+header{position:relative;margin-bottom:26px}
+.ghost{position:absolute;top:-44px;right:-10px;font-family:'Fraunces',serif;font-style:italic;font-weight:800;
+  font-size:clamp(6rem,14vw,10.5rem);color:rgba(247,241,224,.045);line-height:1;pointer-events:none;user-select:none}
+.kicker{color:var(--gold);font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.7rem;display:block;margin-bottom:10px}
+h1{font-family:'Fraunces',serif;font-weight:800;font-size:clamp(2rem,5vw,3.1rem);letter-spacing:-.01em;line-height:1.04}
+.goal{color:var(--muted);margin-top:10px;font-size:.95rem;max-width:560px}
+.meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;align-items:center}
+.chip{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:.5em 1.1em;font-size:.78rem;font-weight:600;color:var(--muted)}
+.chip b{color:var(--ink);font-weight:700}
+.chip.days{background:var(--coral);border-color:var(--coral);color:#fff}
+.chip.days b{color:#fff}
+.stamp{font-size:.72rem;color:var(--muted);opacity:.8;margin-left:auto}
+.stamp .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:6px;animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* ---------- scoreboard row ---------- */
+.score{display:grid;grid-template-columns:1fr 300px;gap:16px;margin-bottom:30px}
+@media(max-width:840px){.score{grid-template-columns:1fr}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.panel h3{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:14px}
+.bignum{font-family:'Fraunces',serif;font-weight:800;font-size:2.3rem;line-height:1}
+.bignum small{font-size:1.05rem;color:var(--muted);font-family:'Inter',sans-serif;font-weight:600}
+.bar{height:12px;background:var(--panel-d);border-radius:999px;overflow:hidden;margin-top:14px}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--gold),var(--coral));width:0;transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+.statrow{display:flex;gap:22px;margin-top:16px;flex-wrap:wrap}
+.stat{font-size:.8rem;color:var(--muted)}
+.stat b{display:block;font-size:1.15rem;color:var(--ink);font-family:'Fraunces',serif;font-weight:800}
+svg text{font-family:'Inter',sans-serif}
+
+/* ---------- board ---------- */
+.board{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:start}
+@media(max-width:1000px){.board{display:flex;overflow-x:auto;padding-bottom:14px;scroll-snap-type:x mandatory}
+  .col{min-width:250px;scroll-snap-align:start}}
+.col{background:rgba(5,32,21,.55);border:1px solid var(--line);border-radius:16px;padding:12px}
+.col.doing{border-color:var(--gold);box-shadow:0 0 26px rgba(217,185,79,.09)}
+.colhead{display:flex;justify-content:space-between;align-items:center;padding:4px 6px 12px}
+.colhead span{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.col.doing .colhead span{color:var(--gold)}
+.count{background:var(--panel-d);border-radius:999px;font-size:.7rem;font-weight:700;padding:.25em .8em;color:var(--muted)}
+
+.card{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--owner,#888);
+  border-radius:12px;padding:12px 13px;margin-bottom:10px;transition:transform .15s ease}
+.card:hover{transform:translateY(-2px)}
+.card .top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.card h4{font-size:.86rem;font-weight:600;line-height:1.35}
+.pts{flex:none;font-size:.66rem;font-weight:700;color:var(--gold);border:1px solid var(--gold);border-radius:999px;padding:.15em .55em;opacity:.9}
+.card p{font-size:.74rem;color:var(--muted);margin-top:6px;line-height:1.45}
+.card .foot{display:flex;gap:8px;align-items:center;margin-top:10px;flex-wrap:wrap}
+.owner{display:flex;align-items:center;gap:5px;font-size:.68rem;font-weight:600;color:var(--muted)}
+.owner i{width:8px;height:8px;border-radius:50%;background:var(--owner);display:inline-block}
+.tag{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--muted);opacity:.7}
+.blocked{background:rgba(255,107,74,.08);border:1px solid rgba(255,107,74,.35);color:var(--coral);
+  font-size:.64rem;font-weight:700;border-radius:6px;padding:.2em .55em}
+.col-done .card{opacity:.58}
+.col-done .card h4{text-decoration:line-through;text-decoration-color:rgba(217,185,79,.6);text-decoration-thickness:1.5px}
+.check{color:var(--green);font-weight:700;margin-right:4px}
+
+/* ---------- log ---------- */
+.logwrap{margin-top:34px}
+.logwrap h3{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:14px}
+.logitem{display:flex;gap:14px;padding:10px 4px;border-bottom:1px solid rgba(28,82,56,.5);font-size:.82rem}
+.logitem .d{flex:none;color:var(--muted);font-size:.72rem;font-weight:600;width:82px;padding-top:2px}
+.logitem .w{flex:none;width:10px;height:10px;border-radius:50%;margin-top:4px}
+.logitem .t{color:var(--ink);opacity:.9;line-height:1.5}
+
+/* ---------- legend ---------- */
+.legend{display:flex;gap:18px;margin-top:26px;flex-wrap:wrap}
+.legend .owner{font-size:.74rem}
+footer{margin-top:44px;text-align:center;font-size:.72rem;color:var(--muted);opacity:.65}
+footer a{color:var(--gold);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="ghost" id="ghost">S01</div>
+    <span class="kicker">Preply Optimization · Scrum Board</span>
+    <h1 id="name">…</h1>
+    <p class="goal" id="goal"></p>
+    <div class="meta">
+      <span class="chip" id="dates"></span>
+      <span class="chip days" id="daysleft"></span>
+      <span class="stamp" id="stamp"><span class="dot"></span></span>
+    </div>
+  </header>
+
+  <div class="score">
+    <div class="panel">
+      <h3>Sprint progress</h3>
+      <div class="bignum"><span id="pdone">0</span><small> / <span id="ptotal">0</span> points</small></div>
+      <div class="bar"><i id="fill"></i></div>
+      <div class="statrow">
+        <div class="stat"><b id="ndone">0</b>shipped</div>
+        <div class="stat"><b id="ndoing">0</b>in motion</div>
+        <div class="stat"><b id="ntodo">0</b>queued</div>
+        <div class="stat"><b id="nblocked">0</b>blocked</div>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>Burndown</h3>
+      <svg id="burn" viewBox="0 0 260 110" width="100%" height="110"></svg>
+    </div>
+  </div>
+
+  <div class="board" id="board"></div>
+
+  <div class="legend" id="legend"></div>
+
+  <div class="logwrap">
+    <h3>Activity</h3>
+    <div id="log"></div>
+  </div>
+
+  <footer>Self-updating: agents push <a href="sprint.json">sprint.json</a> · board reads it live · <a href="../index.html">speak-like-yourself</a></footer>
+</div>
+
+<script>
+fetch('sprint.json?v=' + Date.now()).then(r => r.json()).then(render);
+
+function render(D){
+  const S = D.sprint, tasks = D.tasks, owners = D.owners;
+  const doneIds = new Set(tasks.filter(t => t.col === 'done').map(t => t.id));
+  const isBlocked = t => t.col !== 'done' && (t.blockedBy || []).some(id => !doneIds.has(id));
+
+  /* header */
+  document.getElementById('ghost').textContent = S.id;
+  document.getElementById('name').textContent = S.name;
+  document.getElementById('goal').textContent = S.goal;
+  const fmt = d => new Date(d + 'T00:00:00').toLocaleDateString('en-GB', {day:'numeric', month:'short'});
+  document.getElementById('dates').innerHTML = `<b>${fmt(S.start)}</b> → <b>${fmt(S.end)}</b>`;
+  const today = new Date(); today.setHours(0,0,0,0);
+  const end = new Date(S.end + 'T00:00:00');
+  const left = Math.max(0, Math.round((end - today) / 864e5));
+  document.getElementById('daysleft').innerHTML = left > 0 ? `<b>${left}</b>&nbsp;day${left===1?'':'s'} left` : '<b>final day</b>';
+  document.getElementById('stamp').innerHTML = `<span class="dot"></span>updated ${new Date(S.updated).toLocaleString('en-GB',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})} by ${S.updatedBy}`;
+
+  /* progress */
+  const total = tasks.reduce((a,t) => a + t.points, 0);
+  const done = tasks.filter(t => t.col === 'done').reduce((a,t) => a + t.points, 0);
+  document.getElementById('ptotal').textContent = total;
+  document.getElementById('pdone').textContent = done;
+  requestAnimationFrame(() => setTimeout(() =>
+    document.getElementById('fill').style.width = (total ? 100*done/total : 0) + '%', 60));
+  document.getElementById('ndone').textContent = tasks.filter(t => t.col === 'done').length;
+  document.getElementById('ndoing').textContent = tasks.filter(t => t.col === 'doing' || t.col === 'review').length;
+  document.getElementById('ntodo').textContent = tasks.filter(t => t.col === 'todo' || t.col === 'backlog').length;
+  document.getElementById('nblocked').textContent = tasks.filter(isBlocked).length;
+
+  /* burndown */
+  burndown(S, tasks, total);
+
+  /* board */
+  const board = document.getElementById('board');
+  D.columns.forEach(c => {
+    const list = tasks.filter(t => t.col === c.id);
+    const col = document.createElement('div');
+    col.className = 'col col-' + c.id + (c.id === 'doing' ? ' doing' : '');
+    col.innerHTML = `<div class="colhead"><span>${c.label}</span><span class="count">${list.length}</span></div>`;
+    list.forEach(t => {
+      const o = owners[t.owner];
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.style.setProperty('--owner', o.color);
+      card.innerHTML =
+        `<div class="top"><h4>${c.id==='done' ? '<span class="check">✓</span>' : ''}${t.title}</h4><span class="pts">${t.points}</span></div>
+         <p>${t.detail}</p>
+         <div class="foot">
+           <span class="owner"><i></i>${o.label}</span>
+           ${(t.tags||[]).map(x => `<span class="tag">${x}</span>`).join('')}
+           ${isBlocked(t) ? `<span class="blocked">⛓ waits on ${t.blockedBy.filter(id => !doneIds.has(id)).join(', ')}</span>` : ''}
+         </div>`;
+      col.appendChild(card);
+    });
+    board.appendChild(col);
+  });
+
+  /* legend */
+  document.getElementById('legend').innerHTML = Object.values(owners).map(o =>
+    `<span class="owner"><i style="width:9px;height:9px;border-radius:50%;background:${o.color};display:inline-block"></i>${o.label}</span>`).join('');
+
+  /* log (newest first) */
+  document.getElementById('log').innerHTML = [...D.log].reverse().map(l =>
+    `<div class="logitem"><span class="d">${fmt(l.date)}</span><span class="w" style="background:${(owners[l.who]||{}).color||'#888'}"></span><span class="t">${l.what}</span></div>`).join('');
+}
+
+function burndown(S, tasks, total){
+  const svg = document.getElementById('burn');
+  const W = 260, H = 110, px = 30, py = 12;
+  const start = new Date(S.start + 'T00:00:00'), end = new Date(S.end + 'T00:00:00');
+  const days = Math.round((end - start) / 864e5);
+  const today = new Date(); today.setHours(0,0,0,0);
+  const X = i => px + i * (W - px - 8) / days;
+  const Y = v => py + (H - py - 22) * (1 - v / total);
+
+  let g = '';
+  /* grid + day labels */
+  for (let i = 0; i <= days; i++){
+    g += `<line x1="${X(i)}" y1="${py}" x2="${X(i)}" y2="${H-22}" stroke="#1C5238" stroke-width="${i===0||i===days?1:.5}" opacity=".6"/>`;
+    const d = new Date(start); d.setDate(d.getDate() + i);
+    g += `<text x="${X(i)}" y="${H-8}" font-size="7.5" fill="#A8BFB1" text-anchor="middle">${d.getDate()}</text>`;
+  }
+  g += `<text x="4" y="${Y(total)+3}" font-size="7.5" fill="#A8BFB1">${total}</text>`;
+  g += `<text x="4" y="${Y(0)+3}" font-size="7.5" fill="#A8BFB1">0</text>`;
+  /* ideal line */
+  g += `<line x1="${X(0)}" y1="${Y(total)}" x2="${X(days)}" y2="${Y(0)}" stroke="#A8BFB1" stroke-width="1" stroke-dasharray="4 4" opacity=".55"/>`;
+  /* actual line: remaining points at end of each elapsed day */
+  const pts = [];
+  for (let i = 0; i <= days; i++){
+    const d = new Date(start); d.setDate(d.getDate() + i);
+    if (d > today) break;
+    const dISO = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+    const burned = tasks.filter(t => t.doneDate && t.doneDate <= dISO).reduce((a,t) => a + t.points, 0);
+    pts.push([X(i), Y(total - burned)]);
+  }
+  if (pts.length){
+    g += `<polyline points="${pts.map(p => p.join(',')).join(' ')}" fill="none" stroke="#D9B94F" stroke-width="2.2" stroke-linecap="round"/>`;
+    const last = pts[pts.length-1];
+    g += `<circle cx="${last[0]}" cy="${last[1]}" r="3.4" fill="#FF6B4A"/>`;
+  }
+  svg.innerHTML = g;
+}
+</script>
+</body>
+</html>
