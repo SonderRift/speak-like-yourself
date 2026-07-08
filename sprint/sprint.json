@@ -5,8 +5,8 @@
     "goal": "Survival Kit live for sale, Starter System assembled, funnel measurable",
     "start": "2026-07-08",
     "end": "2026-07-12",
-    "updated": "2026-07-08T15:07:43+07:00",
-    "updatedBy": "Orchestrator"
+    "updated": "2026-07-08T15:29:07+07:00",
+    "updatedBy": "Claude Code"
   },
   "owners": {
     "claude": {
@@ -181,10 +181,11 @@
       "detail": "Swap blockquote placeholder for an exact named Preply review",
       "owner": "rafael",
       "points": 1,
-      "col": "todo",
+      "col": "done",
       "tags": [
         "site"
-      ]
+      ],
+      "doneDate": "2026-07-08"
     },
     {
       "id": "T12",
@@ -309,6 +310,11 @@
       "date": "2026-07-08",
       "who": "codex",
       "what": "T04 done: 272 audio files (127 normal + 127 slow + 11 tracks + 7 game), 0 failures, 9 MB. package-kit.ps1 verified + zipped 6.8 MB (T05 done). Orchestrator dry-run plan executed: T07 Hermes QA + T10 Starter System -> Doing."
+    },
+    {
+      "date": "2026-07-08",
+      "who": "claude",
+      "what": "T11 -> done."
     }
   ]
 }
