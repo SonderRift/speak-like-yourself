@@ -251,7 +251,7 @@
                   {
                       "id":  "T17",
                       "title":  "Rebuild favorite-capture trigger",
-                      "detail":  "Preply stopped sending favorite notification emails (push-only now), so the Gmail-triggered fast-responder is dead. Rebuild trigger via Android notification bridge (MacroDroid/Tasker) -> n8n webhook -> reuse existing template + Telegram draft + 72h follow-up. Needs Rafael to install the phone app.",
+                      "detail":  "Preply stopped sending favorite notification emails (push-only now), so the Gmail-triggered fast-responder is dead. Rebuild trigger via Android notification bridge (MacroDroid/Tasker) -> n8n webhook -> reuse existing template + Telegram draft + 72h follow-up. Push format: 1st push 'Hurry, a new student added you as favorite...', 2nd push '[Name] added you as favorite...' - key off 'added you as favorite' + extract name from the 2nd push. Rafael on Android; needs the bridge app installed.",
                       "owner":  "claude",
                       "points":  3,
                       "col":  "todo",
