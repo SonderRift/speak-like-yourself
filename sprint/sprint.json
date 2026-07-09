@@ -393,6 +393,16 @@
                     "date":  "2026-07-09",
                     "who":  "claude",
                     "what":  "T14 pin poster PARKED: prod + sandbox tokens both return code 3 'consumer type not supported' until Pinterest grants an access tier. Unblocked T13 dependency; now waiting on Pinterest, not on us. Build resumes when GET /v5/boards returns data."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "claude",
+                    "what":  "T17 built (Option B): MacroDroid -> Apps Script -> Google Sheet -> n8n Sheets Trigger -> existing template + Telegram draft + 72h follow-up. Files in C:\\n8n\\Preply. Name regex dry-run verified."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "hermes",
+                    "what":  "T17 import BLOCKED: validated the workflow JSON (parses, 5 nodes + connections intact, both placeholders present) but n8n MCP can't import raw JSON (only SDK-code workflows). Import stays a manual 'Import from File' for Rafael, folded into his activation step."
                 }
             ]
 }
