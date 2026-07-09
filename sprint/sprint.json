@@ -5,7 +5,7 @@
                    "goal":  "Survival Kit live for sale, Starter System assembled, funnel measurable",
                    "start":  "2026-07-08",
                    "end":  "2026-07-12",
-                   "updated":  "2026-07-08T23:05:00+07:00",
+                   "updated":  "2026-07-09T21:30:00+07:00",
                    "updatedBy":  "Claude Code"
                },
     "owners":  {
@@ -230,10 +230,11 @@
                       "detail":  "Weekly note of real questions matching corpus answers; queue-ready for Draft Factory",
                       "owner":  "hermes",
                       "points":  2,
-                      "col":  "doing",
+                      "col":  "done",
                       "tags":  [
                                    "content"
-                               ]
+                               ],
+                      "doneDate":  "2026-07-09"
                   },
                   {
                       "id":  "T16",
@@ -246,6 +247,17 @@
 
                                ],
                       "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T17",
+                      "title":  "Rebuild favorite-capture trigger",
+                      "detail":  "Preply stopped sending favorite notification emails (push-only now), so the Gmail-triggered fast-responder is dead. Rebuild trigger via Android notification bridge (MacroDroid/Tasker) -> n8n webhook -> reuse existing template + Telegram draft + 72h follow-up. Needs Rafael to install the phone app.",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "todo",
+                      "tags":  [
+                                   "funnel"
+                               ]
                   }
               ],
     "log":  [
@@ -358,6 +370,21 @@
                     "date":  "2026-07-08",
                     "who":  "claude",
                     "what":  "T10 progress: Starter System structure staged (manifest, buyer 90-day TOC + Noite Carioca cover concept, gap list). Component builds still missing (Eu-series, conjugation sheets, scenario packs, vocab list); worker was write-blocked so artifacts staged, not in products/. Stays Doing."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "rafael",
+                    "what":  "Rafael approvals: Pinterest Batch 01 pins approved; Reddit/Quora drafts approved. T15 -> done (mining + queue-ready drafts validated)."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "rafael",
+                    "what":  "Orchestrator cron workflow confirmed live and running (n8n import + Telegram cred + CHAT_ID done). T16 setup no longer pending."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "claude",
+                    "what":  "Added T17: rebuild favorite-capture trigger. Preply killed favorite notification emails (push-only now), breaking the Gmail-triggered fast-responder; plan = phone notification bridge -> n8n webhook."
                 }
             ]
 }
