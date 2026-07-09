@@ -5,7 +5,7 @@
                    "goal":  "Survival Kit live for sale, Starter System assembled, funnel measurable",
                    "start":  "2026-07-08",
                    "end":  "2026-07-12",
-                   "updated":  "2026-07-09T21:30:00+07:00",
+                   "updated":  "2026-07-09T22:45:00+07:00",
                    "updatedBy":  "Claude Code"
                },
     "owners":  {
@@ -202,27 +202,25 @@
                   {
                       "id":  "T13",
                       "title":  "Pinterest developer app",
-                      "detail":  "Finish app form so the API pin poster can be built",
+                      "detail":  "App created (ID 1587877) on Business account. App form finished + dev-support ticket \"Trial approval\" submitted 2026-07-09 (endpoint + exact error + public privacy-policy URL included). Now awaiting Pinterest Trial-access grant.",
                       "owner":  "rafael",
                       "points":  2,
-                      "col":  "backlog",
+                      "col":  "done",
                       "tags":  [
                                    "pinterest"
-                               ]
+                               ],
+                      "doneDate":  "2026-07-09"
                   },
                   {
                       "id":  "T14",
                       "title":  "Automated pin poster",
-                      "detail":  "n8n workflow: Pinterest API v5 posts from approved batch queue",
+                      "detail":  "n8n workflow: Pinterest API v5 posts from approved batch queue. PARKED 2026-07-09 - both prod + sandbox tokens return code 3 \"application consumer type is not supported\" until Pinterest grants the app an access tier. Support ticket filed. Build is a ~2-line wire-up (base URL + token into n8n credential) the moment GET /v5/boards returns real data.",
                       "owner":  "claude",
                       "points":  5,
                       "col":  "backlog",
                       "tags":  [
                                    "pinterest"
-                               ],
-                      "blockedBy":  [
-                                        "T13"
-                                    ]
+                               ]
                   },
                   {
                       "id":  "T15",
@@ -385,6 +383,16 @@
                     "date":  "2026-07-09",
                     "who":  "claude",
                     "what":  "Added T17: rebuild favorite-capture trigger. Preply killed favorite notification emails (push-only now), breaking the Gmail-triggered fast-responder; plan = phone notification bridge -> n8n webhook."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "claude",
+                    "what":  "T13 -> done: Pinterest app (ID 1587877) created on Business account, app form finished, dev-support ticket submitted. Awaiting Trial-access grant."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "claude",
+                    "what":  "T14 pin poster PARKED: prod + sandbox tokens both return code 3 'consumer type not supported' until Pinterest grants an access tier. Unblocked T13 dependency; now waiting on Pinterest, not on us. Build resumes when GET /v5/boards returns data."
                 }
             ]
 }
