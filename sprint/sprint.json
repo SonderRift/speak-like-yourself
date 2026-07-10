@@ -215,10 +215,10 @@
     {
       "id": "T14",
       "title": "Automated pin poster",
-      "detail": "n8n workflow preply-pinterest-poster.n8n.json: daily schedule -> reads posting/pinterest-queue.json + ledger -> picks next unposted pin -> base64 image upload via POST /v5/pins (board resolved by name at runtime) -> appends ledger. BUILT 2026-07-10, dry-run validated (selection + image + ledger round-trip). Queue seeded with Batch 01 (10 pins). App approved 2026-07-10; only remaining step is a fresh access token (old trial token 401s) + one live single-pin test, then enable schedule.",
+      "detail": "Poster workflow BUILT + queue seeded (10 pins). OAuth 2.0 flow completed 2026-07-10: write-scoped token obtained (boards/pins read+write), saved to .credentials/Preply/pinterest-oauth.json. Reads return live prod data; pin body verified correct. BLOCKED: app is Trial tier - pin CREATE in production returns 403 code 29 (Trial can post only to sandbox). Needs Trial->Standard upgrade, which requires a demo video showing the OAuth flow + API call. Manual posting continues meanwhile.",
       "owner": "claude",
       "points": 5,
-      "col": "review",
+      "col": "doing",
       "tags": [
         "pinterest"
       ]
@@ -422,6 +422,11 @@
       "date": "2026-07-10",
       "who": "claude",
       "what": "T14 -> review: Pinterest app approved. Built daily poster workflow (preply-pinterest-poster.n8n.json) + normalized queue/ledger under C:\n8n\\Preply\\posting. Dry-run passes. Blocked only on regenerating the access token (old one returns 401), then a live single-pin test."
+    },
+    {
+      "date": "2026-07-10",
+      "who": "claude",
+      "what": "T14: completed Pinterest OAuth (write scopes granted) and proved the poster pipeline end-to-end. Blocked on Trial->Standard access upgrade - Trial tier cannot create pins in production (403 code 29). Next: submit Standard-access application w/ demo video. Tokens saved to .credentials."
     }
   ]
 }
