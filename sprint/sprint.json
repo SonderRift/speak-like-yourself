@@ -5,7 +5,7 @@
                    "goal":  "Survival Kit live for sale, Starter System assembled, funnel measurable",
                    "start":  "2026-07-08",
                    "end":  "2026-07-12",
-                   "updated":  "2026-07-10T21:30:00+07:00",
+                   "updated":  "2026-07-10T21:55:00+07:00",
                    "updatedBy":  "Claude Code"
                },
     "owners":  {
@@ -413,7 +413,12 @@
                 {
                     "date":  "2026-07-10",
                     "who":  "rafael",
-                    "what":  "T08 -> done: Survival Kit live on Payhip (https://payhip.com/b/F5bcR), Pinterest linked, Stripe payment setup in progress. Unblocks T09 (landing buy section). Added 8 gallery/thumbnail value images + purchase-confirmation email copy. Open item: PDF stamping still to enable (Account > Settings > Advanced Settings)."
+                    "what":  "T08 -> done: Survival Kit live on Payhip (https://payhip.com/b/F5bcR), Pinterest linked, Stripe payment setup in progress. Unblocks T09 (landing buy section). Added 8 gallery/thumbnail value images + purchase-confirmation email copy."
+                },
+                {
+                    "date":  "2026-07-10",
+                    "who":  "rafael",
+                    "what":  "PDF stamping ENABLED on Payhip (Account > Settings > Advanced Settings). Anti-piracy layer live; T08 fully closed with no open items."
                 }
             ]
 }
