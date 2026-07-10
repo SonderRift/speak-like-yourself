@@ -5,7 +5,7 @@
                    "goal":  "Survival Kit live for sale, Starter System assembled, funnel measurable",
                    "start":  "2026-07-08",
                    "end":  "2026-07-12",
-                   "updated":  "2026-07-09T22:45:00+07:00",
+                   "updated":  "2026-07-10T21:30:00+07:00",
                    "updatedBy":  "Claude Code"
                },
     "owners":  {
@@ -142,14 +142,15 @@
                       "detail":  "Create free Payhip account, upload zip, enable per-buyer PDF stamping",
                       "owner":  "rafael",
                       "points":  2,
-                      "col":  "todo",
+                      "col":  "done",
                       "tags":  [
                                    "launch"
                                ],
                       "blockedBy":  [
                                         "T05",
                                         "T06"
-                                    ]
+                                    ],
+                      "doneDate":  "2026-07-10"
                   },
                   {
                       "id":  "T09",
@@ -408,6 +409,11 @@
                     "date":  "2026-07-10",
                     "who":  "claude",
                     "what":  "T13 reviewer response handled: Pinterest reviewer Teri flagged an incomplete privacy policy + unverified URL-account relation. Rewrote privacy.html with Pinterest-API disclosures (explicit API use, non-affiliation, data deletion on disconnect, no resale, contact email rafael.automations@gmail.com), deployed live. Claimed the website via p:domain_verify meta tag (Settings > Link to Pinterest) added to index.html + privacy.html. Drafted reply for Rafael to send; app awaiting re-review."
+                },
+                {
+                    "date":  "2026-07-10",
+                    "who":  "rafael",
+                    "what":  "T08 -> done: Survival Kit live on Payhip (https://payhip.com/b/F5bcR), Pinterest linked, Stripe payment setup in progress. Unblocks T09 (landing buy section). Added 8 gallery/thumbnail value images + purchase-confirmation email copy. Open item: PDF stamping still to enable (Account > Settings > Advanced Settings)."
                 }
             ]
 }
