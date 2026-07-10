@@ -5,7 +5,7 @@
     "goal": "Survival Kit live for sale, Starter System assembled, funnel measurable",
     "start": "2026-07-08",
     "end": "2026-07-12",
-    "updated": "2026-07-10T21:55:00+07:00",
+    "updated": "2026-07-10T22:52:00+07:00",
     "updatedBy": "Claude Code"
   },
   "owners": {
@@ -158,13 +158,14 @@
       "detail": "Kit section on speak-like-yourself with Payhip buy button, dark brand",
       "owner": "claude",
       "points": 3,
-      "col": "todo",
+      "col": "done",
       "tags": [
         "launch"
       ],
       "blockedBy": [
         "T08"
-      ]
+      ],
+      "doneDate": "2026-07-10"
     },
     {
       "id": "T10",
@@ -427,6 +428,11 @@
       "date": "2026-07-10",
       "who": "claude",
       "what": "T14: completed Pinterest OAuth (write scopes granted) and proved the poster pipeline end-to-end. Blocked on Trial->Standard access upgrade - Trial tier cannot create pins in production (403 code 29). Next: submit Standard-access application w/ demo video. Tokens saved to .credentials."
+    },
+    {
+      "date": "2026-07-10",
+      "who": "claude",
+      "what": "T09 -> done: Survival Kit buy section shipped on the landing page. Branded dark section (both-editions cover, value bullets, $19 vs $180-240/yr anchor, peek-inside images) with the Payhip overlay buy button for product F5bcR. Audio described accurately at three speeds, no human-voice claim (Rafael's call). Fixed the same stale audio line in payhip-listing.md."
     }
   ]
 }

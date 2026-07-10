@@ -173,6 +173,44 @@
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease, transform .6s ease}
   .reveal.in{opacity:1;transform:none}
   @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+  /* ---------- KIT BUY SECTION ---------- */
+  .kit{max-width:960px;margin:0 auto}
+  .kit-head{max-width:720px;margin:0 auto 46px}
+  .kit-sub{color:var(--muted);font-size:1.05rem;margin:18px auto 0;max-width:610px}
+  .kit-card{display:grid;grid-template-columns:.9fr 1fr;gap:42px;align-items:center;
+    background:var(--panel);border:1px solid var(--linha);border-top:6px solid var(--gold);
+    border-radius:26px;padding:42px;box-shadow:0 18px 44px rgba(0,0,0,.3)}
+  .kit-visual{position:relative;align-self:center}
+  .kit-visual img{width:100%;height:auto;border-radius:14px;box-shadow:0 22px 52px rgba(0,0,0,.5);display:block}
+  .kit-badge{position:absolute;top:-18px;right:-14px;width:76px;height:76px;border-radius:50%;
+    background:var(--gold);color:var(--verde-d);border:3px solid var(--verde-d);
+    font-family:'Fraunces',serif;font-weight:800;font-size:1.5rem;
+    display:flex;align-items:center;justify-content:center;transform:rotate(8deg);
+    box-shadow:0 12px 26px rgba(0,0,0,.4)}
+  .kit-body .kicker{margin-bottom:16px}
+  .kit-list{list-style:none;display:grid;gap:13px}
+  .kit-list li{position:relative;padding-left:1.9em;font-size:.98rem;color:var(--ink);line-height:1.5}
+  .kit-list li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--coral);font-weight:800}
+  .kit-list b{color:var(--heading)}
+  .kit-cta{margin-top:30px}
+  .kit-price{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+  .kit-was{color:var(--muted);text-decoration:line-through;font-size:.9rem}
+  .kit-now{color:var(--ink);font-size:1.02rem}
+  .kit-now b{font-family:'Fraunces',serif;font-size:1.75rem;color:var(--gold);font-weight:800}
+  .kit-btn{width:100%;text-align:center;font-size:1.08rem}
+  .kit-reassure{margin-top:14px;color:var(--muted);font-size:.82rem;text-align:center;line-height:1.5}
+  .kit-peek{display:flex;gap:24px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:58px}
+  .kit-peek img{width:272px;height:auto;max-width:80vw;border-radius:14px;box-shadow:0 16px 40px rgba(0,0,0,.4);transition:transform .25s ease}
+  .kit-peek img:nth-child(1){transform:rotate(-3deg)}
+  .kit-peek img:nth-child(2){transform:rotate(1.5deg) translateY(-8px)}
+  .kit-peek img:nth-child(3){transform:rotate(3deg)}
+  .kit-peek img:hover{transform:rotate(0) scale(1.04)}
+  .kit-peekcap{margin-top:30px;color:var(--muted);font-size:.9rem}
+  @media (max-width:820px){
+    .kit-card{grid-template-columns:1fr;gap:28px;padding:30px}
+    .kit-visual{max-width:360px;margin:0 auto}
+  }
 </style>
 </head>
 <body>
@@ -372,6 +410,49 @@
   </div>
 </section>
 
+<!-- ===== SURVIVAL KIT (paid product) ===== -->
+<section class="wrap reveal" id="kit" style="padding-top:96px">
+  <div class="kit">
+    <div class="kit-head center">
+      <span class="chip">The Survival Kit</span>
+      <h2 class="xl" style="margin-top:18px">Everything to keep you<br>in the conversation</h2>
+      <p class="kit-sub">The free pack is 10 phrases to get you going. The Survival Kit is the whole thing: all 127 phrases across 11 categories, the ear-training game, the little words that make you sound local, and audio for every line. The exact materials my students use, ready to open tonight.</p>
+    </div>
+
+    <div class="kit-card">
+      <div class="kit-visual">
+        <img src="assets/kit/kit-cover.png" alt="Brazilian Portuguese Survival Kit workbook, dark and light editions" loading="lazy" width="1100" height="825">
+        <span class="kit-badge">$19</span>
+      </div>
+      <div class="kit-body">
+        <span class="kicker">What's inside</span>
+        <ul class="kit-list">
+          <li><b>127 survival phrases</b> in 11 real-conversation categories, each in Portuguese with its natural English meaning.</li>
+          <li><b>Spot the Fake</b>: 7 rounds plus a full answer key that train your ear to tell natural Brazilian from textbook-robotic.</li>
+          <li><b>Markers &amp; Fillers starter</b>: the tiny words (beleza, então, aí, sei lá) that make you sound like a person, not a translation.</li>
+          <li><b>Audio for every phrase at three speeds</b> (normal, slow, and slower), plus per-category tracks and the game read aloud.</li>
+          <li><b>Dark and light editions</b> of the full workbook, designed for the screen.</li>
+        </ul>
+        <div class="kit-cta">
+          <div class="kit-price">
+            <span class="kit-was">Subscription apps $180-240/yr</span>
+            <span class="kit-now"><b>$19</b> once, yours forever</span>
+          </div>
+          <a href="https://payhip.com/b/F5bcR" class="payhip-buy-button btn btn-coral kit-btn" data-theme="none" data-product="F5bcR" target="_blank" rel="noopener">Get the Survival Kit &rarr;</a>
+          <p class="kit-reassure">Instant download · secure checkout by Payhip · less than two weeks of a Pimsleur subscription</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="kit-peek">
+      <img src="assets/kit/kit-categories.jpg" alt="Eleven categories, 127 real phrases" loading="lazy" width="900" height="675">
+      <img src="assets/kit/kit-phrases.jpg" alt="Sample phrase cards, Portuguese with English meaning" loading="lazy" width="900" height="675">
+      <img src="assets/kit/kit-audio.jpg" alt="Audio pack: hear every phrase at three speeds" loading="lazy" width="900" height="675">
+    </div>
+    <p class="kit-peekcap center">A look inside the kit.</p>
+  </div>
+</section>
+
 <section style="padding-top:56px">
   <div class="wrap reveal">
     <div class="finale">
@@ -452,6 +533,9 @@
     show(0); restart();
   })();
 </script>
+
+<!-- Payhip buy-button overlay checkout for the Survival Kit (product F5bcR) -->
+<script src="https://payhip.com/payhip.js" type="text/javascript"></script>
 
 </body>
 </html>
