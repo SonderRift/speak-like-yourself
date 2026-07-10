@@ -202,7 +202,7 @@
                   {
                       "id":  "T13",
                       "title":  "Pinterest developer app",
-                      "detail":  "App created (ID 1587877) on Business account. App form finished + dev-support ticket \"Trial approval\" submitted 2026-07-09 (endpoint + exact error + public privacy-policy URL included). Now awaiting Pinterest Trial-access grant.",
+                      "detail":  "App created (ID 1587877) on Business account. App form finished + dev-support ticket \"Trial approval\" submitted 2026-07-09. Reviewer (Teri) replied 2026-07-09 with two blockers: (1) incomplete privacy policy, (2) URL-account relation not verified. Both resolved 2026-07-10: privacy.html rewritten with Pinterest-API disclosures (API use, non-affiliation, data deletion on disconnect, no resale, contact email) and deployed; website claimed via p:domain_verify meta tag under Settings > Link to Pinterest. Reply drafted for Rafael to send; awaiting re-review of the app.",
                       "owner":  "rafael",
                       "points":  2,
                       "col":  "done",
@@ -403,6 +403,11 @@
                     "date":  "2026-07-09",
                     "who":  "hermes",
                     "what":  "T17 import BLOCKED: validated the workflow JSON (parses, 5 nodes + connections intact, both placeholders present) but n8n MCP can't import raw JSON (only SDK-code workflows). Import stays a manual 'Import from File' for Rafael, folded into his activation step."
+                },
+                {
+                    "date":  "2026-07-10",
+                    "who":  "claude",
+                    "what":  "T13 reviewer response handled: Pinterest reviewer Teri flagged an incomplete privacy policy + unverified URL-account relation. Rewrote privacy.html with Pinterest-API disclosures (explicit API use, non-affiliation, data deletion on disconnect, no resale, contact email rafael.automations@gmail.com), deployed live. Claimed the website via p:domain_verify meta tag (Settings > Link to Pinterest) added to index.html + privacy.html. Drafted reply for Rafael to send; app awaiting re-review."
                 }
             ]
 }
