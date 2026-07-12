@@ -5,22 +5,52 @@
     "goal": "One continuous product push, stretched to a bigger goal: from the shipped Survival Kit to a standalone product business (store /learn/ live, email list, reusable production pipeline) and a launched flagship course. Runs from the real project start (2026-07-08) through 2026-08-11.",
     "start": "2026-07-08",
     "end": "2026-08-11",
-    "updated": "2026-07-12T15:40:00+07:00",
-    "updatedBy": "Claude Code"
+    "updated": "2026-07-12T14:01:00+07:00",
+    "updatedBy": "Fable5"
   },
   "owners": {
-    "claude": { "label": "Claude Code", "color": "#FF6B4A" },
-    "fable5": { "label": "Fable5", "color": "#9B7EDE" },
-    "hermes": { "label": "Hermes", "color": "#D9B94F" },
-    "codex": { "label": "Codex", "color": "#6FC7C0" },
-    "rafael": { "label": "Rafael", "color": "#7BC796" }
+    "claude": {
+      "label": "Claude Code",
+      "color": "#FF6B4A"
+    },
+    "fable5": {
+      "label": "Fable5",
+      "color": "#9B7EDE"
+    },
+    "hermes": {
+      "label": "Hermes",
+      "color": "#D9B94F"
+    },
+    "codex": {
+      "label": "Codex",
+      "color": "#6FC7C0"
+    },
+    "rafael": {
+      "label": "Rafael",
+      "color": "#7BC796"
+    }
   },
   "columns": [
-    { "id": "backlog", "label": "Backlog" },
-    { "id": "todo", "label": "To Do" },
-    { "id": "doing", "label": "Doing" },
-    { "id": "review", "label": "Review" },
-    { "id": "done", "label": "Done" }
+    {
+      "id": "backlog",
+      "label": "Backlog"
+    },
+    {
+      "id": "todo",
+      "label": "To Do"
+    },
+    {
+      "id": "doing",
+      "label": "Doing"
+    },
+    {
+      "id": "review",
+      "label": "Review"
+    },
+    {
+      "id": "done",
+      "label": "Done"
+    }
   ],
   "tasks": [
     {
@@ -30,7 +60,9 @@
       "owner": "claude",
       "points": 2,
       "col": "done",
-      "tags": ["kit"],
+      "tags": [
+        "kit"
+      ],
       "doneDate": "2026-07-08"
     },
     {
@@ -40,7 +72,9 @@
       "owner": "claude",
       "points": 5,
       "col": "done",
-      "tags": ["kit"],
+      "tags": [
+        "kit"
+      ],
       "doneDate": "2026-07-08"
     },
     {
@@ -50,7 +84,9 @@
       "owner": "claude",
       "points": 3,
       "col": "done",
-      "tags": ["ops"],
+      "tags": [
+        "ops"
+      ],
       "doneDate": "2026-07-08"
     },
     {
@@ -60,7 +96,9 @@
       "owner": "codex",
       "points": 5,
       "col": "done",
-      "tags": ["kit"],
+      "tags": [
+        "kit"
+      ],
       "doneDate": "2026-07-08"
     },
     {
@@ -70,8 +108,12 @@
       "owner": "claude",
       "points": 2,
       "col": "done",
-      "tags": ["kit"],
-      "blockedBy": ["T04"],
+      "tags": [
+        "kit"
+      ],
+      "blockedBy": [
+        "T04"
+      ],
       "doneDate": "2026-07-08"
     },
     {
@@ -81,7 +123,9 @@
       "owner": "claude",
       "points": 3,
       "col": "done",
-      "tags": ["launch"],
+      "tags": [
+        "launch"
+      ],
       "doneDate": "2026-07-08"
     },
     {
@@ -91,7 +135,9 @@
       "owner": "hermes",
       "points": 2,
       "col": "done",
-      "tags": ["kit"],
+      "tags": [
+        "kit"
+      ],
       "doneDate": "2026-07-08"
     },
     {
@@ -101,8 +147,13 @@
       "owner": "rafael",
       "points": 2,
       "col": "done",
-      "tags": ["launch"],
-      "blockedBy": ["T05", "T06"],
+      "tags": [
+        "launch"
+      ],
+      "blockedBy": [
+        "T05",
+        "T06"
+      ],
       "doneDate": "2026-07-10"
     },
     {
@@ -112,8 +163,12 @@
       "owner": "claude",
       "points": 3,
       "col": "done",
-      "tags": ["launch"],
-      "blockedBy": ["T08"],
+      "tags": [
+        "launch"
+      ],
+      "blockedBy": [
+        "T08"
+      ],
       "doneDate": "2026-07-10"
     },
     {
@@ -123,8 +178,13 @@
       "owner": "fable5",
       "points": 8,
       "col": "backlog",
-      "tags": ["product"],
-      "blockedBy": ["T24", "T20"]
+      "tags": [
+        "product"
+      ],
+      "blockedBy": [
+        "T24",
+        "T20"
+      ]
     },
     {
       "id": "T11",
@@ -133,7 +193,9 @@
       "owner": "rafael",
       "points": 1,
       "col": "done",
-      "tags": ["site"],
+      "tags": [
+        "site"
+      ],
       "doneDate": "2026-07-08"
     },
     {
@@ -142,8 +204,11 @@
       "detail": "Track A3. GoatCounter (free, privacy-friendly) + per-pin src tags on index.html + learn/index.html so store visits, free-PDF opt-ins and Payhip button clicks become measurable.",
       "owner": "claude",
       "points": 3,
-      "col": "doing",
-      "tags": ["site", "funnel"]
+      "col": "review",
+      "tags": [
+        "site",
+        "funnel"
+      ]
     },
     {
       "id": "T13",
@@ -152,7 +217,9 @@
       "owner": "rafael",
       "points": 2,
       "col": "done",
-      "tags": ["pinterest"],
+      "tags": [
+        "pinterest"
+      ],
       "doneDate": "2026-07-09"
     },
     {
@@ -162,7 +229,9 @@
       "owner": "claude",
       "points": 5,
       "col": "todo",
-      "tags": ["pinterest"]
+      "tags": [
+        "pinterest"
+      ]
     },
     {
       "id": "T15",
@@ -171,7 +240,9 @@
       "owner": "hermes",
       "points": 2,
       "col": "done",
-      "tags": ["content"],
+      "tags": [
+        "content"
+      ],
       "doneDate": "2026-07-09"
     },
     {
@@ -181,7 +252,9 @@
       "owner": "claude",
       "points": 5,
       "col": "done",
-      "tags": ["ops"],
+      "tags": [
+        "ops"
+      ],
       "doneDate": "2026-07-08"
     },
     {
@@ -191,7 +264,9 @@
       "owner": "rafael",
       "points": 3,
       "col": "todo",
-      "tags": ["funnel"]
+      "tags": [
+        "funnel"
+      ]
     },
     {
       "id": "T18",
@@ -199,8 +274,12 @@
       "detail": "Track A1. git push web/ so the standalone store /learn/ goes live. Verify store renders, Payhip button works, zero Preply CTAs, assets 200, no mobile horizontal scroll. index.html stays teaching-only.",
       "owner": "claude",
       "points": 2,
-      "col": "todo",
-      "tags": ["ship", "site"]
+      "col": "done",
+      "tags": [
+        "ship",
+        "site"
+      ],
+      "doneDate": "2026-07-12"
     },
     {
       "id": "T19",
@@ -208,8 +287,12 @@
       "detail": "Track A2 (#1 compounding asset). Payhip $0 product for survival-phrases.pdf (captures email + delivers + unifies list). Swap free-PDF href + Starter Pack notify CTA in learn/index.html to the $0 URL. Welcome email introduces the ladder, soft-pitches the Kit.",
       "owner": "claude",
       "points": 3,
-      "col": "todo",
-      "tags": ["ship", "funnel"]
+      "col": "done",
+      "tags": [
+        "ship",
+        "funnel"
+      ],
+      "doneDate": "2026-07-12"
     },
     {
       "id": "T20",
@@ -217,8 +300,11 @@
       "detail": "Track A5, highest-leverage parallel build. Generalize the Kit's one-off tooling into a parametrized pipeline driven by one content JSON: workbook generator (dark+light PDFs), edge-tts audio batch (3 speeds + category tracks, TTS only), gallery/thumbnail generator, reusable Payhip listing + buy-section HTML component. Deliverable: documented content-schema so syllabus output plugs straight in. Fable5 handoff owner.",
       "owner": "fable5",
       "points": 8,
-      "col": "todo",
-      "tags": ["pipeline", "product"]
+      "col": "doing",
+      "tags": [
+        "pipeline",
+        "product"
+      ]
     },
     {
       "id": "T21",
@@ -226,8 +312,11 @@
       "detail": "Track A4. learn/index.html: SEO title/meta, Open Graph + Twitter share image so pins/links preview well, favicon, accessibility pass, mobile QA. Make the store shareable and findable.",
       "owner": "claude",
       "points": 3,
-      "col": "backlog",
-      "tags": ["site"]
+      "col": "done",
+      "tags": [
+        "site"
+      ],
+      "doneDate": "2026-07-12"
     },
     {
       "id": "T22",
@@ -235,8 +324,11 @@
       "detail": "Track A6. Wire the bundle mechanism + Payhip cross-sell / order-bump so Kit buyers see the next rung. Plumbing ships now; the real bundle product waits on Starter Pack / flagship (T10/T25).",
       "owner": "claude",
       "points": 3,
-      "col": "backlog",
-      "tags": ["product", "funnel"]
+      "col": "doing",
+      "tags": [
+        "product",
+        "funnel"
+      ]
     },
     {
       "id": "T23",
@@ -245,7 +337,10 @@
       "owner": "claude",
       "points": 2,
       "col": "backlog",
-      "tags": ["content", "funnel"]
+      "tags": [
+        "content",
+        "funnel"
+      ]
     },
     {
       "id": "T24",
@@ -254,7 +349,10 @@
       "owner": "rafael",
       "points": 3,
       "col": "doing",
-      "tags": ["syllabus", "product"]
+      "tags": [
+        "syllabus",
+        "product"
+      ]
     },
     {
       "id": "T25",
@@ -263,8 +361,14 @@
       "owner": "fable5",
       "points": 8,
       "col": "backlog",
-      "tags": ["product", "flagship"],
-      "blockedBy": ["T24", "T20"]
+      "tags": [
+        "product",
+        "flagship"
+      ],
+      "blockedBy": [
+        "T24",
+        "T20"
+      ]
     },
     {
       "id": "T26",
@@ -273,8 +377,14 @@
       "owner": "claude",
       "points": 3,
       "col": "backlog",
-      "tags": ["launch", "site"],
-      "blockedBy": ["T10", "T25"]
+      "tags": [
+        "launch",
+        "site"
+      ],
+      "blockedBy": [
+        "T10",
+        "T25"
+      ]
     },
     {
       "id": "T27",
@@ -283,7 +393,10 @@
       "owner": "rafael",
       "points": 1,
       "col": "todo",
-      "tags": ["kit", "launch"]
+      "tags": [
+        "kit",
+        "launch"
+      ]
     },
     {
       "id": "T28",
@@ -292,39 +405,196 @@
       "owner": "rafael",
       "points": 1,
       "col": "todo",
-      "tags": ["decision"]
+      "tags": [
+        "decision"
+      ]
     }
   ],
   "log": [
-    { "date": "2026-07-08", "who": "claude", "what": "Sprint opened. Kit data model parsed (T01 done)." },
-    { "date": "2026-07-08", "who": "claude", "what": "Survival Kit PDFs built: dark + light, 13 pages, linked trial CTA (T02 done)." },
-    { "date": "2026-07-08", "who": "claude", "what": "Sprint board built and deployed (T03 done)." },
-    { "date": "2026-07-08", "who": "claude", "what": "Model routing set: Codex takes T04 (audio pack); Claude keeps T06/T10; Hermes keeps T07/T15." },
-    { "date": "2026-07-08", "who": "codex", "what": "T04 synthesis running: state file live, audio/ folders created." },
-    { "date": "2026-07-08", "who": "claude", "what": "Payhip listing copy + dual-cover product thumbnail shipped (T06 done)." },
-    { "date": "2026-07-08", "who": "claude", "what": "T04 -> done." },
-    { "date": "2026-07-08", "who": "claude", "what": "T05 -> done." },
-    { "date": "2026-07-08", "who": "claude", "what": "Added T16: Opus orchestrator system." },
-    { "date": "2026-07-08", "who": "claude", "what": "T16 -> done." },
-    { "date": "2026-07-08", "who": "codex", "what": "T04 done: 272 audio files, 0 failures. package-kit.ps1 verified + zipped 6.8 MB (T05 done)." },
-    { "date": "2026-07-08", "who": "claude", "what": "T11 -> done." },
-    { "date": "2026-07-08", "who": "hermes", "what": "T07 Kit language QA complete: both PDFs reviewed, 0 issues. Kit is upload-ready." },
-    { "date": "2026-07-08", "who": "claude", "what": "T12 promoted backlog -> todo (funnel-measurable pillar)." },
-    { "date": "2026-07-08", "who": "hermes", "what": "T15 -> doing; Reddit/Quora mining notes created with queue-ready drafts." },
-    { "date": "2026-07-08", "who": "codex", "what": "T04 rev2: added slower audio tier (+127 files). Pack now 399 MP3s, 0 failures." },
-    { "date": "2026-07-08", "who": "claude", "what": "T10 progress: Starter System structure staged (manifest, 90-day TOC, gap list). Component builds still missing. Stays Doing." },
-    { "date": "2026-07-09", "who": "rafael", "what": "Rafael approvals: Pinterest Batch 01 pins + Reddit/Quora drafts approved. T15 -> done." },
-    { "date": "2026-07-09", "who": "rafael", "what": "Orchestrator cron confirmed live (n8n import + Telegram cred + CHAT_ID done). T16 fully set." },
-    { "date": "2026-07-09", "who": "claude", "what": "Added T17: rebuild favorite-capture trigger (Preply killed favorite notification emails)." },
-    { "date": "2026-07-09", "who": "claude", "what": "T13 -> done: Pinterest app (ID 1587877) created, form finished, dev-support ticket submitted." },
-    { "date": "2026-07-09", "who": "claude", "what": "T17 built (Option B): MacroDroid -> Apps Script -> Sheet -> n8n -> template + Telegram + 72h follow-up." },
-    { "date": "2026-07-10", "who": "claude", "what": "T13 reviewer response handled: privacy.html rewritten with Pinterest-API disclosures + website claimed. App awaiting re-review." },
-    { "date": "2026-07-10", "who": "rafael", "what": "T08 -> done: Survival Kit LIVE on Payhip (https://payhip.com/b/F5bcR). Unblocks T09." },
-    { "date": "2026-07-10", "who": "rafael", "what": "PDF stamping ENABLED on Payhip. Anti-piracy layer live; T08 fully closed." },
-    { "date": "2026-07-10", "who": "claude", "what": "T14: completed Pinterest OAuth (write scopes) and proved the poster pipeline end-to-end. Blocked on Trial->Standard access upgrade (403 code 29)." },
-    { "date": "2026-07-10", "who": "claude", "what": "T09 -> done: Survival Kit buy section shipped on the landing page (Payhip overlay button F5bcR, $19 vs $180-240/yr anchor). Audio described as three speeds, no human-voice claim." },
-    { "date": "2026-07-11", "who": "claude", "what": "T12 -> doing (landing analytics)." },
-    { "date": "2026-07-12", "who": "claude", "what": "Sprint reframed to S02 'Flagship Sprint' (2026-07-08 -> 08-11, dated from the real project start) toward a standalone product business + launched flagship course, per the Fable5 Product Build Handoff." },
-    { "date": "2026-07-12", "who": "claude", "what": "S01 work folded onto the SAME board (same project, bigger goal): T01-T17 kept with original IDs. Carryovers stay open: T10 (now Starter Pack build, blocked on syllabus+pipeline), T12 analytics, T14 Pinterest Trial->Standard, T17 favorite-capture. New Track A/B work added as T18-T28." }
+    {
+      "date": "2026-07-08",
+      "who": "claude",
+      "what": "Sprint opened. Kit data model parsed (T01 done)."
+    },
+    {
+      "date": "2026-07-08",
+      "who": "claude",
+      "what": "Survival Kit PDFs built: dark + light, 13 pages, linked trial CTA (T02 done)."
+    },
+    {
+      "date": "2026-07-08",
+      "who": "claude",
+      "what": "Sprint board built and deployed (T03 done)."
+    },
+    {
+      "date": "2026-07-08",
+      "who": "claude",
+      "what": "Model routing set: Codex takes T04 (audio pack); Claude keeps T06/T10; Hermes keeps T07/T15."
+    },
+    {
+      "date": "2026-07-08",
+      "who": "codex",
+      "what": "T04 synthesis running: state file live, audio/ folders created."
+    },
+    {
+      "date": "2026-07-08",
+      "who": "claude",
+      "what": "Payhip listing copy + dual-cover product thumbnail shipped (T06 done)."
+    },
+    {
+      "date": "2026-07-08",
+      "who": "claude",
+      "what": "T04 -> done."
+    },
+    {
+      "date": "2026-07-08",
+      "who": "claude",
+      "what": "T05 -> done."
+    },
+    {
+      "date": "2026-07-08",
+      "who": "claude",
+      "what": "Added T16: Opus orchestrator system."
+    },
+    {
+      "date": "2026-07-08",
+      "who": "claude",
+      "what": "T16 -> done."
+    },
+    {
+      "date": "2026-07-08",
+      "who": "codex",
+      "what": "T04 done: 272 audio files, 0 failures. package-kit.ps1 verified + zipped 6.8 MB (T05 done)."
+    },
+    {
+      "date": "2026-07-08",
+      "who": "claude",
+      "what": "T11 -> done."
+    },
+    {
+      "date": "2026-07-08",
+      "who": "hermes",
+      "what": "T07 Kit language QA complete: both PDFs reviewed, 0 issues. Kit is upload-ready."
+    },
+    {
+      "date": "2026-07-08",
+      "who": "claude",
+      "what": "T12 promoted backlog -> todo (funnel-measurable pillar)."
+    },
+    {
+      "date": "2026-07-08",
+      "who": "hermes",
+      "what": "T15 -> doing; Reddit/Quora mining notes created with queue-ready drafts."
+    },
+    {
+      "date": "2026-07-08",
+      "who": "codex",
+      "what": "T04 rev2: added slower audio tier (+127 files). Pack now 399 MP3s, 0 failures."
+    },
+    {
+      "date": "2026-07-08",
+      "who": "claude",
+      "what": "T10 progress: Starter System structure staged (manifest, 90-day TOC, gap list). Component builds still missing. Stays Doing."
+    },
+    {
+      "date": "2026-07-09",
+      "who": "rafael",
+      "what": "Rafael approvals: Pinterest Batch 01 pins + Reddit/Quora drafts approved. T15 -> done."
+    },
+    {
+      "date": "2026-07-09",
+      "who": "rafael",
+      "what": "Orchestrator cron confirmed live (n8n import + Telegram cred + CHAT_ID done). T16 fully set."
+    },
+    {
+      "date": "2026-07-09",
+      "who": "claude",
+      "what": "Added T17: rebuild favorite-capture trigger (Preply killed favorite notification emails)."
+    },
+    {
+      "date": "2026-07-09",
+      "who": "claude",
+      "what": "T13 -> done: Pinterest app (ID 1587877) created, form finished, dev-support ticket submitted."
+    },
+    {
+      "date": "2026-07-09",
+      "who": "claude",
+      "what": "T17 built (Option B): MacroDroid -> Apps Script -> Sheet -> n8n -> template + Telegram + 72h follow-up."
+    },
+    {
+      "date": "2026-07-10",
+      "who": "claude",
+      "what": "T13 reviewer response handled: privacy.html rewritten with Pinterest-API disclosures + website claimed. App awaiting re-review."
+    },
+    {
+      "date": "2026-07-10",
+      "who": "rafael",
+      "what": "T08 -> done: Survival Kit LIVE on Payhip (https://payhip.com/b/F5bcR). Unblocks T09."
+    },
+    {
+      "date": "2026-07-10",
+      "who": "rafael",
+      "what": "PDF stamping ENABLED on Payhip. Anti-piracy layer live; T08 fully closed."
+    },
+    {
+      "date": "2026-07-10",
+      "who": "claude",
+      "what": "T14: completed Pinterest OAuth (write scopes) and proved the poster pipeline end-to-end. Blocked on Trial->Standard access upgrade (403 code 29)."
+    },
+    {
+      "date": "2026-07-10",
+      "who": "claude",
+      "what": "T09 -> done: Survival Kit buy section shipped on the landing page (Payhip overlay button F5bcR, $19 vs $180-240/yr anchor). Audio described as three speeds, no human-voice claim."
+    },
+    {
+      "date": "2026-07-11",
+      "who": "claude",
+      "what": "T12 -> doing (landing analytics)."
+    },
+    {
+      "date": "2026-07-12",
+      "who": "claude",
+      "what": "Sprint reframed to S02 'Flagship Sprint' (2026-07-08 -> 08-11, dated from the real project start) toward a standalone product business + launched flagship course, per the Fable5 Product Build Handoff."
+    },
+    {
+      "date": "2026-07-12",
+      "who": "claude",
+      "what": "S01 work folded onto the SAME board (same project, bigger goal): T01-T17 kept with original IDs. Carryovers stay open: T10 (now Starter Pack build, blocked on syllabus+pipeline), T12 analytics, T14 Pinterest Trial->Standard, T17 favorite-capture. New Track A/B work added as T18-T28."
+    },
+    {
+      "date": "2026-07-12",
+      "who": "claude",
+      "what": "T18 -> done."
+    },
+    {
+      "date": "2026-07-12",
+      "who": "claude",
+      "what": "T19 -> done."
+    },
+    {
+      "date": "2026-07-12",
+      "who": "claude",
+      "what": "T21 -> done."
+    },
+    {
+      "date": "2026-07-12",
+      "who": "claude",
+      "what": "T12 -> review."
+    },
+    {
+      "date": "2026-07-12",
+      "who": "claude",
+      "what": "T22 -> doing."
+    },
+    {
+      "date": "2026-07-12",
+      "who": "claude",
+      "what": "T20 -> doing."
+    },
+    {
+      "date": "2026-07-12",
+      "who": "fable5",
+      "what": "Track A ships: /learn/ store LIVE (T18), email list live via Payhip $0 product nrNlU w/ 20% Kit cross-sell (T19, T22 plumbing), GoatCounter wired both pages pending Rafael registering site code speaklikeyourself (T12 review), SEO/OG/favicon polish live (T21). Pipeline build T20 -> doing."
+    }
   ]
 }
