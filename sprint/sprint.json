@@ -2,10 +2,10 @@
   "sprint": {
     "id": "S02",
     "name": "Flagship Sprint",
-    "goal": "Stand up the standalone product business (store live, email list, reusable production pipeline) and build + launch the flagship course once the syllabus lands. 30-day sprint.",
+    "goal": "One continuous product push, stretched to a bigger goal: from the shipped Survival Kit to a standalone product business (store /learn/ live, email list, reusable production pipeline) and a launched flagship course. 30-day sprint; S01 shipping work carried on the same board.",
     "start": "2026-07-12",
     "end": "2026-08-11",
-    "updated": "2026-07-12T14:30:00+07:00",
+    "updated": "2026-07-12T15:10:00+07:00",
     "updatedBy": "Claude Code"
   },
   "owners": {
@@ -25,6 +25,176 @@
   "tasks": [
     {
       "id": "T01",
+      "title": "Parse corpus into Kit data model",
+      "detail": "127 phrases / 11 categories + 7 game sets + 7 marker groups from corpus_extract_core.json",
+      "owner": "claude",
+      "points": 2,
+      "col": "done",
+      "tags": ["kit"],
+      "doneDate": "2026-07-08"
+    },
+    {
+      "id": "T02",
+      "title": "Survival Kit PDF workbook",
+      "detail": "13-page branded workbook, dark + light themes, clickable trial CTA",
+      "owner": "claude",
+      "points": 5,
+      "col": "done",
+      "tags": ["kit"],
+      "doneDate": "2026-07-08"
+    },
+    {
+      "id": "T03",
+      "title": "Sprint board build + deploy",
+      "detail": "This board: sprint.json + kanban page on GitHub Pages, agents push updates",
+      "owner": "claude",
+      "points": 3,
+      "col": "done",
+      "tags": ["ops"],
+      "doneDate": "2026-07-08"
+    },
+    {
+      "id": "T04",
+      "title": "Audio pack (edge-tts)",
+      "detail": "399 MP3s: 127 normal + 127 slow + 127 slower + 11 tracks + 7 game, pt-BR voice, 0 failures. Codex leg: spec in codex-task-T04-audio.md",
+      "owner": "codex",
+      "points": 5,
+      "col": "done",
+      "tags": ["kit"],
+      "doneDate": "2026-07-08"
+    },
+    {
+      "id": "T05",
+      "title": "Package Kit zip + readme",
+      "detail": "Both PDFs + audio pack + buyer readme, ready for Payhip upload",
+      "owner": "claude",
+      "points": 2,
+      "col": "done",
+      "tags": ["kit"],
+      "blockedBy": ["T04"],
+      "doneDate": "2026-07-08"
+    },
+    {
+      "id": "T06",
+      "title": "Payhip listing copy",
+      "detail": "Paste-ready title + description + $19 anchor copy (payhip-listing.md) and product thumbnail with both covers",
+      "owner": "claude",
+      "points": 3,
+      "col": "done",
+      "tags": ["launch"],
+      "doneDate": "2026-07-08"
+    },
+    {
+      "id": "T07",
+      "title": "Kit language QA pass",
+      "detail": "Review both PDFs: naturalness, register, accents, answer-key correctness",
+      "owner": "hermes",
+      "points": 2,
+      "col": "done",
+      "tags": ["kit"],
+      "doneDate": "2026-07-08"
+    },
+    {
+      "id": "T08",
+      "title": "Payhip account + product upload",
+      "detail": "Create free Payhip account, upload zip, enable per-buyer PDF stamping",
+      "owner": "rafael",
+      "points": 2,
+      "col": "done",
+      "tags": ["launch"],
+      "blockedBy": ["T05", "T06"],
+      "doneDate": "2026-07-10"
+    },
+    {
+      "id": "T09",
+      "title": "Landing page buy section",
+      "detail": "Kit section on speak-like-yourself with Payhip buy button, dark brand",
+      "owner": "claude",
+      "points": 3,
+      "col": "done",
+      "tags": ["launch"],
+      "blockedBy": ["T08"],
+      "doneDate": "2026-07-10"
+    },
+    {
+      "id": "T10",
+      "title": "Starter Pack content build ($49.99)",
+      "detail": "Carried from S01 (was 'Starter System assembly'). Track B: the bridge from surviving a conversation to building your own sentences (L2, anchored on Eu). S01 staged only structure/manifest before stalling; now rebuilt through the T20 pipeline once the syllabus lands. Blocked on syllabus + pipeline.",
+      "owner": "fable5",
+      "points": 8,
+      "col": "backlog",
+      "tags": ["product"],
+      "blockedBy": ["T24", "T20"]
+    },
+    {
+      "id": "T11",
+      "title": "Real review quote on landing page",
+      "detail": "Swap blockquote placeholder for an exact named Preply review",
+      "owner": "rafael",
+      "points": 1,
+      "col": "done",
+      "tags": ["site"],
+      "doneDate": "2026-07-08"
+    },
+    {
+      "id": "T12",
+      "title": "Landing analytics",
+      "detail": "Track A3. GoatCounter (free, privacy-friendly) + per-pin src tags on index.html + learn/index.html so store visits, free-PDF opt-ins and Payhip button clicks become measurable.",
+      "owner": "claude",
+      "points": 3,
+      "col": "doing",
+      "tags": ["site", "funnel"]
+    },
+    {
+      "id": "T13",
+      "title": "Pinterest developer app",
+      "detail": "App created (ID 1587877) on Business account. Privacy policy + URL verification blockers resolved 2026-07-10; app re-review passed.",
+      "owner": "rafael",
+      "points": 2,
+      "col": "done",
+      "tags": ["pinterest"],
+      "doneDate": "2026-07-09"
+    },
+    {
+      "id": "T14",
+      "title": "Pinterest poster: Trial -> Standard upgrade",
+      "detail": "Carried from S01. Poster pipeline proven end-to-end (OAuth write scopes granted, tokens saved to .credentials). PARKED: Trial tier cannot create pins in production (403 code 29). Needs a Standard-access application with a demo video (OAuth flow + API call). Waiting on Pinterest, not on us. Manual posting continues meanwhile.",
+      "owner": "claude",
+      "points": 5,
+      "col": "todo",
+      "tags": ["pinterest"]
+    },
+    {
+      "id": "T15",
+      "title": "Reddit/Quora question mining",
+      "detail": "Weekly note of real questions matching corpus answers; queue-ready for Draft Factory",
+      "owner": "hermes",
+      "points": 2,
+      "col": "done",
+      "tags": ["content"],
+      "doneDate": "2026-07-09"
+    },
+    {
+      "id": "T16",
+      "title": "Opus orchestrator system",
+      "detail": "orchestrate.ps1: bus reports -> Opus 4.8 decides -> dispatches codex/hermes/worker/scripts. 2x daily n8n cron + on-demand. Live 2026-07-09.",
+      "owner": "claude",
+      "points": 5,
+      "col": "done",
+      "tags": ["ops"],
+      "doneDate": "2026-07-08"
+    },
+    {
+      "id": "T17",
+      "title": "Activate favorite-capture trigger",
+      "detail": "Carried from S01. Preply killed favorite notification emails (push-only), breaking the Gmail fast-responder. Rebuild BUILT (MacroDroid -> Apps Script -> Google Sheet -> n8n Sheets Trigger -> template + Telegram draft + 72h follow-up), files in C:\\n8n\\Preply. Waiting on Rafael: install MacroDroid, deploy Apps Script, import workflow.",
+      "owner": "rafael",
+      "points": 3,
+      "col": "todo",
+      "tags": ["funnel"]
+    },
+    {
+      "id": "T18",
       "title": "Deploy /learn/ store separation",
       "detail": "Track A1. git push web/ so the standalone store /learn/ goes live. Verify store renders, Payhip button works, zero Preply CTAs, assets 200, no mobile horizontal scroll. index.html stays teaching-only.",
       "owner": "claude",
@@ -33,7 +203,7 @@
       "tags": ["ship", "site"]
     },
     {
-      "id": "T02",
+      "id": "T19",
       "title": "Email list: $0 opt-in + welcome email",
       "detail": "Track A2 (#1 compounding asset). Payhip $0 product for survival-phrases.pdf (captures email + delivers + unifies list). Swap free-PDF href + Starter Pack notify CTA in learn/index.html to the $0 URL. Welcome email introduces the ladder, soft-pitches the Kit.",
       "owner": "claude",
@@ -42,8 +212,8 @@
       "tags": ["ship", "funnel"]
     },
     {
-      "id": "T03",
-      "title": "Reusable product production pipeline + content schema",
+      "id": "T20",
+      "title": "Reusable production pipeline + content schema",
       "detail": "Track A5, highest-leverage parallel build. Generalize the Kit's one-off tooling into a parametrized pipeline driven by one content JSON: workbook generator (dark+light PDFs), edge-tts audio batch (3 speeds + category tracks, TTS only), gallery/thumbnail generator, reusable Payhip listing + buy-section HTML component. Deliverable: documented content-schema so syllabus output plugs straight in. Fable5 handoff owner.",
       "owner": "fable5",
       "points": 8,
@@ -51,16 +221,7 @@
       "tags": ["pipeline", "product"]
     },
     {
-      "id": "T04",
-      "title": "Analytics: GoatCounter on both pages",
-      "detail": "Track A3 (carryover S01 T12). Add free privacy-friendly GoatCounter to index.html + learn/index.html. Track store visits, free-PDF opt-ins, Payhip button clicks. Makes the funnel measurable.",
-      "owner": "claude",
-      "points": 3,
-      "col": "doing",
-      "tags": ["site", "funnel"]
-    },
-    {
-      "id": "T05",
+      "id": "T21",
       "title": "Store polish: SEO, OG, favicon, a11y, mobile",
       "detail": "Track A4. learn/index.html: SEO title/meta, Open Graph + Twitter share image so pins/links preview well, favicon, accessibility pass, mobile QA. Make the store shareable and findable.",
       "owner": "claude",
@@ -69,16 +230,16 @@
       "tags": ["site"]
     },
     {
-      "id": "T06",
+      "id": "T22",
       "title": "Bundle scaffolding + checkout cross-sell",
-      "detail": "Track A6. Wire the bundle mechanism + Payhip cross-sell / order-bump so Kit buyers see the next rung. Plumbing ships now; the real bundle product waits on Starter Pack / flagship (T09/T10).",
+      "detail": "Track A6. Wire the bundle mechanism + Payhip cross-sell / order-bump so Kit buyers see the next rung. Plumbing ships now; the real bundle product waits on Starter Pack / flagship (T10/T25).",
       "owner": "claude",
       "points": 3,
       "col": "backlog",
       "tags": ["product", "funnel"]
     },
     {
-      "id": "T07",
+      "id": "T23",
       "title": "Demand repointing to /learn/",
       "detail": "Track A7. Repoint product-promoting content CTAs (Pinterest / Reddit / Shorts) to /learn/; keep the Preply teaching funnel on autopilot. Never steer Preply students off-platform; do steer the content audience to the products.",
       "owner": "claude",
@@ -87,64 +248,36 @@
       "tags": ["content", "funnel"]
     },
     {
-      "id": "T08",
+      "id": "T24",
       "title": "Approve Starter Pack + flagship syllabus",
-      "detail": "The gate for Track B. Rafael is brainstorming the syllabus in a dedicated chat (kickoff prompt in Syllabus Brainstorm Prompt.md). Locks each module: title, one-line transformation, 3-6 subtopics, key phrases/structures, mapped to the 3-layer method (L1 Survival, L2 Eu self-expression, L3 fluency via pattern expansion). Arrives as content JSON per the T03 schema.",
+      "detail": "The gate for Track B. Rafael is brainstorming the syllabus in a dedicated chat (kickoff prompt in Syllabus Brainstorm Prompt.md). Locks each module: title, one-line transformation, 3-6 subtopics, key phrases/structures, mapped to the 3-layer method (L1 Survival, L2 Eu self-expression, L3 fluency via pattern expansion). Arrives as content JSON per the T20 schema.",
       "owner": "rafael",
       "points": 3,
       "col": "doing",
       "tags": ["syllabus", "product"]
     },
     {
-      "id": "T09",
-      "title": "Starter Pack content build ($49.99)",
-      "detail": "Track B (carryover S01 T10). Bridge from surviving a conversation to building your own sentences (L2, anchored on Eu). Assemble via the T03 pipeline once the syllabus lands. Blocked on syllabus + pipeline.",
-      "owner": "fable5",
-      "points": 8,
-      "col": "backlog",
-      "tags": ["product"],
-      "blockedBy": ["T08", "T03"]
-    },
-    {
-      "id": "T10",
+      "id": "T25",
       "title": "Flagship course content build ($97-197)",
-      "detail": "Track B. The full method end to end, L1 -> L2 -> L3: the product that replaces taking lessons with Rafael. Workbook PDFs + audio (TTS), optional short video/slides. Built through the T03 pipeline. Blocked on syllabus + pipeline.",
+      "detail": "Track B. The full method end to end, L1 -> L2 -> L3: the product that replaces taking lessons with Rafael. Workbook PDFs + audio (TTS), optional short video/slides. Built through the T20 pipeline. Blocked on syllabus + pipeline.",
       "owner": "fable5",
       "points": 8,
       "col": "backlog",
       "tags": ["product", "flagship"],
-      "blockedBy": ["T08", "T03"]
+      "blockedBy": ["T24", "T20"]
     },
     {
-      "id": "T11",
+      "id": "T26",
       "title": "Publish store: real buy sections + bundle",
-      "detail": "Track B. Replace the store's coming-soon rung + teaser with real Starter Pack and flagship buy sections; publish the real bundle via the T06 plumbing. Blocked until the products exist.",
+      "detail": "Track B. Replace the store's coming-soon rung + teaser with real Starter Pack and flagship buy sections; publish the real bundle via the T22 plumbing. Blocked until the products exist.",
       "owner": "claude",
       "points": 3,
       "col": "backlog",
       "tags": ["launch", "site"],
-      "blockedBy": ["T09", "T10"]
+      "blockedBy": ["T10", "T25"]
     },
     {
-      "id": "T12",
-      "title": "Pinterest poster: Trial -> Standard upgrade",
-      "detail": "Carryover S01 T14. Poster pipeline proven end-to-end (OAuth write scopes granted, tokens saved). PARKED: Trial tier cannot create pins in production (403 code 29). Needs a Standard-access application with a demo video (OAuth flow + API call). Waiting on Pinterest, not on us. Manual posting continues meanwhile.",
-      "owner": "claude",
-      "points": 5,
-      "col": "todo",
-      "tags": ["pinterest"]
-    },
-    {
-      "id": "T13",
-      "title": "Activate favorite-capture trigger",
-      "detail": "Carryover S01 T17. Preply killed favorite notification emails (push-only), breaking the Gmail fast-responder. Rebuild BUILT (MacroDroid -> Apps Script -> Google Sheet -> n8n Sheets Trigger -> template + Telegram draft + 72h follow-up), files in C:\\n8n\\Preply. Waiting on Rafael: install MacroDroid, deploy Apps Script, import workflow.",
-      "owner": "rafael",
-      "points": 3,
-      "col": "todo",
-      "tags": ["funnel"]
-    },
-    {
-      "id": "T14",
+      "id": "T27",
       "title": "Fix live Kit listing + covers wording",
       "detail": "Handoff open item. Live Payhip listing text + PDF covers still say 'spoken by a Brazilian'; audio is TTS, so no human-voice claim. Only Rafael can edit the live listing; re-rendering the covers is a separate render task.",
       "owner": "rafael",
@@ -153,7 +286,7 @@
       "tags": ["kit", "launch"]
     },
     {
-      "id": "T15",
+      "id": "T28",
       "title": "Resolve open product decisions",
       "detail": "Handoff section 5, do not guess. (1) Flagship format: Payhip PDF+audio bundle now vs hosted membership later (recommend bundle first). (2) Email provider: Payhip $0 product vs MailerLite free. (3) Own domain: stay on GitHub Pages subpath vs dedicated domain.",
       "owner": "rafael",
@@ -163,15 +296,35 @@
     }
   ],
   "log": [
-    {
-      "date": "2026-07-12",
-      "who": "claude",
-      "what": "Sprint S01 closed (Shipping Sprint 01, 2026-07-08 -> 2026-07-12): Survival Kit live for sale, store separation built, funnel groundwork laid. Archived to sprint-S01.json."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "claude",
-      "what": "Sprint S02 'Flagship Sprint' opened, 30-day (2026-07-12 -> 2026-08-11). Scope reframed to the standalone product business + flagship course per the Fable5 Product Build Handoff. Track A ship-now (T01-T07) plus syllabus gate T08 and Track B flagship build (T09-T11) blocked on it. Carried over analytics (T04), Pinterest poster (T12), favorite-capture (T13)."
-    }
+    { "date": "2026-07-08", "who": "claude", "what": "Sprint opened. Kit data model parsed (T01 done)." },
+    { "date": "2026-07-08", "who": "claude", "what": "Survival Kit PDFs built: dark + light, 13 pages, linked trial CTA (T02 done)." },
+    { "date": "2026-07-08", "who": "claude", "what": "Sprint board built and deployed (T03 done)." },
+    { "date": "2026-07-08", "who": "claude", "what": "Model routing set: Codex takes T04 (audio pack); Claude keeps T06/T10; Hermes keeps T07/T15." },
+    { "date": "2026-07-08", "who": "codex", "what": "T04 synthesis running: state file live, audio/ folders created." },
+    { "date": "2026-07-08", "who": "claude", "what": "Payhip listing copy + dual-cover product thumbnail shipped (T06 done)." },
+    { "date": "2026-07-08", "who": "claude", "what": "T04 -> done." },
+    { "date": "2026-07-08", "who": "claude", "what": "T05 -> done." },
+    { "date": "2026-07-08", "who": "claude", "what": "Added T16: Opus orchestrator system." },
+    { "date": "2026-07-08", "who": "claude", "what": "T16 -> done." },
+    { "date": "2026-07-08", "who": "codex", "what": "T04 done: 272 audio files, 0 failures. package-kit.ps1 verified + zipped 6.8 MB (T05 done)." },
+    { "date": "2026-07-08", "who": "claude", "what": "T11 -> done." },
+    { "date": "2026-07-08", "who": "hermes", "what": "T07 Kit language QA complete: both PDFs reviewed, 0 issues. Kit is upload-ready." },
+    { "date": "2026-07-08", "who": "claude", "what": "T12 promoted backlog -> todo (funnel-measurable pillar)." },
+    { "date": "2026-07-08", "who": "hermes", "what": "T15 -> doing; Reddit/Quora mining notes created with queue-ready drafts." },
+    { "date": "2026-07-08", "who": "codex", "what": "T04 rev2: added slower audio tier (+127 files). Pack now 399 MP3s, 0 failures." },
+    { "date": "2026-07-08", "who": "claude", "what": "T10 progress: Starter System structure staged (manifest, 90-day TOC, gap list). Component builds still missing. Stays Doing." },
+    { "date": "2026-07-09", "who": "rafael", "what": "Rafael approvals: Pinterest Batch 01 pins + Reddit/Quora drafts approved. T15 -> done." },
+    { "date": "2026-07-09", "who": "rafael", "what": "Orchestrator cron confirmed live (n8n import + Telegram cred + CHAT_ID done). T16 fully set." },
+    { "date": "2026-07-09", "who": "claude", "what": "Added T17: rebuild favorite-capture trigger (Preply killed favorite notification emails)." },
+    { "date": "2026-07-09", "who": "claude", "what": "T13 -> done: Pinterest app (ID 1587877) created, form finished, dev-support ticket submitted." },
+    { "date": "2026-07-09", "who": "claude", "what": "T17 built (Option B): MacroDroid -> Apps Script -> Sheet -> n8n -> template + Telegram + 72h follow-up." },
+    { "date": "2026-07-10", "who": "claude", "what": "T13 reviewer response handled: privacy.html rewritten with Pinterest-API disclosures + website claimed. App awaiting re-review." },
+    { "date": "2026-07-10", "who": "rafael", "what": "T08 -> done: Survival Kit LIVE on Payhip (https://payhip.com/b/F5bcR). Unblocks T09." },
+    { "date": "2026-07-10", "who": "rafael", "what": "PDF stamping ENABLED on Payhip. Anti-piracy layer live; T08 fully closed." },
+    { "date": "2026-07-10", "who": "claude", "what": "T14: completed Pinterest OAuth (write scopes) and proved the poster pipeline end-to-end. Blocked on Trial->Standard access upgrade (403 code 29)." },
+    { "date": "2026-07-10", "who": "claude", "what": "T09 -> done: Survival Kit buy section shipped on the landing page (Payhip overlay button F5bcR, $19 vs $180-240/yr anchor). Audio described as three speeds, no human-voice claim." },
+    { "date": "2026-07-11", "who": "claude", "what": "T12 -> doing (landing analytics)." },
+    { "date": "2026-07-12", "who": "claude", "what": "Sprint reframed to S02 'Flagship Sprint', a 30-day push (2026-07-12 -> 08-11) toward a standalone product business + launched flagship course, per the Fable5 Product Build Handoff." },
+    { "date": "2026-07-12", "who": "claude", "what": "S01 work folded onto the SAME board (same project, bigger goal): T01-T17 kept with original IDs. Carryovers stay open: T10 (now Starter Pack build, blocked on syllabus+pipeline), T12 analytics, T14 Pinterest Trial->Standard, T17 favorite-capture. New Track A/B work added as T18-T28." }
   ]
 }
