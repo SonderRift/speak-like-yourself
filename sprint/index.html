@@ -63,6 +63,9 @@ svg text{font-family:'Inter',sans-serif}
 .card:hover{transform:translateY(-2px)}
 .card .top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
 .card h4{font-size:.86rem;font-weight:600;line-height:1.35}
+.tid{display:inline-block;font-size:.6rem;font-weight:700;color:var(--gold);background:var(--panel-d);
+  border:1px solid rgba(217,185,79,.35);border-radius:5px;padding:.12em .42em;margin-right:6px;
+  letter-spacing:.04em;vertical-align:middle;opacity:.92}
 .pts{flex:none;font-size:.66rem;font-weight:700;color:var(--gold);border:1px solid var(--gold);border-radius:999px;padding:.15em .55em;opacity:.9}
 .card p{font-size:.74rem;color:var(--muted);margin-top:6px;line-height:1.45}
 .card .foot{display:flex;gap:8px;align-items:center;margin-top:10px;flex-wrap:wrap}
@@ -145,6 +148,7 @@ function render(D){
   /* header */
   document.getElementById('ghost').textContent = S.id;
   document.getElementById('name').textContent = S.name;
+  document.getElementById('ghost').textContent = S.id;
   document.getElementById('goal').textContent = S.goal;
   const fmt = d => new Date(d + 'T00:00:00').toLocaleDateString('en-GB', {day:'numeric', month:'short'});
   document.getElementById('dates').innerHTML = `<b>${fmt(S.start)}</b> → <b>${fmt(S.end)}</b>`;
@@ -182,7 +186,7 @@ function render(D){
       card.className = 'card';
       card.style.setProperty('--owner', o.color);
       card.innerHTML =
-        `<div class="top"><h4>${c.id==='done' ? '<span class="check">✓</span>' : ''}${t.title}</h4><span class="pts">${t.points}</span></div>
+        `<div class="top"><h4>${c.id==='done' ? '<span class="check">✓</span>' : ''}<span class="tid">${t.id}</span>${t.title}</h4><span class="pts">${t.points}</span></div>
          <p>${t.detail}</p>
          <div class="foot">
            <span class="owner"><i></i>${o.label}</span>
@@ -213,11 +217,16 @@ function burndown(S, tasks, total){
   const Y = v => py + (H - py - 22) * (1 - v / total);
 
   let g = '';
-  /* grid + day labels */
+  /* grid + day labels: label ~weekly so a long sprint stays readable */
+  const step = Math.max(1, Math.round(days / 6));
   for (let i = 0; i <= days; i++){
-    g += `<line x1="${X(i)}" y1="${py}" x2="${X(i)}" y2="${H-22}" stroke="#1C5238" stroke-width="${i===0||i===days?1:.5}" opacity=".6"/>`;
     const d = new Date(start); d.setDate(d.getDate() + i);
-    g += `<text x="${X(i)}" y="${H-8}" font-size="7.5" fill="#A8BFB1" text-anchor="middle">${d.getDate()}</text>`;
+    const label = i === 0 || i === days || (i % step === 0 && days - i >= step * 0.6);
+    g += `<line x1="${X(i)}" y1="${py}" x2="${X(i)}" y2="${H-22}" stroke="#1C5238" stroke-width="${i===0||i===days?1:.5}" opacity="${label?.6:.22}"/>`;
+    if (label){
+      const txt = (i === 0 || d.getDate() === 1) ? `${d.toLocaleString('en',{month:'short'})} ${d.getDate()}` : `${d.getDate()}`;
+      g += `<text x="${X(i)}" y="${H-8}" font-size="7.5" fill="#A8BFB1" text-anchor="middle">${txt}</text>`;
+    }
   }
   g += `<text x="4" y="${Y(total)+3}" font-size="7.5" fill="#A8BFB1">${total}</text>`;
   g += `<text x="4" y="${Y(0)+3}" font-size="7.5" fill="#A8BFB1">0</text>`;
