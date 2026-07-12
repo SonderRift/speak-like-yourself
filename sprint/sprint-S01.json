@@ -1,0 +1,445 @@
+﻿{
+    "sprint":  {
+                   "id":  "S01",
+                   "name":  "Shipping Sprint 01",
+                   "goal":  "Survival Kit live for sale, Starter System assembled, funnel measurable",
+                   "start":  "2026-07-08",
+                   "end":  "2026-07-12",
+                   "updated":  "2026-07-11T08:02:00+07:00",
+                   "updatedBy":  "Orchestrator"
+               },
+    "owners":  {
+                   "claude":  {
+                                  "label":  "Claude Code",
+                                  "color":  "#FF6B4A"
+                              },
+                   "hermes":  {
+                                  "label":  "Hermes",
+                                  "color":  "#D9B94F"
+                              },
+                   "codex":  {
+                                 "label":  "Codex",
+                                 "color":  "#6FC7C0"
+                             },
+                   "rafael":  {
+                                  "label":  "Rafael",
+                                  "color":  "#7BC796"
+                              }
+               },
+    "columns":  [
+                    {
+                        "id":  "backlog",
+                        "label":  "Backlog"
+                    },
+                    {
+                        "id":  "todo",
+                        "label":  "To Do"
+                    },
+                    {
+                        "id":  "doing",
+                        "label":  "Doing"
+                    },
+                    {
+                        "id":  "review",
+                        "label":  "Review"
+                    },
+                    {
+                        "id":  "done",
+                        "label":  "Done"
+                    }
+                ],
+    "tasks":  [
+                  {
+                      "id":  "T01",
+                      "title":  "Parse corpus into Kit data model",
+                      "detail":  "127 phrases / 11 categories + 7 game sets + 7 marker groups from corpus_extract_core.json",
+                      "owner":  "claude",
+                      "points":  2,
+                      "col":  "done",
+                      "tags":  [
+                                   "kit"
+                               ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T02",
+                      "title":  "Survival Kit PDF workbook",
+                      "detail":  "13-page branded workbook, dark + light themes, clickable trial CTA",
+                      "owner":  "claude",
+                      "points":  5,
+                      "col":  "done",
+                      "tags":  [
+                                   "kit"
+                               ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T03",
+                      "title":  "Sprint board build + deploy",
+                      "detail":  "This board: sprint.json + kanban page on GitHub Pages, agents push updates",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "done",
+                      "tags":  [
+                                   "ops"
+                               ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T04",
+                      "title":  "Audio pack (edge-tts)",
+                      "detail":  "399 MP3s: 127 normal + 127 slow + 127 slower + 11 tracks + 7 game, pt-BR voice, 0 failures. Codex leg: spec in codex-task-T04-audio.md",
+                      "owner":  "codex",
+                      "points":  5,
+                      "col":  "done",
+                      "tags":  [
+                                   "kit"
+                               ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T05",
+                      "title":  "Package Kit zip + readme",
+                      "detail":  "Both PDFs + audio pack + buyer readme, ready for Payhip upload",
+                      "owner":  "claude",
+                      "points":  2,
+                      "col":  "done",
+                      "tags":  [
+                                   "kit"
+                               ],
+                      "blockedBy":  [
+                                        "T04"
+                                    ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T06",
+                      "title":  "Payhip listing copy",
+                      "detail":  "Paste-ready title + description + $19 anchor copy (payhip-listing.md) and product thumbnail with both covers",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "done",
+                      "tags":  [
+                                   "launch"
+                               ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T07",
+                      "title":  "Kit language QA pass",
+                      "detail":  "Review both PDFs: naturalness, register, accents, answer-key correctness",
+                      "owner":  "hermes",
+                      "points":  2,
+                      "col":  "done",
+                      "tags":  [
+                                   "kit"
+                               ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T08",
+                      "title":  "Payhip account + product upload",
+                      "detail":  "Create free Payhip account, upload zip, enable per-buyer PDF stamping",
+                      "owner":  "rafael",
+                      "points":  2,
+                      "col":  "done",
+                      "tags":  [
+                                   "launch"
+                               ],
+                      "blockedBy":  [
+                                        "T05",
+                                        "T06"
+                                    ],
+                      "doneDate":  "2026-07-10"
+                  },
+                  {
+                      "id":  "T09",
+                      "title":  "Landing page buy section",
+                      "detail":  "Kit section on speak-like-yourself with Payhip buy button, dark brand",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "done",
+                      "tags":  [
+                                   "launch"
+                               ],
+                      "blockedBy":  [
+                                        "T08"
+                                    ],
+                      "doneDate":  "2026-07-10"
+                  },
+                  {
+                      "id":  "T10",
+                      "title":  "Starter System assembly",
+                      "detail":  "$49.99 anchor: Kit + Eu-series workbooks + scenario packs + conjugations + vocab list",
+                      "owner":  "claude",
+                      "points":  8,
+                      "col":  "doing",
+                      "tags":  [
+                                   "product"
+                               ]
+                  },
+                  {
+                      "id":  "T11",
+                      "title":  "Real review quote on landing page",
+                      "detail":  "Swap blockquote placeholder for an exact named Preply review",
+                      "owner":  "rafael",
+                      "points":  1,
+                      "col":  "done",
+                      "tags":  [
+                                   "site"
+                               ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T12",
+                      "title":  "Landing analytics",
+                      "detail":  "GoatCounter + per-pin src tags so funnel clicks become measurable",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "doing",
+                      "tags":  [
+                                   "site"
+                               ]
+                  },
+                  {
+                      "id":  "T13",
+                      "title":  "Pinterest developer app",
+                      "detail":  "App created (ID 1587877) on Business account. App form finished + dev-support ticket \"Trial approval\" submitted 2026-07-09. Reviewer (Teri) replied 2026-07-09 with two blockers: (1) incomplete privacy policy, (2) URL-account relation not verified. Both resolved 2026-07-10: privacy.html rewritten with Pinterest-API disclosures (API use, non-affiliation, data deletion on disconnect, no resale, contact email) and deployed; website claimed via p:domain_verify meta tag under Settings \u003e Link to Pinterest. Reply drafted for Rafael to send; awaiting re-review of the app.",
+                      "owner":  "rafael",
+                      "points":  2,
+                      "col":  "done",
+                      "tags":  [
+                                   "pinterest"
+                               ],
+                      "doneDate":  "2026-07-09"
+                  },
+                  {
+                      "id":  "T14",
+                      "title":  "Automated pin poster",
+                      "detail":  "Poster workflow BUILT + queue seeded (10 pins). OAuth 2.0 flow completed 2026-07-10: write-scoped token obtained (boards/pins read+write), saved to .credentials/Preply/pinterest-oauth.json. Reads return live prod data; pin body verified correct. BLOCKED: app is Trial tier - pin CREATE in production returns 403 code 29 (Trial can post only to sandbox). Needs Trial-\u003eStandard upgrade, which requires a demo video showing the OAuth flow + API call. Manual posting continues meanwhile.",
+                      "owner":  "claude",
+                      "points":  5,
+                      "col":  "doing",
+                      "tags":  [
+                                   "pinterest"
+                               ]
+                  },
+                  {
+                      "id":  "T15",
+                      "title":  "Reddit/Quora question mining",
+                      "detail":  "Weekly note of real questions matching corpus answers; queue-ready for Draft Factory",
+                      "owner":  "hermes",
+                      "points":  2,
+                      "col":  "done",
+                      "tags":  [
+                                   "content"
+                               ],
+                      "doneDate":  "2026-07-09"
+                  },
+                  {
+                      "id":  "T16",
+                      "title":  "Opus orchestrator system",
+                      "detail":  "orchestrate.ps1: bus reports -\u003e Opus 4.8 decides -\u003e dispatches codex/hermes/worker/scripts. 2x daily n8n cron + on-demand. Dry-run validated.",
+                      "owner":  "claude",
+                      "points":  5,
+                      "col":  "done",
+                      "tags":  [
+
+                               ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T17",
+                      "title":  "Rebuild favorite-capture trigger",
+                      "detail":  "Preply stopped emailing on favorite (push-only now), so the Gmail-triggered fast-responder is dead. BUILT 2026-07-09 (Option B transport, works on WiFi+cellular): MacroDroid (Android notification trigger) -\u003e Google Apps Script web app -\u003e Google Sheet -\u003e n8n Google Sheets Trigger -\u003e reuse existing template + Telegram draft + 72h follow-up. Files: C:\\n8n\\Preply\\preply-favorite-capture.gs + preply-favorite-fastresponder-v2.n8n.json. Name regex verified on sample pushes. Waiting on Rafael: install MacroDroid + deploy Apps Script + import workflow. NOTE: Telegram-as-transport ruled out (bots can\u0027t read other bots\u0027 messages).",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "todo",
+                      "tags":  [
+                                   "funnel"
+                               ]
+                  }
+              ],
+    "log":  [
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "Sprint opened. Kit data model parsed (T01 done)."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "Survival Kit PDFs built: dark + light, 13 pages, linked trial CTA (T02 done)."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "Sprint board built and deployed (T03 done)."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "Model routing set: Codex takes T04 (audio pack, single-scope leg); Claude keeps T06/T10; Hermes keeps T07/T15. Codex dispatched, T04 -\u003e Doing."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "codex",
+                    "what":  "T04 synthesis running: state file live, audio/ folders created (first dispatch was sandbox-blocked, re-dispatched unsandboxed)."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "Payhip listing copy + dual-cover product thumbnail shipped (T06 done)."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "T04 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "T05 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "Added T16: Opus orchestrator system (claude, 5 pts)."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "T16 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "T07 -\u003e doing."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "T10 -\u003e doing."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "codex",
+                    "what":  "T04 done: 272 audio files (127 normal + 127 slow + 11 tracks + 7 game), 0 failures, 9 MB. package-kit.ps1 verified + zipped 6.8 MB (T05 done). Orchestrator dry-run plan executed: T07 Hermes QA + T10 Starter System -\u003e Doing."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "T11 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "Orchestrator fixed: SYSTEM-account credential shim (n8n cron was failing with Not logged in) + Start-Process arg quoting. T07/T10 dispatches had silently failed (arg splitting + wrong username in paths); both re-dispatched."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "T07 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "hermes",
+                    "what":  "T07 Kit language QA complete: both PDFs reviewed, 0 issues. Kit is upload-ready."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "T12 -\u003e todo."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "T12 promoted backlog -\u003e todo (funnel-measurable pillar); analytics build dispatched to worker (build-only, no live push)."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "hermes",
+                    "what":  "T15 backlog -\u003e doing; Reddit/Quora mining notes created from corpus themes with queue-ready drafts under Approval Queue/2026-07-08 Batch 01/reddit-quora/."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "codex",
+                    "what":  "T04 rev2: added slower audio tier (+127 files). Pack now 399 MP3s (127 normal + 127 slow + 127 slower + 11 tracks + 7 game), 0 failures."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "T10 progress: Starter System structure staged (manifest, buyer 90-day TOC + Noite Carioca cover concept, gap list). Component builds still missing (Eu-series, conjugation sheets, scenario packs, vocab list); worker was write-blocked so artifacts staged, not in products/. Stays Doing."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "rafael",
+                    "what":  "Rafael approvals: Pinterest Batch 01 pins approved; Reddit/Quora drafts approved. T15 -\u003e done (mining + queue-ready drafts validated)."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "rafael",
+                    "what":  "Orchestrator cron workflow confirmed live and running (n8n import + Telegram cred + CHAT_ID done). T16 setup no longer pending."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "claude",
+                    "what":  "Added T17: rebuild favorite-capture trigger. Preply killed favorite notification emails (push-only now), breaking the Gmail-triggered fast-responder; plan = phone notification bridge -\u003e n8n webhook."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "claude",
+                    "what":  "T13 -\u003e done: Pinterest app (ID 1587877) created on Business account, app form finished, dev-support ticket submitted. Awaiting Trial-access grant."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "claude",
+                    "what":  "T14 pin poster PARKED: prod + sandbox tokens both return code 3 \u0027consumer type not supported\u0027 until Pinterest grants an access tier. Unblocked T13 dependency; now waiting on Pinterest, not on us. Build resumes when GET /v5/boards returns data."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "claude",
+                    "what":  "T17 built (Option B): MacroDroid -\u003e Apps Script -\u003e Google Sheet -\u003e n8n Sheets Trigger -\u003e existing template + Telegram draft + 72h follow-up. Files in C:\\n8n\\Preply. Name regex dry-run verified."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "hermes",
+                    "what":  "T17 import BLOCKED: validated the workflow JSON (parses, 5 nodes + connections intact, both placeholders present) but n8n MCP can\u0027t import raw JSON (only SDK-code workflows). Import stays a manual \u0027Import from File\u0027 for Rafael, folded into his activation step."
+                },
+                {
+                    "date":  "2026-07-10",
+                    "who":  "claude",
+                    "what":  "T13 reviewer response handled: Pinterest reviewer Teri flagged an incomplete privacy policy + unverified URL-account relation. Rewrote privacy.html with Pinterest-API disclosures (explicit API use, non-affiliation, data deletion on disconnect, no resale, contact email rafael.automations@gmail.com), deployed live. Claimed the website via p:domain_verify meta tag (Settings \u003e Link to Pinterest) added to index.html + privacy.html. Drafted reply for Rafael to send; app awaiting re-review."
+                },
+                {
+                    "date":  "2026-07-10",
+                    "who":  "rafael",
+                    "what":  "T08 -\u003e done: Survival Kit live on Payhip (https://payhip.com/b/F5bcR), Pinterest linked, Stripe payment setup in progress. Unblocks T09 (landing buy section). Added 8 gallery/thumbnail value images + purchase-confirmation email copy."
+                },
+                {
+                    "date":  "2026-07-10",
+                    "who":  "rafael",
+                    "what":  "PDF stamping ENABLED on Payhip (Account \u003e Settings \u003e Advanced Settings). Anti-piracy layer live; T08 fully closed with no open items."
+                },
+                {
+                    "date":  "2026-07-10",
+                    "who":  "claude",
+                    "what":  "T14 -\u003e review: Pinterest app approved. Built daily poster workflow (preply-pinterest-poster.n8n.json) + normalized queue/ledger under C:\n8n\\Preply\\posting. Dry-run passes. Blocked only on regenerating the access token (old one returns 401), then a live single-pin test."
+                },
+                {
+                    "date":  "2026-07-10",
+                    "who":  "claude",
+                    "what":  "T14: completed Pinterest OAuth (write scopes granted) and proved the poster pipeline end-to-end. Blocked on Trial-\u003eStandard access upgrade - Trial tier cannot create pins in production (403 code 29). Next: submit Standard-access application w/ demo video. Tokens saved to .credentials."
+                },
+                {
+                    "date":  "2026-07-10",
+                    "who":  "claude",
+                    "what":  "T09 -\u003e done: Survival Kit buy section shipped on the landing page. Branded dark section (both-editions cover, value bullets, $19 vs $180-240/yr anchor, peek-inside images) with the Payhip overlay buy button for product F5bcR. Audio described accurately at three speeds, no human-voice claim (Rafael\u0027s call). Fixed the same stale audio line in payhip-listing.md."
+                },
+                {
+                    "date":  "2026-07-11",
+                    "who":  "claude",
+                    "what":  "T12 -\u003e doing."
+                }
+            ]
+}
