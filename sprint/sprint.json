@@ -5,7 +5,7 @@
     "goal": "One continuous product push, stretched to a bigger goal: from the shipped Survival Kit to a standalone product business (store /learn/ live, email list, reusable production pipeline) and a launched flagship course. Runs from the real project start (2026-07-08) through 2026-08-11.",
     "start": "2026-07-08",
     "end": "2026-08-11",
-    "updated": "2026-07-12T14:01:00+07:00",
+    "updated": "2026-07-12T16:44:47+07:00",
     "updatedBy": "Fable5"
   },
   "owners": {
@@ -300,11 +300,12 @@
       "detail": "Track A5, highest-leverage parallel build. Generalize the Kit's one-off tooling into a parametrized pipeline driven by one content JSON: workbook generator (dark+light PDFs), edge-tts audio batch (3 speeds + category tracks, TTS only), gallery/thumbnail generator, reusable Payhip listing + buy-section HTML component. Deliverable: documented content-schema so syllabus output plugs straight in. Fable5 handoff owner.",
       "owner": "fable5",
       "points": 8,
-      "col": "doing",
+      "col": "done",
       "tags": [
         "pipeline",
         "product"
-      ]
+      ],
+      "doneDate": "2026-07-12"
     },
     {
       "id": "T21",
@@ -324,11 +325,12 @@
       "detail": "Track A6. Wire the bundle mechanism + Payhip cross-sell / order-bump so Kit buyers see the next rung. Plumbing ships now; the real bundle product waits on Starter Pack / flagship (T10/T25).",
       "owner": "claude",
       "points": 3,
-      "col": "doing",
+      "col": "done",
       "tags": [
         "product",
         "funnel"
-      ]
+      ],
+      "doneDate": "2026-07-12"
     },
     {
       "id": "T23",
@@ -336,11 +338,12 @@
       "detail": "Track A7. Repoint product-promoting content CTAs (Pinterest / Reddit / Shorts) to /learn/; keep the Preply teaching funnel on autopilot. Never steer Preply students off-platform; do steer the content audience to the products.",
       "owner": "claude",
       "points": 2,
-      "col": "backlog",
+      "col": "done",
       "tags": [
         "content",
         "funnel"
-      ]
+      ],
+      "doneDate": "2026-07-12"
     },
     {
       "id": "T24",
@@ -595,6 +598,26 @@
       "date": "2026-07-12",
       "who": "fable5",
       "what": "Track A ships: /learn/ store LIVE (T18), email list live via Payhip $0 product nrNlU w/ 20% Kit cross-sell (T19, T22 plumbing), GoatCounter wired both pages pending Rafael registering site code speaklikeyourself (T12 review), SEO/OG/favicon polish live (T21). Pipeline build T20 -> doing."
+    },
+    {
+      "date": "2026-07-12",
+      "who": "claude",
+      "what": "T20 -> done."
+    },
+    {
+      "date": "2026-07-12",
+      "who": "claude",
+      "what": "T22 -> done."
+    },
+    {
+      "date": "2026-07-12",
+      "who": "claude",
+      "what": "T23 -> done."
+    },
+    {
+      "date": "2026-07-12",
+      "who": "fable5",
+      "what": "T20 pipeline DONE: products/pipeline/ (content schema + validators, workbook PDF gen, edge-tts audio gen, gallery gen, listing gen, store buy-section gen). Survival Kit re-expressed in the schema rebuilds 1:1 (13pp PDFs, 399-file audio plan); mini module full-build incl. audio passed 0 failures. T22 plumbing done (cross-sell live, bundle waits on Track B). T23 done: pin queue + draft factory CTAs repointed to /learn/, trial-CTA wording removed from content drafts."
     }
   ]
 }
