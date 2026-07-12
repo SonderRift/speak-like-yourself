@@ -2,10 +2,10 @@
   "sprint": {
     "id": "S02",
     "name": "Flagship Sprint",
-    "goal": "One continuous product push, stretched to a bigger goal: from the shipped Survival Kit to a standalone product business (store /learn/ live, email list, reusable production pipeline) and a launched flagship course. 30-day sprint; S01 shipping work carried on the same board.",
-    "start": "2026-07-12",
+    "goal": "One continuous product push, stretched to a bigger goal: from the shipped Survival Kit to a standalone product business (store /learn/ live, email list, reusable production pipeline) and a launched flagship course. Runs from the real project start (2026-07-08) through 2026-08-11.",
+    "start": "2026-07-08",
     "end": "2026-08-11",
-    "updated": "2026-07-12T15:10:00+07:00",
+    "updated": "2026-07-12T15:40:00+07:00",
     "updatedBy": "Claude Code"
   },
   "owners": {
@@ -324,7 +324,7 @@
     { "date": "2026-07-10", "who": "claude", "what": "T14: completed Pinterest OAuth (write scopes) and proved the poster pipeline end-to-end. Blocked on Trial->Standard access upgrade (403 code 29)." },
     { "date": "2026-07-10", "who": "claude", "what": "T09 -> done: Survival Kit buy section shipped on the landing page (Payhip overlay button F5bcR, $19 vs $180-240/yr anchor). Audio described as three speeds, no human-voice claim." },
     { "date": "2026-07-11", "who": "claude", "what": "T12 -> doing (landing analytics)." },
-    { "date": "2026-07-12", "who": "claude", "what": "Sprint reframed to S02 'Flagship Sprint', a 30-day push (2026-07-12 -> 08-11) toward a standalone product business + launched flagship course, per the Fable5 Product Build Handoff." },
+    { "date": "2026-07-12", "who": "claude", "what": "Sprint reframed to S02 'Flagship Sprint' (2026-07-08 -> 08-11, dated from the real project start) toward a standalone product business + launched flagship course, per the Fable5 Product Build Handoff." },
     { "date": "2026-07-12", "who": "claude", "what": "S01 work folded onto the SAME board (same project, bigger goal): T01-T17 kept with original IDs. Carryovers stay open: T10 (now Starter Pack build, blocked on syllabus+pipeline), T12 analytics, T14 Pinterest Trial->Standard, T17 favorite-capture. New Track A/B work added as T18-T28." }
   ]
 }
