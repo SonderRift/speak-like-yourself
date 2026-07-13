@@ -1,12 +1,12 @@
 {
   "sprint": {
     "id": "S02",
-    "name": "Flagship Sprint",
-    "goal": "One continuous product push, stretched to a bigger goal: from the shipped Survival Kit to a standalone product business (store /learn/ live, email list, reusable production pipeline) and a launched flagship course. Runs from the real project start (2026-07-08) through 2026-08-11.",
+    "name": "First Sale Sprint",
+    "goal": "North Star: the FIRST SALE. Everything now points at getting the Starter Pack in front of buyers and making its first sale. Milestones: (M1) checkout works, connect a payment processor so Payhip can take money [T29]; (M2) Starter Pack launched, finish the build, upload, publish its buy section [T10, T26]; (M3) drive the sale, the online-presence push (platform posts) plus sales-funnel work become top priority once the Starter Pack is live [T30, T12, T14, T17, T23]. The flagship course [T25] is ON HOLD until the Starter Pack records its first sales. One continuous board from the real project start (2026-07-08).",
     "start": "2026-07-08",
     "end": "2026-08-11",
-    "updated": "2026-07-13T01:49:27+07:00",
-    "updatedBy": "Claude (Fable5)"
+    "updated": "2026-07-13T15:20:00+07:00",
+    "updatedBy": "Claude Code"
   },
   "owners": {
     "claude": {
@@ -360,23 +360,23 @@
     {
       "id": "T25",
       "title": "Flagship course content build ($97-197)",
-      "detail": "Track B. The full method end to end, L1 -> L2 -> L3: the product that replaces taking lessons with Rafael. Workbook PDFs + audio (TTS), optional short video/slides. Built through the T20 pipeline. Blocked on syllabus + pipeline.",
+      "detail": "ON HOLD until the Starter Pack (T10) records its FIRST SALES. Do not start building until money comes in from the Starter Pack; proving demand before investing the big build is the new direction. Track B. The full method end to end, L1 -> L2 -> L3: the product that replaces taking lessons with Rafael. Workbook PDFs + audio (TTS), optional short video/slides. Built through the T20 pipeline once un-held.",
       "owner": "fable5",
       "points": 8,
       "col": "backlog",
       "tags": [
         "product",
-        "flagship"
+        "flagship",
+        "on-hold"
       ],
       "blockedBy": [
-        "T24",
-        "T20"
+        "T10"
       ]
     },
     {
       "id": "T26",
-      "title": "Publish store: real buy sections + bundle",
-      "detail": "Track B. Replace the store's coming-soon rung + teaser with real Starter Pack and flagship buy sections; publish the real bundle via the T22 plumbing. Blocked until the products exist.",
+      "title": "Publish Starter Pack buy section (launch)",
+      "detail": "Milestone M2. Replace the store's Starter Pack coming-soon rung with its real buy section so the Pack is purchasable; this is the launch that opens the door to the first sale. Refocused to the Starter Pack only (unblocked from the flagship). Flagship buy section + the real bundle move to T25's follow-up once the flagship comes off hold.",
       "owner": "claude",
       "points": 3,
       "col": "backlog",
@@ -385,8 +385,22 @@
         "site"
       ],
       "blockedBy": [
-        "T10",
-        "T25"
+        "T10"
+      ]
+    },
+    {
+      "id": "T30",
+      "title": "First-sale push: platform posts + funnel",
+      "detail": "Milestone M3, the engine for the first sale. Once the Starter Pack is live, make online presence + sales funnel the TOP priority: ramp platform posting (Pinterest, Reddit/Quora, YouTube Shorts) pointing at /learn/, tune the email welcome/nurture sequence to soft-pitch the Pack, and read analytics (T12) to turn traffic into the first Starter Pack sale. Iterate offer/copy until it converts.",
+      "owner": "claude",
+      "points": 5,
+      "col": "backlog",
+      "tags": [
+        "funnel",
+        "content"
+      ],
+      "blockedBy": [
+        "T26"
       ]
     },
     {
@@ -660,6 +674,26 @@
       "date": "2026-07-13",
       "who": "claude",
       "what": "T10: workbook redesigned per Rafael's review: numbering now restarts per table (didactic), audio pack reorganized into topic folders matching the book (phrases/06-requests/03.mp3), STREET labels renamed NATIVE, airier type. 610 existing clips migrated, audio resuming in background. Dark PDF staged (viewer lock), light replaced."
+    },
+    {
+      "date": "2026-07-13",
+      "who": "claude",
+      "what": "DIRECTION CHANGE (Rafael): the FIRST SALE is now the final goal. Sprint renamed 'First Sale Sprint'; goal + milestones reframed to M1 checkout works (T29), M2 Starter Pack launched (T10 + T26), M3 online-presence + funnel push (T30). Done tasks and score kept as-is."
+    },
+    {
+      "date": "2026-07-13",
+      "who": "claude",
+      "what": "T25 flagship -> ON HOLD until the Starter Pack (T10) records its first sales (blockedBy T10, on-hold tag). Prove demand before the big build."
+    },
+    {
+      "date": "2026-07-13",
+      "who": "claude",
+      "what": "T26 refocused on publishing the Starter Pack buy section only (unblocked from the flagship, now blockedBy T10); flagship buy section + real bundle deferred to when T25 comes off hold."
+    },
+    {
+      "date": "2026-07-13",
+      "who": "claude",
+      "what": "Added T30: first-sale push (platform posts + sales funnel), the M3 engine, priority once the Starter Pack is launched (blockedBy T26)."
     }
   ]
 }
