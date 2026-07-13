@@ -2,10 +2,10 @@
   "sprint": {
     "id": "S02",
     "name": "First Sale Sprint",
-    "goal": "North Star: the FIRST SALE. Everything now points at getting the Starter Pack in front of buyers and making its first sale. Milestones: (M1) checkout works, connect a payment processor so Payhip can take money [T29]; (M2) Starter Pack launched, finish the build, upload, publish its buy section [T10, T26]; (M3) drive the sale, the online-presence push (platform posts) plus sales-funnel work become top priority once the Starter Pack is live [T30, T12, T14, T17, T23]. The flagship course [T25] is ON HOLD until the Starter Pack records its first sales. One continuous board from the real project start (2026-07-08).",
+    "goal": "MILESTONE M1 REACHED 2026-07-13: checkout works, Stripe + PayPal connected in Payhip (T29 done). North Star: the FIRST SALE. Everything now points at getting the Starter Pack in front of buyers and making its first sale. Milestones: (M1) checkout works, connect a payment processor so Payhip can take money [T29]; (M2) Starter Pack launched, finish the build, upload, publish its buy section [T10, T26]; (M3) drive the sale, the online-presence push (platform posts) plus sales-funnel work become top priority once the Starter Pack is live [T30, T12, T14, T23]. The flagship course [T25] is ON HOLD until the Starter Pack records its first sales. One continuous board from the real project start (2026-07-08).",
     "start": "2026-07-08",
     "end": "2026-08-11",
-    "updated": "2026-07-13T15:20:00+07:00",
+    "updated": "2026-07-13T21:00:00+07:00",
     "updatedBy": "Claude Code"
   },
   "owners": {
@@ -258,17 +258,6 @@
       "doneDate": "2026-07-08"
     },
     {
-      "id": "T17",
-      "title": "Activate favorite-capture trigger",
-      "detail": "Carried from S01. Preply killed favorite notification emails (push-only), breaking the Gmail fast-responder. Rebuild BUILT (MacroDroid -> Apps Script -> Google Sheet -> n8n Sheets Trigger -> template + Telegram draft + 72h follow-up), files in C:\\n8n\\Preply. Waiting on Rafael: install MacroDroid, deploy Apps Script, import workflow.",
-      "owner": "rafael",
-      "points": 3,
-      "col": "todo",
-      "tags": [
-        "funnel"
-      ]
-    },
-    {
       "id": "T18",
       "title": "Deploy /learn/ store separation",
       "detail": "Track A1. git push web/ so the standalone store /learn/ goes live. Verify store renders, Payhip button works, zero Preply CTAs, assets 200, no mobile horizontal scroll. index.html stays teaching-only.",
@@ -406,10 +395,10 @@
     {
       "id": "T27",
       "title": "Fix live Kit listing + covers wording",
-      "detail": "Handoff open item. Live Payhip listing text + PDF covers still say 'spoken by a Brazilian'; audio is TTS, so no human-voice claim. Only Rafael can edit the live listing; re-rendering the covers is a separate render task.",
+      "detail": "Handoff open item. Product description FIXED by Rafael 2026-07-13 (no more human-voice claim). Remaining: re-render the PDF covers that still say 'spoken by a Brazilian' and re-upload the corrected PDFs to Payhip.",
       "owner": "rafael",
       "points": 1,
-      "col": "todo",
+      "col": "doing",
       "tags": [
         "kit",
         "launch"
@@ -418,25 +407,27 @@
     {
       "id": "T28",
       "title": "Resolve open product decisions",
-      "detail": "Handoff section 5, do not guess. (1) Flagship format: Payhip PDF+audio bundle now vs hosted membership later (recommend bundle first). (2) Email provider: Payhip $0 product vs MailerLite free. (3) Own domain: stay on GitHub Pages subpath vs dedicated domain.",
+      "detail": "RESOLVED by Rafael 2026-07-13. (1) Flagship format: Payhip PDF + audio bundle. (2) Email provider: Payhip. (3) Own domain: stay on GitHub Pages for now, move to a dedicated domain once sales start.",
       "owner": "rafael",
       "points": 1,
-      "col": "todo",
+      "col": "done",
       "tags": [
         "decision"
-      ]
+      ],
+      "doneDate": "2026-07-13"
     },
     {
       "id": "T29",
       "title": "URGENT: connect Stripe or PayPal in Payhip",
-      "detail": "Both product pages (F5bcR Kit + nrNlU free phrases) show 'Seller is unable to receive payments' and render NO buy/download button. Checkout is blocked account-wide until a payment processor connects: no Kit sales AND no email capture can happen. Payhip > Settings > Payment details. Found by Fable5 2026-07-12 during live verification; explains 0 orders since launch.",
+      "detail": "DONE 2026-07-13: Rafael connected BOTH PayPal and Stripe to Payhip. Checkout is now unblocked account-wide, buy/download buttons render, Kit sales and email capture can happen. Milestone M1 (checkout works) reached. Was blocking everything since launch (0 orders explained).",
       "owner": "rafael",
       "points": 1,
-      "col": "todo",
+      "col": "done",
       "tags": [
         "launch",
         "urgent"
-      ]
+      ],
+      "doneDate": "2026-07-13"
     }
   ],
   "log": [
@@ -694,6 +685,26 @@
       "date": "2026-07-13",
       "who": "claude",
       "what": "Added T30: first-sale push (platform posts + sales funnel), the M3 engine, priority once the Starter Pack is launched (blockedBy T26)."
+    },
+    {
+      "date": "2026-07-13",
+      "who": "rafael",
+      "what": "T29 -> DONE: PayPal AND Stripe connected to Payhip. Checkout unblocked account-wide. MILESTONE M1 (checkout works) REACHED."
+    },
+    {
+      "date": "2026-07-13",
+      "who": "rafael",
+      "what": "T28 -> done: product decisions resolved. (1) flagship = Payhip PDF+audio bundle, (2) email = Payhip, (3) domain = GitHub Pages for now, own domain when sales start."
+    },
+    {
+      "date": "2026-07-13",
+      "who": "rafael",
+      "what": "T27 -> doing: product description fixed on the live listing; PDF covers re-render + re-upload still remaining."
+    },
+    {
+      "date": "2026-07-13",
+      "who": "rafael",
+      "what": "T17 (favorite-capture trigger) removed from the board on Rafael's word: no longer relevant."
     }
   ]
 }
