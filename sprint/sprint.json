@@ -5,7 +5,7 @@
     "goal": "MILESTONE M1 REACHED 2026-07-13: checkout works, Stripe + PayPal connected in Payhip (T29 done). North Star: the FIRST SALE. Everything now points at getting the Starter Pack in front of buyers and making its first sale. Milestones: (M1) checkout works, connect a payment processor so Payhip can take money [T29]; (M2) Starter Pack launched, finish the build, upload, publish its buy section [T10, T26]; (M3) drive the sale, the online-presence push (platform posts) plus sales-funnel work become top priority once the Starter Pack is live [T30, T12, T14, T23]. The flagship course [T25] is ON HOLD until the Starter Pack records its first sales. One continuous board from the real project start (2026-07-08).",
     "start": "2026-07-08",
     "end": "2026-08-11",
-    "updated": "2026-07-13T21:00:00+07:00",
+    "updated": "2026-07-13T23:57:25+07:00",
     "updatedBy": "Claude Code"
   },
   "owners": {
@@ -398,11 +398,12 @@
       "detail": "Handoff open item. Product description FIXED by Rafael 2026-07-13 (no more human-voice claim). Remaining: re-render the PDF covers that still say 'spoken by a Brazilian' and re-upload the corrected PDFs to Payhip.",
       "owner": "rafael",
       "points": 1,
-      "col": "doing",
+      "col": "done",
       "tags": [
         "kit",
         "launch"
-      ]
+      ],
+      "doneDate": "2026-07-13"
     },
     {
       "id": "T28",
@@ -426,6 +427,18 @@
       "tags": [
         "launch",
         "urgent"
+      ],
+      "doneDate": "2026-07-13"
+    },
+    {
+      "id": "T31",
+      "title": "Survival Kit two-voice audio revoice",
+      "detail": "Replaced the single Antonio audio with a student voice choice: Donato (male) and Brenda (female). Full Azure TTS regen per voice: 127 phrases x 3 speeds + 11 category tracks + 7 game tracks + a ~12s intro (798 clips + 2 intros, 0 failures). README + both workbook PDFs refreshed with a pick-a-voice note, zip rebuilt (803 entries) and re-uploaded to Payhip; listing description updated for the male/female choice. Antonio pack archived, not shipped.",
+      "owner": "claude",
+      "points": 3,
+      "col": "done",
+      "tags": [
+        "kit"
       ],
       "doneDate": "2026-07-13"
     }
@@ -705,6 +718,21 @@
       "date": "2026-07-13",
       "who": "rafael",
       "what": "T17 (favorite-capture trigger) removed from the board on Rafael's word: no longer relevant."
+    },
+    {
+      "date": "2026-07-13",
+      "who": "claude",
+      "what": "Added T31: Survival Kit two-voice audio revoice (claude, 3 pts)."
+    },
+    {
+      "date": "2026-07-13",
+      "who": "claude",
+      "what": "T31 -> done."
+    },
+    {
+      "date": "2026-07-13",
+      "who": "claude",
+      "what": "T27 -> done."
     }
   ]
 }
