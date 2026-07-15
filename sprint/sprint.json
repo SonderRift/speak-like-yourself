@@ -5,8 +5,8 @@
     "goal": "MILESTONE M1 REACHED 2026-07-13: checkout works, Stripe + PayPal connected in Payhip (T29 done). North Star: the FIRST SALE. Everything now points at getting the Starter Pack in front of buyers and making its first sale. Milestones: (M1) checkout works, connect a payment processor so Payhip can take money [T29]; (M2) Starter Pack launched, finish the build, upload, publish its buy section [T10, T26]; (M3) drive the sale, the online-presence push (platform posts) plus sales-funnel work become top priority once the Starter Pack is live [T30, T12, T14, T23]. The flagship course [T25] is ON HOLD until the Starter Pack records its first sales. One continuous board from the real project start (2026-07-08).",
     "start": "2026-07-08",
     "end": "2026-08-11",
-    "updated": "2026-07-14T00:09:20+07:00",
-    "updatedBy": "Orchestrator"
+    "updated": "2026-07-15T16:07:24+07:00",
+    "updatedBy": "Claude Code"
   },
   "owners": {
     "claude": {
@@ -174,16 +174,18 @@
     {
       "id": "T10",
       "title": "Starter Pack content build ($49.99)",
-      "detail": "Carried from S01 (was 'Starter System assembly'). Track B: the bridge from surviving a conversation to building your own sentences (L2, anchored on Eu). S01 staged only structure/manifest before stalling; now rebuilt through the T20 pipeline once the syllabus lands. Blocked on syllabus + pipeline.",
+      "detail": "UMBRELLA, split 2026-07-15 on Rafael's call into three tangible legs: T32 Modules, T33 Support material, T34 Homework material. No work happens on this card; it closes when all three land, and it stays on the board because M2 plus T25/T26 gate on this id. Track B: the bridge from surviving a conversation to building your own sentences (L2, anchored on Eu). Ships as a two-part Payhip bundle (course + Companion), dark + light. Old blockers T20 (done) and T24 (syllabus locked in practice, all 18 modules built) retired at the split.",
       "owner": "fable5",
-      "points": 8,
+      "points": 0,
       "col": "doing",
       "tags": [
-        "product"
+        "product",
+        "epic"
       ],
       "blockedBy": [
-        "T24",
-        "T20"
+        "T32",
+        "T33",
+        "T34"
       ]
     },
     {
@@ -442,6 +444,43 @@
         "kit"
       ],
       "doneDate": "2026-07-13"
+    },
+    {
+      "id": "T32",
+      "title": "Starter Pack - Modules",
+      "detail": "Main body of the course. 18 modules, L2 self-expression anchored on Eu, built from content/modules/m01-m18.json via assemble.py. Dark + light workbooks BUILT (142pp, 1018 phrases) but Rafael is reworking the look himself in the editable .docx, so the layout is not signed off. Module audio NOT built: the old 2349-clip Antonio run was parked and is gone from disk, so it needs a fresh run under the Marcelo + Fernanda standard.",
+      "owner": "claude",
+      "points": 5,
+      "col": "doing",
+      "tags": [
+        "product",
+        "starter-pack"
+      ]
+    },
+    {
+      "id": "T33",
+      "title": "Starter Pack - Support material",
+      "detail": "Companion material. 1004-word Vocabulary Bank + full verb tables + 6 grammar flowcharts; Companion dark + light PDFs built (42pp). Audio pack generating now: 1004 words x 3 speeds x 2 voices = 6024 clips, Fernanda + Marcelo. Then per-speed category tracks, Rafael's flag pass on the review page, a repair tool that re-rolls only the flagged words, and finalize_vocab_voices.py to mask the folders to fernanda/marcelo before any of it ships.",
+      "owner": "claude",
+      "points": 3,
+      "col": "doing",
+      "tags": [
+        "product",
+        "starter-pack",
+        "audio"
+      ]
+    },
+    {
+      "id": "T34",
+      "title": "Starter Pack - Homework material",
+      "detail": "Exercises per module. Not started, nothing on disk, never scoped until now. Needs a call from Rafael before it can be estimated properly: which exercise types per module, whether the answer key ships in the same PDF or separately, and whether homework rides inside the course workbook or becomes a third PDF alongside the course and the Companion.",
+      "owner": "claude",
+      "points": 5,
+      "col": "todo",
+      "tags": [
+        "product",
+        "starter-pack"
+      ]
     }
   ],
   "log": [
@@ -744,6 +783,21 @@
       "date": "2026-07-14",
       "who": "claude",
       "what": "T12 follow-up: GoatCounter views cheat sheet (bookmarkable filters + manual funnel reads) saved at products/site-assets/goatcounter-views.md"
+    },
+    {
+      "date": "2026-07-15",
+      "who": "claude",
+      "what": "T10 SPLIT on Rafael's call, for a better overview and more tangible steps: T32 Starter Pack - Modules, T33 Starter Pack - Support material, T34 Starter Pack - Homework material. T10 stays as a 0-point umbrella blockedBy the three, so M2 and T25/T26 keep gating on the same id. Its stale blockers dropped (T20 done; T24 syllabus locked in practice, all 18 modules built)."
+    },
+    {
+      "date": "2026-07-15",
+      "who": "claude",
+      "what": "T33 -> doing: the Vocabulary Bank audio pack is the Starter Pack's support material. 6024 clips (1004 words x 3 speeds x Fernanda + Marcelo) generating, Companion PDFs already built. Remaining: category tracks, Rafael's flag pass, the repair tool, and the voice-name mask before it ships."
+    },
+    {
+      "date": "2026-07-15",
+      "who": "claude",
+      "what": "T32 -> doing: workbooks built but the module audio pack is missing (the old Antonio run was parked and is off disk), so it needs a fresh run under the Marcelo + Fernanda standard. Added T34: homework material, never scoped before, needs Rafael's exercise-format call. Board total moves 8 -> 13 pts: homework and the module audio rerun were work nobody had counted."
     }
   ]
 }
