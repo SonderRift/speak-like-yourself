@@ -5,7 +5,7 @@
     "goal": "MILESTONE M1 REACHED 2026-07-13: checkout works, Stripe + PayPal connected in Payhip (T29 done). North Star: the FIRST SALE. Everything now points at getting the Starter Pack in front of buyers and making its first sale. Milestones: (M1) checkout works, connect a payment processor so Payhip can take money [T29]; (M2) Starter Pack launched, finish the build, upload, publish its buy section [T10, T26]; (M3) drive the sale, the online-presence push (platform posts) plus sales-funnel work become top priority once the Starter Pack is live [T30, T12, T14, T23]. The flagship course [T25] is ON HOLD until the Starter Pack records its first sales. One continuous board from the real project start (2026-07-08).",
     "start": "2026-07-08",
     "end": "2026-08-11",
-    "updated": "2026-07-15T16:07:24+07:00",
+    "updated": "2026-07-17T11:50:00+07:00",
     "updatedBy": "Claude Code"
   },
   "owners": {
@@ -448,7 +448,7 @@
     {
       "id": "T32",
       "title": "Starter Pack - Modules",
-      "detail": "Main body of the course. 18 modules, L2 self-expression anchored on Eu, built from content/modules/m01-m18.json via assemble.py. Dark + light workbooks BUILT (142pp, 1018 phrases) but Rafael is reworking the look himself in the editable .docx, so the layout is not signed off. Module audio NOT built: the old 2349-clip Antonio run was parked and is gone from disk, so it needs a fresh run under the Marcelo + Fernanda standard.",
+      "detail": "Main body of the course. 18 modules, L2 self-expression anchored on Eu, built from content/modules/m01-m18.json via assemble.py. Dark + light workbooks BUILT (142pp, 1018 phrases) but Rafael is reworking the look himself in the editable .docx, so the layout is not signed off. Module audio NOT built: the old 2349-clip Antonio run was parked and is gone from disk, so it needs a fresh run under the Marcelo + Fernanda standard. When it runs it MUST follow the preply-course-audio skill: Marcelo is normal-only (his slow/slower derive by ffmpeg atempo 0.75/0.60 from approved normals, never Azure), every approved take gets sha256-locked before anything else runs, and packaging ships an allowlist. Deriving cuts the API calls to ~1/3 and collapses the Marcelo QC asymmetry (approve one normal, the slow tiers inherit it).",
       "owner": "claude",
       "points": 5,
       "col": "doing",
@@ -460,15 +460,16 @@
     {
       "id": "T33",
       "title": "Starter Pack - Support material",
-      "detail": "Companion material. 1004-word Vocabulary Bank + full verb tables + 6 grammar flowcharts; Companion dark + light PDFs built (42pp). Audio pack generating now: 1004 words x 3 speeds x 2 voices = 6024 clips, Fernanda + Marcelo. Then per-speed category tracks, Rafael's flag pass on the review page, a repair tool that re-rolls only the flagged words, and finalize_vocab_voices.py to mask the folders to fernanda/marcelo before any of it ships.",
+      "detail": "Companion material. 1004-word Vocabulary Bank + full verb tables + 6 grammar flowcharts; Companion dark + light PDFs built (42pp). AUDIO COMPLETE 2026-07-16: 6024 clips (1004 words x 3 speeds x Fernanda + Marcelo) + 210 category tracks, Rafael flag-passed both voices (196 Marcelo words re-run and picked; 29 Fernanda words fixed via phoneme-corrected Brenda or revoiced to Thalita under her mask), folders masked to fernanda/marcelo. Ships inside build/Brazilian-Portuguese-Starter-Pack.zip (216.2 MB, 6241 entries, audited: 0 voice-id leaks, 0 rejected takes). WARNING before touching this again: 3099 clips are hand-approved and CANNOT be regenerated (Marcelo/Thalita re-roll on every request); they are sha256-locked and the builder refuses to overwrite them. Read the preply-course-audio skill first.",
       "owner": "claude",
       "points": 3,
-      "col": "doing",
+      "col": "done",
       "tags": [
         "product",
         "starter-pack",
         "audio"
-      ]
+      ],
+      "doneDate": "2026-07-16"
     },
     {
       "id": "T34",
@@ -798,6 +799,11 @@
       "date": "2026-07-15",
       "who": "claude",
       "what": "T32 -> doing: workbooks built but the module audio pack is missing (the old Antonio run was parked and is off disk), so it needs a fresh run under the Marcelo + Fernanda standard. Added T34: homework material, never scoped before, needs Rafael's exercise-format call. Board total moves 8 -> 13 pts: homework and the module audio rerun were work nobody had counted."
+    },
+    {
+      "date": "2026-07-17",
+      "who": "claude",
+      "what": "T33 -> done (2026-07-16): Vocabulary Bank audio complete for both voices and packaged into the Starter Pack zip (216.2 MB, audited clean of voice-id leaks and rejected takes). The card detail was stale and actively dangerous: it still read \"audio pack generating now\" with the flag pass, repair tool and voice mask listed as pending, all long done. Also closed the two blockers that made the pack unshippable: a builder that would have re-rolled 2008 approved clips, and a packaging script that threw on line 1. 3099 unreproducible clips are now sha256-locked. Knowledge captured as the preply-course-audio vault skill; T32 detail now points at it before the module audio run."
     }
   ]
 }
