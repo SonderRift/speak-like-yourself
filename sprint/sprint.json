@@ -2,10 +2,10 @@
   "sprint": {
     "id": "S02",
     "name": "First Sale Sprint",
-    "goal": "MILESTONE M1 REACHED 2026-07-13: checkout works, Stripe + PayPal connected in Payhip (T29 done). North Star: the FIRST SALE. Everything now points at getting the Starter Pack in front of buyers and making its first sale. Milestones: (M1) checkout works, connect a payment processor so Payhip can take money [T29]; (M2) Starter Pack launched, finish the build, upload, publish its buy section [T10, T26]; (M3) drive the sale, the online-presence push (platform posts) plus sales-funnel work become top priority once the Starter Pack is live [T30, T12, T14, T23]. The flagship course [T25] is ON HOLD until the Starter Pack records its first sales. One continuous board from the real project start (2026-07-08).",
+    "goal": "MILESTONE M1 REACHED 2026-07-13: checkout works, Stripe + PayPal connected in Payhip (T29 done). North Star: the FIRST SALE. Everything now points at getting the Starter Pack in front of buyers and making its first sale. Milestones: (M1) checkout works, connect a payment processor so Payhip can take money [T29]; (M2) Starter Pack launched, finish the build, upload, publish its buy section [T10, T26]; (M3) drive the sale, the online-presence push (platform posts) plus sales-funnel work become top priority once the Starter Pack is live [T30, T12, T14, T23]. The flagship course [T25] is ON HOLD until the Starter Pack records its first sales. PARALLEL REACH BUILD (Rafael, Divide & Conquer 2026-07-17): do NOT wait for M2 to build distribution. The reach engine is being built NOW, one channel at a time, easiest first, next starts only when the previous is fully running: (1) Bluesky [LIVE 2026-07-20], (2) Threads, (3) Instagram, (4) own blog hub; Pinterest handled in a parallel chat (Standard access GRANTED 2026-07-20). The live Survival Kit at /learn/ is already the destination these channels drive to; the Starter Pack joins as the flagship rung when it launches. One continuous board from the real project start (2026-07-08).",
     "start": "2026-07-08",
     "end": "2026-08-11",
-    "updated": "2026-07-17T11:50:00+07:00",
+    "updated": "2026-07-20T15:33:00+07:00",
     "updatedBy": "Claude Code"
   },
   "owners": {
@@ -228,13 +228,14 @@
     {
       "id": "T14",
       "title": "Pinterest poster: Trial -> Standard upgrade",
-      "detail": "Carried from S01. Poster pipeline proven end-to-end (OAuth write scopes granted, tokens saved to .credentials). PARKED: Trial tier cannot create pins in production (403 code 29). Needs a Standard-access application with a demo video (OAuth flow + API call). Waiting on Pinterest, not on us. Manual posting continues meanwhile.",
+      "detail": "DONE 2026-07-20: Standard access GRANTED for App 1587877 after two prior declines. The demo that won it: pinterest_demo.py rebuilt to do a REAL sandbox pin write + CDN read-back (the rejected demo only printed a JSON body and called nothing). Production POST /v5/pins now works, the 403 code 29 wall is gone. Ownership handed to the PARALLEL Pinterest chat (holds the OAuth token + app secret, auto-refresh working, sandbox artifacts retired); it runs pinterest_post.js as the LEADER (10 posts / 7 days via cadence.json) and writes pinterest-posted.json. Single-owner-per-platform: only that chat posts Pinterest. Poster is built and reconciled; final go on the daily schedule is the parallel chat's call.",
       "owner": "claude",
       "points": 5,
-      "col": "todo",
+      "col": "done",
       "tags": [
         "pinterest"
-      ]
+      ],
+      "doneDate": "2026-07-20"
     },
     {
       "id": "T15",
@@ -481,6 +482,92 @@
       "tags": [
         "product",
         "starter-pack"
+      ]
+    },
+    {
+      "id": "T35",
+      "title": "Automated posting engine (cadence + approval pipeline)",
+      "detail": "DONE 2026-07-20. The reusable machine that runs distribution without Rafael touching a platform. LEADER/FOLLOWER model (Rafael's call, not a shared clock): Pinterest LEADS at 10 posts / 7 days via cadence.json and never waits; other channels FOLLOW by mirror-by-id (post an item only once the leader has posted that same id from pinterest-posted.json), so a follower can never get ahead. Self-contained Node poster + Windows Scheduled Task per platform (replaced the n8n poster after its binary handoff errored in Rafael's build); this script+task pattern is the template for every next channel. APPROVAL PIPELINE: the Approval Queue is split by content-sharing platform group (Pinterest-Bsky-Threads-Instagram / Reddit-Quora / YouTube), each with Approval Queue/ (pending) + Approved/ (approved) subfolders; posting/approve_batch.js is the SINGLE writer of queue population, moving an approved batch to Approved/ and appending it to both platform queues (same ids -> mirror). Full contract in posting/CADENCE-SPEC.md.",
+      "owner": "claude",
+      "points": 5,
+      "col": "done",
+      "tags": [
+        "reach",
+        "ops"
+      ],
+      "doneDate": "2026-07-20"
+    },
+    {
+      "id": "T36",
+      "title": "Reach channel 1: Bluesky LIVE",
+      "detail": "DONE 2026-07-20. First of the four reach channels (easiest first). Account @speaklikeyourself.bsky.social created; approved Batch-01 pin shipped and verified via the public API (image + alt + link facet + 2 tag facets by UTF-8 byte offset). Runs as the FOLLOWER in the leader/follower model: bluesky_post.js ignores cadence.json and mirrors Pinterest by id, fires 3x/day (10:00/14:00/18:00) to backfill then throttles to the leader's pace. Bots are allowed on Bluesky (self-labeled). This proved the script+Scheduled-Task template that channels 2-4 reuse.",
+      "owner": "claude",
+      "points": 3,
+      "col": "done",
+      "tags": [
+        "reach",
+        "bluesky"
+      ],
+      "doneDate": "2026-07-20"
+    },
+    {
+      "id": "T37",
+      "title": "Content batches + Monday cadence (2 weeks ahead)",
+      "detail": "Ongoing. Rafael reviews batches every Monday and wants to stay a week ahead: TWO batches in hand each Monday (current + upcoming week) = a 20-unit runway target, 10-unit floor. The content engine was IDLE since 07-09; restarted 2026-07-20. The working pin pipeline (batch 02/03 proved it): author units.json (phrase|versus|quiz from the approved Survival Kit corpus, no theme repeats) -> scripts/render_pins.py -> queue-items.json -> on approval node approve_batch.js loads both queues. Batches 01, 02, 03 all authored + approved; both queues hold 30 mirrored items = runway 22 = TWO WEEKS AHEAD, buffer flag OK. Footer CTA locked across all three: 'Free Survival Phrases . Trial lessons: link in bio' (middle dot, no '+', so 'Free' does not read as covering the paid trial). OWNER of the Monday generate+flag job = HERMES (primary), Claude Code = BACKUP (batch_buffer_watch.js scheduled Mondays 09:30 flags if runway runs short or no Monday batch landed; it never auto-generates). OPEN GAP: draft_factory.py emits ONE templated concept per run, not 10 shippable units + captions, so it is not yet wired to this pipeline; batches 02/03 were hand-authored. Hermes needs a 10-unit generator to own Mondays cleanly.",
+      "owner": "claude",
+      "points": 3,
+      "col": "doing",
+      "tags": [
+        "reach",
+        "content"
+      ]
+    },
+    {
+      "id": "T38",
+      "title": "Reach channel 2: Threads",
+      "detail": "Next channel after Bluesky is fully running (build order: Bluesky -> Threads -> Instagram -> blog). Reuses the same pin cards (already named in the Pinterest-Bsky-Threads-Instagram content group) and the script+Scheduled-Task template from T35/T36. Meta app in dev mode gives Standard Access with NO app review for the own professional account; add it as a follower in the leader/follower model. Not started; starts when Bluesky is confirmed steady-state.",
+      "owner": "claude",
+      "points": 3,
+      "col": "todo",
+      "tags": [
+        "reach",
+        "threads"
+      ]
+    },
+    {
+      "id": "T39",
+      "title": "Reach channel 3: Instagram",
+      "detail": "Channel 3 of 4. Same Meta app as Threads (dev-mode Standard Access, no app review for the own professional account, 100 posts/24h), same pin cards, same follower pattern. Backlog until Threads is running.",
+      "owner": "claude",
+      "points": 3,
+      "col": "backlog",
+      "tags": [
+        "reach",
+        "instagram"
+      ]
+    },
+    {
+      "id": "T40",
+      "title": "Reach channel 4: own blog hub",
+      "detail": "Channel 4 of 4, the owned surface. Long-form (deliberately NOT in the shared pin group), approval-gated auto-publish. Governed by Google's scaled-content policy, so curated 1-2 pages/week only, not bulk. Backlog until Instagram is running.",
+      "owner": "claude",
+      "points": 5,
+      "col": "backlog",
+      "tags": [
+        "reach",
+        "blog"
+      ]
+    },
+    {
+      "id": "T41",
+      "title": "Mission Control dashboard",
+      "detail": "Requested by Rafael 2026-07-20: a single-page dark-mode one-stop-shop to run the whole post workflow without opening new chats. Platform status strip (LIVE/PLANNED + total posts per platform), latest-post-per-platform cards, batch approval section split current/upcoming week with skimmable PNG carousels + per-batch Approve button (POST -> existing approve_batch.js) + per-batch Flag textbox that writes a note into the batch folder, post-overview schedule (date + pin, due-timing from cadence.json), per-platform analytics panels. Handed to Fable 5 as an extensive build prompt, specced as a small local Node server + one HTML page (a static file cannot approve a batch or persist a flag), wired to the real queue/ledger/batch-folder JSON. Not built yet; awaiting Fable 5.",
+      "owner": "fable5",
+      "points": 5,
+      "col": "doing",
+      "tags": [
+        "reach",
+        "ops"
       ]
     }
   ],
@@ -804,6 +891,41 @@
       "date": "2026-07-17",
       "who": "claude",
       "what": "T33 -> done (2026-07-16): Vocabulary Bank audio complete for both voices and packaged into the Starter Pack zip (216.2 MB, audited clean of voice-id leaks and rejected takes). The card detail was stale and actively dangerous: it still read \"audio pack generating now\" with the flag pass, repair tool and voice mask listed as pending, all long done. Also closed the two blockers that made the pack unshippable: a builder that would have re-rolled 2008 approved clips, and a packaging script that threw on line 1. 3099 unreproducible clips are now sha256-locked. Knowledge captured as the preply-course-audio vault skill; T32 detail now points at it before the module audio run."
+    },
+    {
+      "date": "2026-07-20",
+      "who": "claude",
+      "what": "Board caught up with the reach/distribution workstream it was blind to. Goal augmented with the PARALLEL REACH BUILD (Rafael's Divide & Conquer: build distribution now, do not wait for M2; one channel at a time, Bluesky -> Threads -> Instagram -> blog)."
+    },
+    {
+      "date": "2026-07-20",
+      "who": "claude",
+      "what": "T14 -> done: Pinterest Standard access GRANTED (App 1587877) after two declines; production POST /v5/pins works. Poster ownership handed to the parallel Pinterest chat (leader, 10/7 via cadence.json), single-owner-per-platform."
+    },
+    {
+      "date": "2026-07-20",
+      "who": "claude",
+      "what": "Added T35 Automated posting engine (cadence + approval pipeline) -> done: leader/follower mirror, per-platform Node poster + Scheduled Task template, approve_batch.js single-writer approval flow, Approval Queue split by platform group. Contract in posting/CADENCE-SPEC.md."
+    },
+    {
+      "date": "2026-07-20",
+      "who": "claude",
+      "what": "Added T36 Reach channel 1: Bluesky -> done. @speaklikeyourself.bsky.social live, approved pins posting + verified, runs as the follower (mirror-by-id, 3x/day). Proved the script+Scheduled-Task template for channels 2-4."
+    },
+    {
+      "date": "2026-07-20",
+      "who": "claude",
+      "what": "Added T37 Content batches + Monday cadence -> doing. Engine restarted after idling since 07-09: batches 01/02/03 authored + approved, both queues at 30 mirrored items = 22 runway = two weeks ahead, buffer flag OK. Footer CTA locked across all three ('Free Survival Phrases . Trial lessons: link in bio', middle dot not '+'). Hermes owns Mondays, Claude backup (batch_buffer_watch.js). Open gap: draft_factory emits 1 concept, not 10 units."
+    },
+    {
+      "date": "2026-07-20",
+      "who": "claude",
+      "what": "Added the remaining reach channels as cards: T38 Threads (todo, next), T39 Instagram (backlog), T40 own blog hub (backlog). Each reuses the T35/T36 poster template and (for Threads/IG) the shared pin cards."
+    },
+    {
+      "date": "2026-07-20",
+      "who": "claude",
+      "what": "Added T41 Mission Control dashboard (fable5) -> doing: one-page dark-mode control board for the whole post workflow (platform status, latest posts, batch-approval carousels with Approve + Flag, schedule, analytics). Prompt handed to Fable 5 as a local Node server + HTML page wired to the real queue/ledger/batch JSON. Not built yet."
     }
   ]
 }
