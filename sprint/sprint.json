@@ -5,7 +5,7 @@
                    "goal":  "MILESTONE M1 REACHED 2026-07-13: checkout works, Stripe + PayPal connected in Payhip (T29 done). North Star: the FIRST SALE. Everything now points at getting the Starter Pack in front of buyers and making its first sale. Milestones: (M1) checkout works, connect a payment processor so Payhip can take money [T29]; (M2) Starter Pack launched, finish the build, upload, publish its buy section [T10, T26]; (M3) drive the sale, the online-presence push (platform posts) plus sales-funnel work become top priority once the Starter Pack is live [T30, T12, T14, T23]. The flagship course [T25] is ON HOLD until the Starter Pack records its first sales. PARALLEL REACH BUILD (Rafael, Divide \u0026 Conquer 2026-07-17): do NOT wait for M2 to build distribution. The reach engine is being built NOW, one channel at a time, easiest first, next starts only when the previous is fully running: (1) Bluesky [LIVE 2026-07-20], (2) Threads, (3) Instagram, (4) own blog hub; Pinterest handled in a parallel chat (Standard access GRANTED 2026-07-20). The live Survival Kit at /learn/ is already the destination these channels drive to; the Starter Pack joins as the flagship rung when it launches. One continuous board from the real project start (2026-07-08).",
                    "start":  "2026-07-08",
                    "end":  "2026-08-11",
-                   "updated":  "2026-07-23T17:01:45+07:00",
+                   "updated":  "2026-07-23T19:47:05+07:00",
                    "updatedBy":  "Orchestrator"
                },
     "owners":  {
@@ -537,10 +537,10 @@
                   {
                       "id":  "T39",
                       "title":  "Reach channel 3: Instagram",
-                      "detail":  "Channel 3 of 4. Same Meta app as Threads (dev-mode Standard Access, no app review for the own professional account, 100 posts/24h), same pin cards, same follower pattern. Backlog until Threads is running.",
+                      "detail":  "Reach channel 3: Instagram. BUILT and wired into the leader/follower cadence: instagram_post.js, make_ig_variant.js, backfill_instagram.js, get_ig_token.js, 27KB instagram-queue.json, instagram-credentials.json, META-INSTAGRAM-SETUP.md. 0 posted yet, first posts pending approval. Prioritized AHEAD of Threads (T38), so live channel order is now Bluesky then Instagram then Threads.",
                       "owner":  "claude",
                       "points":  3,
-                      "col":  "backlog",
+                      "col":  "doing",
                       "tags":  [
                                    "reach",
                                    "instagram"
@@ -568,6 +568,30 @@
                       "tags":  [
                                    "reach",
                                    "ops"
+                               ]
+                  },
+                  {
+                      "id":  "T42",
+                      "title":  "Directory migration: C:\\n8n\\Preply -\u003e C:\\n8n\\SLY",
+                      "detail":  "Cutover of all live automation from C:\\n8n\\Preply to C:\\n8n\\SLY, completed 2026-07-23. Robocopy 193 items, rewrote ~21 files hardcoded paths, re-registered every path-dependent Windows task, re-pointed the code junction + launch.json + AGENTS.md + CLAUDE.md alias, bounced mission-control + Audio Council listener. Verified green (dashboard :4000 HTTP 200, council :8787, all tasks resolve to SLY), old tree deleted after dry-run proof. Ref MIGRATION-SCOPE.md + JOURNAL 07-22/07-23.",
+                      "owner":  "claude",
+                      "points":  5,
+                      "col":  "done",
+                      "tags":  [
+                                   "infra",
+                                   "migration"
+                               ]
+                  },
+                  {
+                      "id":  "T43",
+                      "title":  "Orchestrator board-blindness fix (board-digest wiring)",
+                      "detail":  "orchestrate.ps1 fed Opus a sprint.json capped at 12000 chars, truncating after ~T23 so the model never saw active tasks and never pushed board updates (5-run stall). Wired runbook\\board-digest.ps1 in as a pre-step that prepends a complete one-line-per-task digest above the capped json. Verified via DryRun: model now sees the whole board and emits board dispatches. Done 2026-07-23.",
+                      "owner":  "claude",
+                      "points":  2,
+                      "col":  "done",
+                      "tags":  [
+                                   "infra",
+                                   "orchestrator"
                                ]
                   }
               ],
@@ -936,6 +960,26 @@
                     "date":  "2026-07-23",
                     "who":  "orchestrator",
                     "what":  "T32 Modules + T34 Homework reassigned to Rafael: he is hand-building both, to be handed to Claude Code later. Orchestrator holds off dispatching builds for them until reassigned."
+                },
+                {
+                    "date":  "2026-07-23",
+                    "who":  "orchestrator",
+                    "what":  "T39 Instagram -\u003e doing: channel fully built and wired into cadence (0 posted, approval-pending); jumped ahead of Threads (T38, no code yet)."
+                },
+                {
+                    "date":  "2026-07-23",
+                    "who":  "claude",
+                    "what":  "Added T42: Directory migration: C:\\n8n\\Preply -\u003e C:\\n8n\\SLY (claude, 5 pts)."
+                },
+                {
+                    "date":  "2026-07-23",
+                    "who":  "claude",
+                    "what":  "Added T43: Orchestrator board-blindness fix (board-digest wiring) (claude, 2 pts)."
+                },
+                {
+                    "date":  "2026-07-23",
+                    "who":  "orchestrator",
+                    "what":  "Full SLY-project reconciliation sweep: T39 Instagram -\u003e doing (built + in cadence, 0 posted); added T42 Preply-\u003eSLY migration (done) and T43 orchestrator board-blindness fix (done). Flagged for Rafael: T33 Support material marked done but no artifacts on disk; T41 Mission Control still doing (running :4000); T37 cadence engine built (mark done?)."
                 }
             ]
 }
