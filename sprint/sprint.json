@@ -5,7 +5,7 @@
                    "goal":  "MILESTONE M1 REACHED 2026-07-13: checkout works, Stripe + PayPal connected in Payhip (T29 done). North Star: the FIRST SALE. Everything now points at getting the Starter Pack in front of buyers and making its first sale. Milestones: (M1) checkout works, connect a payment processor so Payhip can take money [T29]; (M2) Starter Pack launched, finish the build, upload, publish its buy section [T10, T26]; (M3) drive the sale, the online-presence push (platform posts) plus sales-funnel work become top priority once the Starter Pack is live [T30, T12, T14, T23]. The flagship course [T25] is ON HOLD until the Starter Pack records its first sales. PARALLEL REACH BUILD (Rafael, Divide \u0026 Conquer 2026-07-17): do NOT wait for M2 to build distribution. The reach engine is being built NOW, one channel at a time, easiest first, next starts only when the previous is fully running: (1) Bluesky [LIVE 2026-07-20], (2) Threads, (3) Instagram, (4) own blog hub; Pinterest handled in a parallel chat (Standard access GRANTED 2026-07-20). The live Survival Kit at /learn/ is already the destination these channels drive to; the Starter Pack joins as the flagship rung when it launches. One continuous board from the real project start (2026-07-08).",
                    "start":  "2026-07-08",
                    "end":  "2026-08-11",
-                   "updated":  "2026-07-23T23:24:58+07:00",
+                   "updated":  "2026-07-23T23:25:01+07:00",
                    "updatedBy":  "Orchestrator"
                },
     "owners":  {
@@ -595,6 +595,18 @@
                                    "infra",
                                    "orchestrator"
                                ]
+                  },
+                  {
+                      "id":  "T44",
+                      "title":  "Self-healing posting infrastructure",
+                      "detail":  "Operational hardening of the posting engine (beyond T35): posting_watchdog.js self-heals the Pinterest/Bluesky/Instagram posters, plus POSTING-HEALTH.md, POSTING-GUARDS.md, CADENCE-SPEC.md and the batch_buffer_watch.js buffer keeper. Built and running; carded now for visibility per reconciliation 2026-07-23.",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "done",
+                      "tags":  [
+                                   "posting",
+                                   "infra"
+                               ]
                   }
               ],
     "log":  [
@@ -992,6 +1004,11 @@
                     "date":  "2026-07-23",
                     "who":  "claude",
                     "what":  "T41 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-23",
+                    "who":  "claude",
+                    "what":  "Added T44: Self-healing posting infrastructure (claude, 3 pts)."
                 }
             ]
 }
