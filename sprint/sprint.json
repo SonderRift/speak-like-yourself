@@ -5,7 +5,7 @@
                    "goal":  "MILESTONE M1 REACHED 2026-07-13: checkout works, Stripe + PayPal connected in Payhip (T29 done). North Star: the FIRST SALE. Everything now points at getting the Starter Pack in front of buyers and making its first sale. Milestones: (M1) checkout works, connect a payment processor so Payhip can take money [T29]; (M2) Starter Pack launched, finish the build, upload, publish its buy section [T10, T26]; (M3) drive the sale, the online-presence push (platform posts) plus sales-funnel work become top priority once the Starter Pack is live [T30, T12, T14, T23]. The flagship course [T25] is ON HOLD until the Starter Pack records its first sales. PARALLEL REACH BUILD (Rafael, Divide \u0026 Conquer 2026-07-17): do NOT wait for M2 to build distribution. The reach engine is being built NOW, one channel at a time, easiest first, next starts only when the previous is fully running: (1) Bluesky [LIVE 2026-07-20], (2) Threads, (3) Instagram, (4) own blog hub; Pinterest handled in a parallel chat (Standard access GRANTED 2026-07-20). The live Survival Kit at /learn/ is already the destination these channels drive to; the Starter Pack joins as the flagship rung when it launches. One continuous board from the real project start (2026-07-08).",
                    "start":  "2026-07-08",
                    "end":  "2026-08-11",
-                   "updated":  "2026-07-23T23:24:55+07:00",
+                   "updated":  "2026-07-23T23:24:58+07:00",
                    "updatedBy":  "Orchestrator"
                },
     "owners":  {
@@ -565,11 +565,12 @@
                       "detail":  "Requested by Rafael 2026-07-20: a single-page dark-mode one-stop-shop to run the whole post workflow without opening new chats. Platform status strip (LIVE/PLANNED + total posts per platform), latest-post-per-platform cards, batch approval section split current/upcoming week with skimmable PNG carousels + per-batch Approve button (POST -\u003e existing approve_batch.js) + per-batch Flag textbox that writes a note into the batch folder, post-overview schedule (date + pin, due-timing from cadence.json), per-platform analytics panels. Handed to Fable 5 as an extensive build prompt, specced as a small local Node server + one HTML page (a static file cannot approve a batch or persist a flag), wired to the real queue/ledger/batch-folder JSON. Not built yet; awaiting Fable 5.",
                       "owner":  "fable5",
                       "points":  5,
-                      "col":  "doing",
+                      "col":  "done",
                       "tags":  [
                                    "reach",
                                    "ops"
-                               ]
+                               ],
+                      "doneDate":  "2026-07-23"
                   },
                   {
                       "id":  "T42",
@@ -986,6 +987,11 @@
                     "date":  "2026-07-23",
                     "who":  "claude",
                     "what":  "T37 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-23",
+                    "who":  "claude",
+                    "what":  "T41 -\u003e done."
                 }
             ]
 }
