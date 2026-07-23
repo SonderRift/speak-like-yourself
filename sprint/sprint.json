@@ -5,7 +5,7 @@
                    "goal":  "MILESTONE M1 REACHED 2026-07-13: checkout works, Stripe + PayPal connected in Payhip (T29 done). North Star: the FIRST SALE. Everything now points at getting the Starter Pack in front of buyers and making its first sale. Milestones: (M1) checkout works, connect a payment processor so Payhip can take money [T29]; (M2) Starter Pack launched, finish the build, upload, publish its buy section [T10, T26]; (M3) drive the sale, the online-presence push (platform posts) plus sales-funnel work become top priority once the Starter Pack is live [T30, T12, T14, T23]. The flagship course [T25] is ON HOLD until the Starter Pack records its first sales. PARALLEL REACH BUILD (Rafael, Divide \u0026 Conquer 2026-07-17): do NOT wait for M2 to build distribution. The reach engine is being built NOW, one channel at a time, easiest first, next starts only when the previous is fully running: (1) Bluesky [LIVE 2026-07-20], (2) Threads, (3) Instagram, (4) own blog hub; Pinterest handled in a parallel chat (Standard access GRANTED 2026-07-20). The live Survival Kit at /learn/ is already the destination these channels drive to; the Starter Pack joins as the flagship rung when it launches. One continuous board from the real project start (2026-07-08).",
                    "start":  "2026-07-08",
                    "end":  "2026-08-11",
-                   "updated":  "2026-07-23T16:44:21+07:00",
+                   "updated":  "2026-07-23T17:01:45+07:00",
                    "updatedBy":  "Orchestrator"
                },
     "owners":  {
@@ -449,8 +449,8 @@
                   {
                       "id":  "T32",
                       "title":  "Starter Pack - Modules",
-                      "detail":  "Main body of the course. 18 modules, L2 self-expression anchored on Eu, built from content/modules/m01-m18.json via assemble.py. Dark + light workbooks BUILT (142pp, 1018 phrases) but Rafael is reworking the look himself in the editable .docx, so the layout is not signed off. Module audio NOT built: the old 2349-clip Antonio run was parked and is gone from disk, so it needs a fresh run under the Marcelo + Fernanda standard. When it runs it MUST follow the preply-course-audio skill: Marcelo is normal-only (his slow/slower derive by ffmpeg atempo 0.75/0.60 from approved normals, never Azure), every approved take gets sha256-locked before anything else runs, and packaging ships an allowlist. Deriving cuts the API calls to ~1/3 and collapses the Marcelo QC asymmetry (approve one normal, the slow tiers inherit it).",
-                      "owner":  "claude",
+                      "detail":  "OWNER: Rafael is hand-building this; it will be handed to Claude Code later. Orchestrator: do NOT dispatch a build for this and do NOT move it - Rafael owns it until he reassigns. Main body of the course. 18 modules, L2 self-expression anchored on Eu, built from content/modules/m01-m18.json via assemble.py. Dark + light workbooks BUILT (142pp, 1018 phrases) but Rafael is reworking the look himself in the editable .docx, so the layout is not signed off. Module audio NOT built: the old 2349-clip Antonio run was parked and is gone from disk, so it needs a fresh run under the Marcelo + Fernanda standard. When it runs it MUST follow the preply-course-audio skill: Marcelo is normal-only (his slow/slower derive by ffmpeg atempo 0.75/0.60 from approved normals, never Azure), every approved take gets sha256-locked before anything else runs, and packaging ships an allowlist. Deriving cuts the API calls to ~1/3 and collapses the Marcelo QC asymmetry (approve one normal, the slow tiers inherit it).",
+                      "owner":  "rafael",
                       "points":  5,
                       "col":  "doing",
                       "tags":  [
@@ -475,8 +475,8 @@
                   {
                       "id":  "T34",
                       "title":  "Starter Pack - Homework material",
-                      "detail":  "Exercises per module. Not started, nothing on disk, never scoped until now. Needs a call from Rafael before it can be estimated properly: which exercise types per module, whether the answer key ships in the same PDF or separately, and whether homework rides inside the course workbook or becomes a third PDF alongside the course and the Companion.",
-                      "owner":  "claude",
+                      "detail":  "OWNER: Rafael is hand-building this; it will be handed to Claude Code later. Orchestrator: do NOT dispatch a build for this and do NOT move it - Rafael owns it until he reassigns. Exercises per module. Not started, nothing on disk, never scoped until now. Needs a call from Rafael before it can be estimated properly: which exercise types per module, whether the answer key ships in the same PDF or separately, and whether homework rides inside the course workbook or becomes a third PDF alongside the course and the Companion.",
+                      "owner":  "rafael",
                       "points":  5,
                       "col":  "todo",
                       "tags":  [
@@ -931,6 +931,11 @@
                     "date":  "2026-07-23",
                     "who":  "claude",
                     "what":  "Orchestrator board-blindness resolved: board-digest.ps1 now wired into orchestrate.ps1, full leg status visible. M2 pivot from hold to execution; fresh leg inventory dispatched."
+                },
+                {
+                    "date":  "2026-07-23",
+                    "who":  "orchestrator",
+                    "what":  "T32 Modules + T34 Homework reassigned to Rafael: he is hand-building both, to be handed to Claude Code later. Orchestrator holds off dispatching builds for them until reassigned."
                 }
             ]
 }
