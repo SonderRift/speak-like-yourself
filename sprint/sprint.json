@@ -1,931 +1,936 @@
-{
-  "sprint": {
-    "id": "S02",
-    "name": "First Sale Sprint",
-    "goal": "MILESTONE M1 REACHED 2026-07-13: checkout works, Stripe + PayPal connected in Payhip (T29 done). North Star: the FIRST SALE. Everything now points at getting the Starter Pack in front of buyers and making its first sale. Milestones: (M1) checkout works, connect a payment processor so Payhip can take money [T29]; (M2) Starter Pack launched, finish the build, upload, publish its buy section [T10, T26]; (M3) drive the sale, the online-presence push (platform posts) plus sales-funnel work become top priority once the Starter Pack is live [T30, T12, T14, T23]. The flagship course [T25] is ON HOLD until the Starter Pack records its first sales. PARALLEL REACH BUILD (Rafael, Divide & Conquer 2026-07-17): do NOT wait for M2 to build distribution. The reach engine is being built NOW, one channel at a time, easiest first, next starts only when the previous is fully running: (1) Bluesky [LIVE 2026-07-20], (2) Threads, (3) Instagram, (4) own blog hub; Pinterest handled in a parallel chat (Standard access GRANTED 2026-07-20). The live Survival Kit at /learn/ is already the destination these channels drive to; the Starter Pack joins as the flagship rung when it launches. One continuous board from the real project start (2026-07-08).",
-    "start": "2026-07-08",
-    "end": "2026-08-11",
-    "updated": "2026-07-20T15:33:00+07:00",
-    "updatedBy": "Claude Code"
-  },
-  "owners": {
-    "claude": {
-      "label": "Claude Code",
-      "color": "#FF6B4A"
-    },
-    "fable5": {
-      "label": "Fable5",
-      "color": "#9B7EDE"
-    },
-    "hermes": {
-      "label": "Hermes",
-      "color": "#D9B94F"
-    },
-    "codex": {
-      "label": "Codex",
-      "color": "#6FC7C0"
-    },
-    "rafael": {
-      "label": "Rafael",
-      "color": "#7BC796"
-    }
-  },
-  "columns": [
-    {
-      "id": "backlog",
-      "label": "Backlog"
-    },
-    {
-      "id": "todo",
-      "label": "To Do"
-    },
-    {
-      "id": "doing",
-      "label": "Doing"
-    },
-    {
-      "id": "review",
-      "label": "Review"
-    },
-    {
-      "id": "done",
-      "label": "Done"
-    }
-  ],
-  "tasks": [
-    {
-      "id": "T01",
-      "title": "Parse corpus into Kit data model",
-      "detail": "127 phrases / 11 categories + 7 game sets + 7 marker groups from corpus_extract_core.json",
-      "owner": "claude",
-      "points": 2,
-      "col": "done",
-      "tags": [
-        "kit"
-      ],
-      "doneDate": "2026-07-08"
-    },
-    {
-      "id": "T02",
-      "title": "Survival Kit PDF workbook",
-      "detail": "13-page branded workbook, dark + light themes, clickable trial CTA",
-      "owner": "claude",
-      "points": 5,
-      "col": "done",
-      "tags": [
-        "kit"
-      ],
-      "doneDate": "2026-07-08"
-    },
-    {
-      "id": "T03",
-      "title": "Sprint board build + deploy",
-      "detail": "This board: sprint.json + kanban page on GitHub Pages, agents push updates",
-      "owner": "claude",
-      "points": 3,
-      "col": "done",
-      "tags": [
-        "ops"
-      ],
-      "doneDate": "2026-07-08"
-    },
-    {
-      "id": "T04",
-      "title": "Audio pack (edge-tts)",
-      "detail": "399 MP3s: 127 normal + 127 slow + 127 slower + 11 tracks + 7 game, pt-BR voice, 0 failures. Codex leg: spec in codex-task-T04-audio.md",
-      "owner": "codex",
-      "points": 5,
-      "col": "done",
-      "tags": [
-        "kit"
-      ],
-      "doneDate": "2026-07-08"
-    },
-    {
-      "id": "T05",
-      "title": "Package Kit zip + readme",
-      "detail": "Both PDFs + audio pack + buyer readme, ready for Payhip upload",
-      "owner": "claude",
-      "points": 2,
-      "col": "done",
-      "tags": [
-        "kit"
-      ],
-      "blockedBy": [
-        "T04"
-      ],
-      "doneDate": "2026-07-08"
-    },
-    {
-      "id": "T06",
-      "title": "Payhip listing copy",
-      "detail": "Paste-ready title + description + $19 anchor copy (payhip-listing.md) and product thumbnail with both covers",
-      "owner": "claude",
-      "points": 3,
-      "col": "done",
-      "tags": [
-        "launch"
-      ],
-      "doneDate": "2026-07-08"
-    },
-    {
-      "id": "T07",
-      "title": "Kit language QA pass",
-      "detail": "Review both PDFs: naturalness, register, accents, answer-key correctness",
-      "owner": "hermes",
-      "points": 2,
-      "col": "done",
-      "tags": [
-        "kit"
-      ],
-      "doneDate": "2026-07-08"
-    },
-    {
-      "id": "T08",
-      "title": "Payhip account + product upload",
-      "detail": "Create free Payhip account, upload zip, enable per-buyer PDF stamping",
-      "owner": "rafael",
-      "points": 2,
-      "col": "done",
-      "tags": [
-        "launch"
-      ],
-      "blockedBy": [
-        "T05",
-        "T06"
-      ],
-      "doneDate": "2026-07-10"
-    },
-    {
-      "id": "T09",
-      "title": "Landing page buy section",
-      "detail": "Kit section on speak-like-yourself with Payhip buy button, dark brand",
-      "owner": "claude",
-      "points": 3,
-      "col": "done",
-      "tags": [
-        "launch"
-      ],
-      "blockedBy": [
-        "T08"
-      ],
-      "doneDate": "2026-07-10"
-    },
-    {
-      "id": "T10",
-      "title": "Starter Pack content build ($49.99)",
-      "detail": "UMBRELLA, split 2026-07-15 on Rafael's call into three tangible legs: T32 Modules, T33 Support material, T34 Homework material. No work happens on this card; it closes when all three land, and it stays on the board because M2 plus T25/T26 gate on this id. Track B: the bridge from surviving a conversation to building your own sentences (L2, anchored on Eu). Ships as a two-part Payhip bundle (course + Companion), dark + light. Old blockers T20 (done) and T24 (syllabus locked in practice, all 18 modules built) retired at the split.",
-      "owner": "fable5",
-      "points": 0,
-      "col": "doing",
-      "tags": [
-        "product",
-        "epic"
-      ],
-      "blockedBy": [
-        "T32",
-        "T33",
-        "T34"
-      ]
-    },
-    {
-      "id": "T11",
-      "title": "Real review quote on landing page",
-      "detail": "Swap blockquote placeholder for an exact named Preply review",
-      "owner": "rafael",
-      "points": 1,
-      "col": "done",
-      "tags": [
-        "site"
-      ],
-      "doneDate": "2026-07-08"
-    },
-    {
-      "id": "T12",
-      "title": "Landing analytics",
-      "detail": "Track A3. GoatCounter (free, privacy-friendly) + per-pin src tags on index.html + learn/index.html so store visits, free-PDF opt-ins and Payhip button clicks become measurable.",
-      "owner": "claude",
-      "points": 3,
-      "col": "done",
-      "tags": [
-        "site",
-        "funnel"
-      ],
-      "doneDate": "2026-07-14"
-    },
-    {
-      "id": "T13",
-      "title": "Pinterest developer app",
-      "detail": "App created (ID 1587877) on Business account. Privacy policy + URL verification blockers resolved 2026-07-10; app re-review passed.",
-      "owner": "rafael",
-      "points": 2,
-      "col": "done",
-      "tags": [
-        "pinterest"
-      ],
-      "doneDate": "2026-07-09"
-    },
-    {
-      "id": "T14",
-      "title": "Pinterest poster: Trial -> Standard upgrade",
-      "detail": "DONE 2026-07-20: Standard access GRANTED for App 1587877 after two prior declines. The demo that won it: pinterest_demo.py rebuilt to do a REAL sandbox pin write + CDN read-back (the rejected demo only printed a JSON body and called nothing). Production POST /v5/pins now works, the 403 code 29 wall is gone. Ownership handed to the PARALLEL Pinterest chat (holds the OAuth token + app secret, auto-refresh working, sandbox artifacts retired); it runs pinterest_post.js as the LEADER (10 posts / 7 days via cadence.json) and writes pinterest-posted.json. Single-owner-per-platform: only that chat posts Pinterest. Poster is built and reconciled; final go on the daily schedule is the parallel chat's call.",
-      "owner": "claude",
-      "points": 5,
-      "col": "done",
-      "tags": [
-        "pinterest"
-      ],
-      "doneDate": "2026-07-20"
-    },
-    {
-      "id": "T15",
-      "title": "Reddit/Quora question mining",
-      "detail": "Weekly note of real questions matching corpus answers; queue-ready for Draft Factory",
-      "owner": "hermes",
-      "points": 2,
-      "col": "done",
-      "tags": [
-        "content"
-      ],
-      "doneDate": "2026-07-09"
-    },
-    {
-      "id": "T16",
-      "title": "Opus orchestrator system",
-      "detail": "orchestrate.ps1: bus reports -> Opus 4.8 decides -> dispatches codex/hermes/worker/scripts. 2x daily n8n cron + on-demand. Live 2026-07-09.",
-      "owner": "claude",
-      "points": 5,
-      "col": "done",
-      "tags": [
-        "ops"
-      ],
-      "doneDate": "2026-07-08"
-    },
-    {
-      "id": "T18",
-      "title": "Deploy /learn/ store separation",
-      "detail": "Track A1. git push web/ so the standalone store /learn/ goes live. Verify store renders, Payhip button works, zero Preply CTAs, assets 200, no mobile horizontal scroll. index.html stays teaching-only.",
-      "owner": "claude",
-      "points": 2,
-      "col": "done",
-      "tags": [
-        "ship",
-        "site"
-      ],
-      "doneDate": "2026-07-12"
-    },
-    {
-      "id": "T19",
-      "title": "Email list: $0 opt-in + welcome email",
-      "detail": "Track A2 (#1 compounding asset). Payhip $0 product for survival-phrases.pdf (captures email + delivers + unifies list). Swap free-PDF href + Starter Pack notify CTA in learn/index.html to the $0 URL. Welcome email introduces the ladder, soft-pitches the Kit.",
-      "owner": "claude",
-      "points": 3,
-      "col": "done",
-      "tags": [
-        "ship",
-        "funnel"
-      ],
-      "doneDate": "2026-07-12"
-    },
-    {
-      "id": "T20",
-      "title": "Reusable production pipeline + content schema",
-      "detail": "Track A5, highest-leverage parallel build. Generalize the Kit's one-off tooling into a parametrized pipeline driven by one content JSON: workbook generator (dark+light PDFs), edge-tts audio batch (3 speeds + category tracks, TTS only), gallery/thumbnail generator, reusable Payhip listing + buy-section HTML component. Deliverable: documented content-schema so syllabus output plugs straight in. Fable5 handoff owner.",
-      "owner": "fable5",
-      "points": 8,
-      "col": "done",
-      "tags": [
-        "pipeline",
-        "product"
-      ],
-      "doneDate": "2026-07-12"
-    },
-    {
-      "id": "T21",
-      "title": "Store polish: SEO, OG, favicon, a11y, mobile",
-      "detail": "Track A4. learn/index.html: SEO title/meta, Open Graph + Twitter share image so pins/links preview well, favicon, accessibility pass, mobile QA. Make the store shareable and findable.",
-      "owner": "claude",
-      "points": 3,
-      "col": "done",
-      "tags": [
-        "site"
-      ],
-      "doneDate": "2026-07-12"
-    },
-    {
-      "id": "T22",
-      "title": "Bundle scaffolding + checkout cross-sell",
-      "detail": "Track A6. Wire the bundle mechanism + Payhip cross-sell / order-bump so Kit buyers see the next rung. Plumbing ships now; the real bundle product waits on Starter Pack / flagship (T10/T25).",
-      "owner": "claude",
-      "points": 3,
-      "col": "done",
-      "tags": [
-        "product",
-        "funnel"
-      ],
-      "doneDate": "2026-07-12"
-    },
-    {
-      "id": "T23",
-      "title": "Demand repointing to /learn/",
-      "detail": "Track A7. Repoint product-promoting content CTAs (Pinterest / Reddit / Shorts) to /learn/; keep the Preply teaching funnel on autopilot. Never steer Preply students off-platform; do steer the content audience to the products.",
-      "owner": "claude",
-      "points": 2,
-      "col": "done",
-      "tags": [
-        "content",
-        "funnel"
-      ],
-      "doneDate": "2026-07-12"
-    },
-    {
-      "id": "T24",
-      "title": "Approve Starter Pack + flagship syllabus",
-      "detail": "The gate for Track B. Rafael is brainstorming the syllabus in a dedicated chat (kickoff prompt in Syllabus Brainstorm Prompt.md). Locks each module: title, one-line transformation, 3-6 subtopics, key phrases/structures, mapped to the 3-layer method (L1 Survival, L2 Eu self-expression, L3 fluency via pattern expansion). Arrives as content JSON per the T20 schema.",
-      "owner": "rafael",
-      "points": 3,
-      "col": "doing",
-      "tags": [
-        "syllabus",
-        "product"
-      ]
-    },
-    {
-      "id": "T25",
-      "title": "Flagship course content build ($97-197)",
-      "detail": "ON HOLD until the Starter Pack (T10) records its FIRST SALES. Do not start building until money comes in from the Starter Pack; proving demand before investing the big build is the new direction. Track B. The full method end to end, L1 -> L2 -> L3: the product that replaces taking lessons with Rafael. Workbook PDFs + audio (TTS), optional short video/slides. Built through the T20 pipeline once un-held.",
-      "owner": "fable5",
-      "points": 8,
-      "col": "backlog",
-      "tags": [
-        "product",
-        "flagship",
-        "on-hold"
-      ],
-      "blockedBy": [
-        "T10"
-      ]
-    },
-    {
-      "id": "T26",
-      "title": "Publish Starter Pack buy section (launch)",
-      "detail": "Milestone M2. Replace the store's Starter Pack coming-soon rung with its real buy section so the Pack is purchasable; this is the launch that opens the door to the first sale. Refocused to the Starter Pack only (unblocked from the flagship). Flagship buy section + the real bundle move to T25's follow-up once the flagship comes off hold.",
-      "owner": "claude",
-      "points": 3,
-      "col": "backlog",
-      "tags": [
-        "launch",
-        "site"
-      ],
-      "blockedBy": [
-        "T10"
-      ]
-    },
-    {
-      "id": "T30",
-      "title": "First-sale push: platform posts + funnel",
-      "detail": "Milestone M3, the engine for the first sale. Once the Starter Pack is live, make online presence + sales funnel the TOP priority: ramp platform posting (Pinterest, Reddit/Quora, YouTube Shorts) pointing at /learn/, tune the email welcome/nurture sequence to soft-pitch the Pack, and read analytics (T12) to turn traffic into the first Starter Pack sale. Iterate offer/copy until it converts.",
-      "owner": "claude",
-      "points": 5,
-      "col": "backlog",
-      "tags": [
-        "funnel",
-        "content"
-      ],
-      "blockedBy": [
-        "T26"
-      ]
-    },
-    {
-      "id": "T27",
-      "title": "Fix live Kit listing + covers wording",
-      "detail": "Handoff open item. Product description FIXED by Rafael 2026-07-13 (no more human-voice claim). Remaining: re-render the PDF covers that still say 'spoken by a Brazilian' and re-upload the corrected PDFs to Payhip.",
-      "owner": "rafael",
-      "points": 1,
-      "col": "done",
-      "tags": [
-        "kit",
-        "launch"
-      ],
-      "doneDate": "2026-07-13"
-    },
-    {
-      "id": "T28",
-      "title": "Resolve open product decisions",
-      "detail": "RESOLVED by Rafael 2026-07-13. (1) Flagship format: Payhip PDF + audio bundle. (2) Email provider: Payhip. (3) Own domain: stay on GitHub Pages for now, move to a dedicated domain once sales start.",
-      "owner": "rafael",
-      "points": 1,
-      "col": "done",
-      "tags": [
-        "decision"
-      ],
-      "doneDate": "2026-07-13"
-    },
-    {
-      "id": "T29",
-      "title": "URGENT: connect Stripe or PayPal in Payhip",
-      "detail": "DONE 2026-07-13: Rafael connected BOTH PayPal and Stripe to Payhip. Checkout is now unblocked account-wide, buy/download buttons render, Kit sales and email capture can happen. Milestone M1 (checkout works) reached. Was blocking everything since launch (0 orders explained).",
-      "owner": "rafael",
-      "points": 1,
-      "col": "done",
-      "tags": [
-        "launch",
-        "urgent"
-      ],
-      "doneDate": "2026-07-13"
-    },
-    {
-      "id": "T31",
-      "title": "Survival Kit two-voice audio revoice",
-      "detail": "Replaced the single Antonio audio with a student voice choice: Donato (male) and Brenda (female). Full Azure TTS regen per voice: 127 phrases x 3 speeds + 11 category tracks + 7 game tracks + a ~12s intro (798 clips + 2 intros, 0 failures). README + both workbook PDFs refreshed with a pick-a-voice note, zip rebuilt (803 entries) and re-uploaded to Payhip; listing description updated for the male/female choice. Antonio pack archived, not shipped.",
-      "owner": "claude",
-      "points": 3,
-      "col": "done",
-      "tags": [
-        "kit"
-      ],
-      "doneDate": "2026-07-13"
-    },
-    {
-      "id": "T32",
-      "title": "Starter Pack - Modules",
-      "detail": "Main body of the course. 18 modules, L2 self-expression anchored on Eu, built from content/modules/m01-m18.json via assemble.py. Dark + light workbooks BUILT (142pp, 1018 phrases) but Rafael is reworking the look himself in the editable .docx, so the layout is not signed off. Module audio NOT built: the old 2349-clip Antonio run was parked and is gone from disk, so it needs a fresh run under the Marcelo + Fernanda standard. When it runs it MUST follow the preply-course-audio skill: Marcelo is normal-only (his slow/slower derive by ffmpeg atempo 0.75/0.60 from approved normals, never Azure), every approved take gets sha256-locked before anything else runs, and packaging ships an allowlist. Deriving cuts the API calls to ~1/3 and collapses the Marcelo QC asymmetry (approve one normal, the slow tiers inherit it).",
-      "owner": "claude",
-      "points": 5,
-      "col": "doing",
-      "tags": [
-        "product",
-        "starter-pack"
-      ]
-    },
-    {
-      "id": "T33",
-      "title": "Starter Pack - Support material",
-      "detail": "Companion material. 1004-word Vocabulary Bank + full verb tables + 6 grammar flowcharts; Companion dark + light PDFs built (42pp). AUDIO COMPLETE 2026-07-16: 6024 clips (1004 words x 3 speeds x Fernanda + Marcelo) + 210 category tracks, Rafael flag-passed both voices (196 Marcelo words re-run and picked; 29 Fernanda words fixed via phoneme-corrected Brenda or revoiced to Thalita under her mask), folders masked to fernanda/marcelo. Ships inside build/Brazilian-Portuguese-Starter-Pack.zip (216.2 MB, 6241 entries, audited: 0 voice-id leaks, 0 rejected takes). WARNING before touching this again: 3099 clips are hand-approved and CANNOT be regenerated (Marcelo/Thalita re-roll on every request); they are sha256-locked and the builder refuses to overwrite them. Read the preply-course-audio skill first.",
-      "owner": "claude",
-      "points": 3,
-      "col": "done",
-      "tags": [
-        "product",
-        "starter-pack",
-        "audio"
-      ],
-      "doneDate": "2026-07-16"
-    },
-    {
-      "id": "T34",
-      "title": "Starter Pack - Homework material",
-      "detail": "Exercises per module. Not started, nothing on disk, never scoped until now. Needs a call from Rafael before it can be estimated properly: which exercise types per module, whether the answer key ships in the same PDF or separately, and whether homework rides inside the course workbook or becomes a third PDF alongside the course and the Companion.",
-      "owner": "claude",
-      "points": 5,
-      "col": "todo",
-      "tags": [
-        "product",
-        "starter-pack"
-      ]
-    },
-    {
-      "id": "T35",
-      "title": "Automated posting engine (cadence + approval pipeline)",
-      "detail": "DONE 2026-07-20. The reusable machine that runs distribution without Rafael touching a platform. LEADER/FOLLOWER model (Rafael's call, not a shared clock): Pinterest LEADS at 10 posts / 7 days via cadence.json and never waits; other channels FOLLOW by mirror-by-id (post an item only once the leader has posted that same id from pinterest-posted.json), so a follower can never get ahead. Self-contained Node poster + Windows Scheduled Task per platform (replaced the n8n poster after its binary handoff errored in Rafael's build); this script+task pattern is the template for every next channel. APPROVAL PIPELINE: the Approval Queue is split by content-sharing platform group (Pinterest-Bsky-Threads-Instagram / Reddit-Quora / YouTube), each with Approval Queue/ (pending) + Approved/ (approved) subfolders; posting/approve_batch.js is the SINGLE writer of queue population, moving an approved batch to Approved/ and appending it to both platform queues (same ids -> mirror). Full contract in posting/CADENCE-SPEC.md.",
-      "owner": "claude",
-      "points": 5,
-      "col": "done",
-      "tags": [
-        "reach",
-        "ops"
-      ],
-      "doneDate": "2026-07-20"
-    },
-    {
-      "id": "T36",
-      "title": "Reach channel 1: Bluesky LIVE",
-      "detail": "DONE 2026-07-20. First of the four reach channels (easiest first). Account @speaklikeyourself.bsky.social created; approved Batch-01 pin shipped and verified via the public API (image + alt + link facet + 2 tag facets by UTF-8 byte offset). Runs as the FOLLOWER in the leader/follower model: bluesky_post.js ignores cadence.json and mirrors Pinterest by id, fires 3x/day (10:00/14:00/18:00) to backfill then throttles to the leader's pace. Bots are allowed on Bluesky (self-labeled). This proved the script+Scheduled-Task template that channels 2-4 reuse.",
-      "owner": "claude",
-      "points": 3,
-      "col": "done",
-      "tags": [
-        "reach",
-        "bluesky"
-      ],
-      "doneDate": "2026-07-20"
-    },
-    {
-      "id": "T37",
-      "title": "Content batches + Monday cadence (2 weeks ahead)",
-      "detail": "Ongoing. Rafael reviews batches every Monday and wants to stay a week ahead: TWO batches in hand each Monday (current + upcoming week) = a 20-unit runway target, 10-unit floor. The content engine was IDLE since 07-09; restarted 2026-07-20. The working pin pipeline (batch 02/03 proved it): author units.json (phrase|versus|quiz from the approved Survival Kit corpus, no theme repeats) -> scripts/render_pins.py -> queue-items.json -> on approval node approve_batch.js loads both queues. Batches 01, 02, 03 all authored + approved; both queues hold 30 mirrored items = runway 22 = TWO WEEKS AHEAD, buffer flag OK. Footer CTA locked across all three: 'Free Survival Phrases . Trial lessons: link in bio' (middle dot, no '+', so 'Free' does not read as covering the paid trial). OWNER of the Monday generate+flag job = HERMES (primary), Claude Code = BACKUP (batch_buffer_watch.js scheduled Mondays 09:30 flags if runway runs short or no Monday batch landed; it never auto-generates). OPEN GAP: draft_factory.py emits ONE templated concept per run, not 10 shippable units + captions, so it is not yet wired to this pipeline; batches 02/03 were hand-authored. Hermes needs a 10-unit generator to own Mondays cleanly.",
-      "owner": "claude",
-      "points": 3,
-      "col": "doing",
-      "tags": [
-        "reach",
-        "content"
-      ]
-    },
-    {
-      "id": "T38",
-      "title": "Reach channel 2: Threads",
-      "detail": "Next channel after Bluesky is fully running (build order: Bluesky -> Threads -> Instagram -> blog). Reuses the same pin cards (already named in the Pinterest-Bsky-Threads-Instagram content group) and the script+Scheduled-Task template from T35/T36. Meta app in dev mode gives Standard Access with NO app review for the own professional account; add it as a follower in the leader/follower model. Not started; starts when Bluesky is confirmed steady-state.",
-      "owner": "claude",
-      "points": 3,
-      "col": "todo",
-      "tags": [
-        "reach",
-        "threads"
-      ]
-    },
-    {
-      "id": "T39",
-      "title": "Reach channel 3: Instagram",
-      "detail": "Channel 3 of 4. Same Meta app as Threads (dev-mode Standard Access, no app review for the own professional account, 100 posts/24h), same pin cards, same follower pattern. Backlog until Threads is running.",
-      "owner": "claude",
-      "points": 3,
-      "col": "backlog",
-      "tags": [
-        "reach",
-        "instagram"
-      ]
-    },
-    {
-      "id": "T40",
-      "title": "Reach channel 4: own blog hub",
-      "detail": "Channel 4 of 4, the owned surface. Long-form (deliberately NOT in the shared pin group), approval-gated auto-publish. Governed by Google's scaled-content policy, so curated 1-2 pages/week only, not bulk. Backlog until Instagram is running.",
-      "owner": "claude",
-      "points": 5,
-      "col": "backlog",
-      "tags": [
-        "reach",
-        "blog"
-      ]
-    },
-    {
-      "id": "T41",
-      "title": "Mission Control dashboard",
-      "detail": "Requested by Rafael 2026-07-20: a single-page dark-mode one-stop-shop to run the whole post workflow without opening new chats. Platform status strip (LIVE/PLANNED + total posts per platform), latest-post-per-platform cards, batch approval section split current/upcoming week with skimmable PNG carousels + per-batch Approve button (POST -> existing approve_batch.js) + per-batch Flag textbox that writes a note into the batch folder, post-overview schedule (date + pin, due-timing from cadence.json), per-platform analytics panels. Handed to Fable 5 as an extensive build prompt, specced as a small local Node server + one HTML page (a static file cannot approve a batch or persist a flag), wired to the real queue/ledger/batch-folder JSON. Not built yet; awaiting Fable 5.",
-      "owner": "fable5",
-      "points": 5,
-      "col": "doing",
-      "tags": [
-        "reach",
-        "ops"
-      ]
-    }
-  ],
-  "log": [
-    {
-      "date": "2026-07-08",
-      "who": "claude",
-      "what": "Sprint opened. Kit data model parsed (T01 done)."
-    },
-    {
-      "date": "2026-07-08",
-      "who": "claude",
-      "what": "Survival Kit PDFs built: dark + light, 13 pages, linked trial CTA (T02 done)."
-    },
-    {
-      "date": "2026-07-08",
-      "who": "claude",
-      "what": "Sprint board built and deployed (T03 done)."
-    },
-    {
-      "date": "2026-07-08",
-      "who": "claude",
-      "what": "Model routing set: Codex takes T04 (audio pack); Claude keeps T06/T10; Hermes keeps T07/T15."
-    },
-    {
-      "date": "2026-07-08",
-      "who": "codex",
-      "what": "T04 synthesis running: state file live, audio/ folders created."
-    },
-    {
-      "date": "2026-07-08",
-      "who": "claude",
-      "what": "Payhip listing copy + dual-cover product thumbnail shipped (T06 done)."
-    },
-    {
-      "date": "2026-07-08",
-      "who": "claude",
-      "what": "T04 -> done."
-    },
-    {
-      "date": "2026-07-08",
-      "who": "claude",
-      "what": "T05 -> done."
-    },
-    {
-      "date": "2026-07-08",
-      "who": "claude",
-      "what": "Added T16: Opus orchestrator system."
-    },
-    {
-      "date": "2026-07-08",
-      "who": "claude",
-      "what": "T16 -> done."
-    },
-    {
-      "date": "2026-07-08",
-      "who": "codex",
-      "what": "T04 done: 272 audio files, 0 failures. package-kit.ps1 verified + zipped 6.8 MB (T05 done)."
-    },
-    {
-      "date": "2026-07-08",
-      "who": "claude",
-      "what": "T11 -> done."
-    },
-    {
-      "date": "2026-07-08",
-      "who": "hermes",
-      "what": "T07 Kit language QA complete: both PDFs reviewed, 0 issues. Kit is upload-ready."
-    },
-    {
-      "date": "2026-07-08",
-      "who": "claude",
-      "what": "T12 promoted backlog -> todo (funnel-measurable pillar)."
-    },
-    {
-      "date": "2026-07-08",
-      "who": "hermes",
-      "what": "T15 -> doing; Reddit/Quora mining notes created with queue-ready drafts."
-    },
-    {
-      "date": "2026-07-08",
-      "who": "codex",
-      "what": "T04 rev2: added slower audio tier (+127 files). Pack now 399 MP3s, 0 failures."
-    },
-    {
-      "date": "2026-07-08",
-      "who": "claude",
-      "what": "T10 progress: Starter System structure staged (manifest, 90-day TOC, gap list). Component builds still missing. Stays Doing."
-    },
-    {
-      "date": "2026-07-09",
-      "who": "rafael",
-      "what": "Rafael approvals: Pinterest Batch 01 pins + Reddit/Quora drafts approved. T15 -> done."
-    },
-    {
-      "date": "2026-07-09",
-      "who": "rafael",
-      "what": "Orchestrator cron confirmed live (n8n import + Telegram cred + CHAT_ID done). T16 fully set."
-    },
-    {
-      "date": "2026-07-09",
-      "who": "claude",
-      "what": "Added T17: rebuild favorite-capture trigger (Preply killed favorite notification emails)."
-    },
-    {
-      "date": "2026-07-09",
-      "who": "claude",
-      "what": "T13 -> done: Pinterest app (ID 1587877) created, form finished, dev-support ticket submitted."
-    },
-    {
-      "date": "2026-07-09",
-      "who": "claude",
-      "what": "T17 built (Option B): MacroDroid -> Apps Script -> Sheet -> n8n -> template + Telegram + 72h follow-up."
-    },
-    {
-      "date": "2026-07-10",
-      "who": "claude",
-      "what": "T13 reviewer response handled: privacy.html rewritten with Pinterest-API disclosures + website claimed. App awaiting re-review."
-    },
-    {
-      "date": "2026-07-10",
-      "who": "rafael",
-      "what": "T08 -> done: Survival Kit LIVE on Payhip (https://payhip.com/b/F5bcR). Unblocks T09."
-    },
-    {
-      "date": "2026-07-10",
-      "who": "rafael",
-      "what": "PDF stamping ENABLED on Payhip. Anti-piracy layer live; T08 fully closed."
-    },
-    {
-      "date": "2026-07-10",
-      "who": "claude",
-      "what": "T14: completed Pinterest OAuth (write scopes) and proved the poster pipeline end-to-end. Blocked on Trial->Standard access upgrade (403 code 29)."
-    },
-    {
-      "date": "2026-07-10",
-      "who": "claude",
-      "what": "T09 -> done: Survival Kit buy section shipped on the landing page (Payhip overlay button F5bcR, $19 vs $180-240/yr anchor). Audio described as three speeds, no human-voice claim."
-    },
-    {
-      "date": "2026-07-11",
-      "who": "claude",
-      "what": "T12 -> doing (landing analytics)."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "claude",
-      "what": "Sprint reframed to S02 'Flagship Sprint' (2026-07-08 -> 08-11, dated from the real project start) toward a standalone product business + launched flagship course, per the Fable5 Product Build Handoff."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "claude",
-      "what": "S01 work folded onto the SAME board (same project, bigger goal): T01-T17 kept with original IDs. Carryovers stay open: T10 (now Starter Pack build, blocked on syllabus+pipeline), T12 analytics, T14 Pinterest Trial->Standard, T17 favorite-capture. New Track A/B work added as T18-T28."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "claude",
-      "what": "T18 -> done."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "claude",
-      "what": "T19 -> done."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "claude",
-      "what": "T21 -> done."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "claude",
-      "what": "T12 -> review."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "claude",
-      "what": "T22 -> doing."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "claude",
-      "what": "T20 -> doing."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "fable5",
-      "what": "Track A ships: /learn/ store LIVE (T18), email list live via Payhip $0 product nrNlU w/ 20% Kit cross-sell (T19, T22 plumbing), GoatCounter wired both pages pending Rafael registering site code speaklikeyourself (T12 review), SEO/OG/favicon polish live (T21). Pipeline build T20 -> doing."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "claude",
-      "what": "T20 -> done."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "claude",
-      "what": "T22 -> done."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "claude",
-      "what": "T23 -> done."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "fable5",
-      "what": "T20 pipeline DONE: products/pipeline/ (content schema + validators, workbook PDF gen, edge-tts audio gen, gallery gen, listing gen, store buy-section gen). Survival Kit re-expressed in the schema rebuilds 1:1 (13pp PDFs, 399-file audio plan); mini module full-build incl. audio passed 0 failures. T22 plumbing done (cross-sell live, bundle waits on Track B). T23 done: pin queue + draft factory CTAs repointed to /learn/, trial-CTA wording removed from content drafts."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "claude",
-      "what": "Added T29: URGENT: connect Stripe or PayPal in Payhip (rafael, 1 pts)."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "claude",
-      "what": "T10 -> doing."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "claude",
-      "what": "T10: Starter syllabus locked by Rafael; all 18 modules mapped to verified source files (Starter Pack/00 - Source File Match Map.md). Drafting waits on Rafael's map approval."
-    },
-    {
-      "date": "2026-07-12",
-      "who": "claude",
-      "what": "T10: all 18 Starter Pack module blueprints drafted from the approved source map (C:\\Projects\\Preply\\Starter Pack\\modules\\), with Rafael's 3 map edits applied. Next: content JSON for the T20 pipeline."
-    },
-    {
-      "date": "2026-07-13",
-      "who": "claude",
-      "what": "T10: Starter Pack course BUILT. 94-page dark+light workbooks (18 modules, minimal-pair system, TOC, audio-numbered lines), gallery + listing + buy section done; 2349-clip 3-speed audio pack generating in background. Rafael's L7/L8 adjustments applied. Remaining: audio completion + zip + Payhip upload."
-    },
-    {
-      "date": "2026-07-13",
-      "who": "claude",
-      "what": "T10: workbook redesigned per Rafael's review: numbering now restarts per table (didactic), audio pack reorganized into topic folders matching the book (phrases/06-requests/03.mp3), STREET labels renamed NATIVE, airier type. 610 existing clips migrated, audio resuming in background. Dark PDF staged (viewer lock), light replaced."
-    },
-    {
-      "date": "2026-07-13",
-      "who": "claude",
-      "what": "DIRECTION CHANGE (Rafael): the FIRST SALE is now the final goal. Sprint renamed 'First Sale Sprint'; goal + milestones reframed to M1 checkout works (T29), M2 Starter Pack launched (T10 + T26), M3 online-presence + funnel push (T30). Done tasks and score kept as-is."
-    },
-    {
-      "date": "2026-07-13",
-      "who": "claude",
-      "what": "T25 flagship -> ON HOLD until the Starter Pack (T10) records its first sales (blockedBy T10, on-hold tag). Prove demand before the big build."
-    },
-    {
-      "date": "2026-07-13",
-      "who": "claude",
-      "what": "T26 refocused on publishing the Starter Pack buy section only (unblocked from the flagship, now blockedBy T10); flagship buy section + real bundle deferred to when T25 comes off hold."
-    },
-    {
-      "date": "2026-07-13",
-      "who": "claude",
-      "what": "Added T30: first-sale push (platform posts + sales funnel), the M3 engine, priority once the Starter Pack is launched (blockedBy T26)."
-    },
-    {
-      "date": "2026-07-13",
-      "who": "rafael",
-      "what": "T29 -> DONE: PayPal AND Stripe connected to Payhip. Checkout unblocked account-wide. MILESTONE M1 (checkout works) REACHED."
-    },
-    {
-      "date": "2026-07-13",
-      "who": "rafael",
-      "what": "T28 -> done: product decisions resolved. (1) flagship = Payhip PDF+audio bundle, (2) email = Payhip, (3) domain = GitHub Pages for now, own domain when sales start."
-    },
-    {
-      "date": "2026-07-13",
-      "who": "rafael",
-      "what": "T27 -> doing: product description fixed on the live listing; PDF covers re-render + re-upload still remaining."
-    },
-    {
-      "date": "2026-07-13",
-      "who": "rafael",
-      "what": "T17 (favorite-capture trigger) removed from the board on Rafael's word: no longer relevant."
-    },
-    {
-      "date": "2026-07-13",
-      "who": "claude",
-      "what": "Added T31: Survival Kit two-voice audio revoice (claude, 3 pts)."
-    },
-    {
-      "date": "2026-07-13",
-      "who": "claude",
-      "what": "T31 -> done."
-    },
-    {
-      "date": "2026-07-13",
-      "who": "claude",
-      "what": "T27 -> done."
-    },
-    {
-      "date": "2026-07-14",
-      "who": "claude",
-      "what": "T12 -> done."
-    },
-    {
-      "date": "2026-07-14",
-      "who": "claude",
-      "what": "T12 follow-up: GoatCounter views cheat sheet (bookmarkable filters + manual funnel reads) saved at products/site-assets/goatcounter-views.md"
-    },
-    {
-      "date": "2026-07-15",
-      "who": "claude",
-      "what": "T10 SPLIT on Rafael's call, for a better overview and more tangible steps: T32 Starter Pack - Modules, T33 Starter Pack - Support material, T34 Starter Pack - Homework material. T10 stays as a 0-point umbrella blockedBy the three, so M2 and T25/T26 keep gating on the same id. Its stale blockers dropped (T20 done; T24 syllabus locked in practice, all 18 modules built)."
-    },
-    {
-      "date": "2026-07-15",
-      "who": "claude",
-      "what": "T33 -> doing: the Vocabulary Bank audio pack is the Starter Pack's support material. 6024 clips (1004 words x 3 speeds x Fernanda + Marcelo) generating, Companion PDFs already built. Remaining: category tracks, Rafael's flag pass, the repair tool, and the voice-name mask before it ships."
-    },
-    {
-      "date": "2026-07-15",
-      "who": "claude",
-      "what": "T32 -> doing: workbooks built but the module audio pack is missing (the old Antonio run was parked and is off disk), so it needs a fresh run under the Marcelo + Fernanda standard. Added T34: homework material, never scoped before, needs Rafael's exercise-format call. Board total moves 8 -> 13 pts: homework and the module audio rerun were work nobody had counted."
-    },
-    {
-      "date": "2026-07-17",
-      "who": "claude",
-      "what": "T33 -> done (2026-07-16): Vocabulary Bank audio complete for both voices and packaged into the Starter Pack zip (216.2 MB, audited clean of voice-id leaks and rejected takes). The card detail was stale and actively dangerous: it still read \"audio pack generating now\" with the flag pass, repair tool and voice mask listed as pending, all long done. Also closed the two blockers that made the pack unshippable: a builder that would have re-rolled 2008 approved clips, and a packaging script that threw on line 1. 3099 unreproducible clips are now sha256-locked. Knowledge captured as the preply-course-audio vault skill; T32 detail now points at it before the module audio run."
-    },
-    {
-      "date": "2026-07-20",
-      "who": "claude",
-      "what": "Board caught up with the reach/distribution workstream it was blind to. Goal augmented with the PARALLEL REACH BUILD (Rafael's Divide & Conquer: build distribution now, do not wait for M2; one channel at a time, Bluesky -> Threads -> Instagram -> blog)."
-    },
-    {
-      "date": "2026-07-20",
-      "who": "claude",
-      "what": "T14 -> done: Pinterest Standard access GRANTED (App 1587877) after two declines; production POST /v5/pins works. Poster ownership handed to the parallel Pinterest chat (leader, 10/7 via cadence.json), single-owner-per-platform."
-    },
-    {
-      "date": "2026-07-20",
-      "who": "claude",
-      "what": "Added T35 Automated posting engine (cadence + approval pipeline) -> done: leader/follower mirror, per-platform Node poster + Scheduled Task template, approve_batch.js single-writer approval flow, Approval Queue split by platform group. Contract in posting/CADENCE-SPEC.md."
-    },
-    {
-      "date": "2026-07-20",
-      "who": "claude",
-      "what": "Added T36 Reach channel 1: Bluesky -> done. @speaklikeyourself.bsky.social live, approved pins posting + verified, runs as the follower (mirror-by-id, 3x/day). Proved the script+Scheduled-Task template for channels 2-4."
-    },
-    {
-      "date": "2026-07-20",
-      "who": "claude",
-      "what": "Added T37 Content batches + Monday cadence -> doing. Engine restarted after idling since 07-09: batches 01/02/03 authored + approved, both queues at 30 mirrored items = 22 runway = two weeks ahead, buffer flag OK. Footer CTA locked across all three ('Free Survival Phrases . Trial lessons: link in bio', middle dot not '+'). Hermes owns Mondays, Claude backup (batch_buffer_watch.js). Open gap: draft_factory emits 1 concept, not 10 units."
-    },
-    {
-      "date": "2026-07-20",
-      "who": "claude",
-      "what": "Added the remaining reach channels as cards: T38 Threads (todo, next), T39 Instagram (backlog), T40 own blog hub (backlog). Each reuses the T35/T36 poster template and (for Threads/IG) the shared pin cards."
-    },
-    {
-      "date": "2026-07-20",
-      "who": "claude",
-      "what": "Added T41 Mission Control dashboard (fable5) -> doing: one-page dark-mode control board for the whole post workflow (platform status, latest posts, batch-approval carousels with Approve + Flag, schedule, analytics). Prompt handed to Fable 5 as a local Node server + HTML page wired to the real queue/ledger/batch JSON. Not built yet."
-    }
-  ]
+﻿{
+    "sprint":  {
+                   "id":  "S02",
+                   "name":  "First Sale Sprint",
+                   "goal":  "MILESTONE M1 REACHED 2026-07-13: checkout works, Stripe + PayPal connected in Payhip (T29 done). North Star: the FIRST SALE. Everything now points at getting the Starter Pack in front of buyers and making its first sale. Milestones: (M1) checkout works, connect a payment processor so Payhip can take money [T29]; (M2) Starter Pack launched, finish the build, upload, publish its buy section [T10, T26]; (M3) drive the sale, the online-presence push (platform posts) plus sales-funnel work become top priority once the Starter Pack is live [T30, T12, T14, T23]. The flagship course [T25] is ON HOLD until the Starter Pack records its first sales. PARALLEL REACH BUILD (Rafael, Divide \u0026 Conquer 2026-07-17): do NOT wait for M2 to build distribution. The reach engine is being built NOW, one channel at a time, easiest first, next starts only when the previous is fully running: (1) Bluesky [LIVE 2026-07-20], (2) Threads, (3) Instagram, (4) own blog hub; Pinterest handled in a parallel chat (Standard access GRANTED 2026-07-20). The live Survival Kit at /learn/ is already the destination these channels drive to; the Starter Pack joins as the flagship rung when it launches. One continuous board from the real project start (2026-07-08).",
+                   "start":  "2026-07-08",
+                   "end":  "2026-08-11",
+                   "updated":  "2026-07-23T16:44:21+07:00",
+                   "updatedBy":  "Orchestrator"
+               },
+    "owners":  {
+                   "claude":  {
+                                  "label":  "Claude Code",
+                                  "color":  "#FF6B4A"
+                              },
+                   "fable5":  {
+                                  "label":  "Fable5",
+                                  "color":  "#9B7EDE"
+                              },
+                   "hermes":  {
+                                  "label":  "Hermes",
+                                  "color":  "#D9B94F"
+                              },
+                   "codex":  {
+                                 "label":  "Codex",
+                                 "color":  "#6FC7C0"
+                             },
+                   "rafael":  {
+                                  "label":  "Rafael",
+                                  "color":  "#7BC796"
+                              }
+               },
+    "columns":  [
+                    {
+                        "id":  "backlog",
+                        "label":  "Backlog"
+                    },
+                    {
+                        "id":  "todo",
+                        "label":  "To Do"
+                    },
+                    {
+                        "id":  "doing",
+                        "label":  "Doing"
+                    },
+                    {
+                        "id":  "review",
+                        "label":  "Review"
+                    },
+                    {
+                        "id":  "done",
+                        "label":  "Done"
+                    }
+                ],
+    "tasks":  [
+                  {
+                      "id":  "T01",
+                      "title":  "Parse corpus into Kit data model",
+                      "detail":  "127 phrases / 11 categories + 7 game sets + 7 marker groups from corpus_extract_core.json",
+                      "owner":  "claude",
+                      "points":  2,
+                      "col":  "done",
+                      "tags":  [
+                                   "kit"
+                               ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T02",
+                      "title":  "Survival Kit PDF workbook",
+                      "detail":  "13-page branded workbook, dark + light themes, clickable trial CTA",
+                      "owner":  "claude",
+                      "points":  5,
+                      "col":  "done",
+                      "tags":  [
+                                   "kit"
+                               ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T03",
+                      "title":  "Sprint board build + deploy",
+                      "detail":  "This board: sprint.json + kanban page on GitHub Pages, agents push updates",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "done",
+                      "tags":  [
+                                   "ops"
+                               ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T04",
+                      "title":  "Audio pack (edge-tts)",
+                      "detail":  "399 MP3s: 127 normal + 127 slow + 127 slower + 11 tracks + 7 game, pt-BR voice, 0 failures. Codex leg: spec in codex-task-T04-audio.md",
+                      "owner":  "codex",
+                      "points":  5,
+                      "col":  "done",
+                      "tags":  [
+                                   "kit"
+                               ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T05",
+                      "title":  "Package Kit zip + readme",
+                      "detail":  "Both PDFs + audio pack + buyer readme, ready for Payhip upload",
+                      "owner":  "claude",
+                      "points":  2,
+                      "col":  "done",
+                      "tags":  [
+                                   "kit"
+                               ],
+                      "blockedBy":  [
+                                        "T04"
+                                    ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T06",
+                      "title":  "Payhip listing copy",
+                      "detail":  "Paste-ready title + description + $19 anchor copy (payhip-listing.md) and product thumbnail with both covers",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "done",
+                      "tags":  [
+                                   "launch"
+                               ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T07",
+                      "title":  "Kit language QA pass",
+                      "detail":  "Review both PDFs: naturalness, register, accents, answer-key correctness",
+                      "owner":  "hermes",
+                      "points":  2,
+                      "col":  "done",
+                      "tags":  [
+                                   "kit"
+                               ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T08",
+                      "title":  "Payhip account + product upload",
+                      "detail":  "Create free Payhip account, upload zip, enable per-buyer PDF stamping",
+                      "owner":  "rafael",
+                      "points":  2,
+                      "col":  "done",
+                      "tags":  [
+                                   "launch"
+                               ],
+                      "blockedBy":  [
+                                        "T05",
+                                        "T06"
+                                    ],
+                      "doneDate":  "2026-07-10"
+                  },
+                  {
+                      "id":  "T09",
+                      "title":  "Landing page buy section",
+                      "detail":  "Kit section on speak-like-yourself with Payhip buy button, dark brand",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "done",
+                      "tags":  [
+                                   "launch"
+                               ],
+                      "blockedBy":  [
+                                        "T08"
+                                    ],
+                      "doneDate":  "2026-07-10"
+                  },
+                  {
+                      "id":  "T10",
+                      "title":  "Starter Pack content build ($49.99)",
+                      "detail":  "UMBRELLA, split 2026-07-15 on Rafael\u0027s call into three tangible legs: T32 Modules, T33 Support material, T34 Homework material. No work happens on this card; it closes when all three land, and it stays on the board because M2 plus T25/T26 gate on this id. Track B: the bridge from surviving a conversation to building your own sentences (L2, anchored on Eu). Ships as a two-part Payhip bundle (course + Companion), dark + light. Old blockers T20 (done) and T24 (syllabus locked in practice, all 18 modules built) retired at the split.",
+                      "owner":  "fable5",
+                      "points":  0,
+                      "col":  "doing",
+                      "tags":  [
+                                   "product",
+                                   "epic"
+                               ],
+                      "blockedBy":  [
+                                        "T32",
+                                        "T33",
+                                        "T34"
+                                    ]
+                  },
+                  {
+                      "id":  "T11",
+                      "title":  "Real review quote on landing page",
+                      "detail":  "Swap blockquote placeholder for an exact named Preply review",
+                      "owner":  "rafael",
+                      "points":  1,
+                      "col":  "done",
+                      "tags":  [
+                                   "site"
+                               ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T12",
+                      "title":  "Landing analytics",
+                      "detail":  "Track A3. GoatCounter (free, privacy-friendly) + per-pin src tags on index.html + learn/index.html so store visits, free-PDF opt-ins and Payhip button clicks become measurable.",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "done",
+                      "tags":  [
+                                   "site",
+                                   "funnel"
+                               ],
+                      "doneDate":  "2026-07-14"
+                  },
+                  {
+                      "id":  "T13",
+                      "title":  "Pinterest developer app",
+                      "detail":  "App created (ID 1587877) on Business account. Privacy policy + URL verification blockers resolved 2026-07-10; app re-review passed.",
+                      "owner":  "rafael",
+                      "points":  2,
+                      "col":  "done",
+                      "tags":  [
+                                   "pinterest"
+                               ],
+                      "doneDate":  "2026-07-09"
+                  },
+                  {
+                      "id":  "T14",
+                      "title":  "Pinterest poster: Trial -\u003e Standard upgrade",
+                      "detail":  "DONE 2026-07-20: Standard access GRANTED for App 1587877 after two prior declines. The demo that won it: pinterest_demo.py rebuilt to do a REAL sandbox pin write + CDN read-back (the rejected demo only printed a JSON body and called nothing). Production POST /v5/pins now works, the 403 code 29 wall is gone. Ownership handed to the PARALLEL Pinterest chat (holds the OAuth token + app secret, auto-refresh working, sandbox artifacts retired); it runs pinterest_post.js as the LEADER (10 posts / 7 days via cadence.json) and writes pinterest-posted.json. Single-owner-per-platform: only that chat posts Pinterest. Poster is built and reconciled; final go on the daily schedule is the parallel chat\u0027s call.",
+                      "owner":  "claude",
+                      "points":  5,
+                      "col":  "done",
+                      "tags":  [
+                                   "pinterest"
+                               ],
+                      "doneDate":  "2026-07-20"
+                  },
+                  {
+                      "id":  "T15",
+                      "title":  "Reddit/Quora question mining",
+                      "detail":  "Weekly note of real questions matching corpus answers; queue-ready for Draft Factory",
+                      "owner":  "hermes",
+                      "points":  2,
+                      "col":  "done",
+                      "tags":  [
+                                   "content"
+                               ],
+                      "doneDate":  "2026-07-09"
+                  },
+                  {
+                      "id":  "T16",
+                      "title":  "Opus orchestrator system",
+                      "detail":  "orchestrate.ps1: bus reports -\u003e Opus 4.8 decides -\u003e dispatches codex/hermes/worker/scripts. 2x daily n8n cron + on-demand. Live 2026-07-09.",
+                      "owner":  "claude",
+                      "points":  5,
+                      "col":  "done",
+                      "tags":  [
+                                   "ops"
+                               ],
+                      "doneDate":  "2026-07-08"
+                  },
+                  {
+                      "id":  "T18",
+                      "title":  "Deploy /learn/ store separation",
+                      "detail":  "Track A1. git push web/ so the standalone store /learn/ goes live. Verify store renders, Payhip button works, zero Preply CTAs, assets 200, no mobile horizontal scroll. index.html stays teaching-only.",
+                      "owner":  "claude",
+                      "points":  2,
+                      "col":  "done",
+                      "tags":  [
+                                   "ship",
+                                   "site"
+                               ],
+                      "doneDate":  "2026-07-12"
+                  },
+                  {
+                      "id":  "T19",
+                      "title":  "Email list: $0 opt-in + welcome email",
+                      "detail":  "Track A2 (#1 compounding asset). Payhip $0 product for survival-phrases.pdf (captures email + delivers + unifies list). Swap free-PDF href + Starter Pack notify CTA in learn/index.html to the $0 URL. Welcome email introduces the ladder, soft-pitches the Kit.",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "done",
+                      "tags":  [
+                                   "ship",
+                                   "funnel"
+                               ],
+                      "doneDate":  "2026-07-12"
+                  },
+                  {
+                      "id":  "T20",
+                      "title":  "Reusable production pipeline + content schema",
+                      "detail":  "Track A5, highest-leverage parallel build. Generalize the Kit\u0027s one-off tooling into a parametrized pipeline driven by one content JSON: workbook generator (dark+light PDFs), edge-tts audio batch (3 speeds + category tracks, TTS only), gallery/thumbnail generator, reusable Payhip listing + buy-section HTML component. Deliverable: documented content-schema so syllabus output plugs straight in. Fable5 handoff owner.",
+                      "owner":  "fable5",
+                      "points":  8,
+                      "col":  "done",
+                      "tags":  [
+                                   "pipeline",
+                                   "product"
+                               ],
+                      "doneDate":  "2026-07-12"
+                  },
+                  {
+                      "id":  "T21",
+                      "title":  "Store polish: SEO, OG, favicon, a11y, mobile",
+                      "detail":  "Track A4. learn/index.html: SEO title/meta, Open Graph + Twitter share image so pins/links preview well, favicon, accessibility pass, mobile QA. Make the store shareable and findable.",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "done",
+                      "tags":  [
+                                   "site"
+                               ],
+                      "doneDate":  "2026-07-12"
+                  },
+                  {
+                      "id":  "T22",
+                      "title":  "Bundle scaffolding + checkout cross-sell",
+                      "detail":  "Track A6. Wire the bundle mechanism + Payhip cross-sell / order-bump so Kit buyers see the next rung. Plumbing ships now; the real bundle product waits on Starter Pack / flagship (T10/T25).",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "done",
+                      "tags":  [
+                                   "product",
+                                   "funnel"
+                               ],
+                      "doneDate":  "2026-07-12"
+                  },
+                  {
+                      "id":  "T23",
+                      "title":  "Demand repointing to /learn/",
+                      "detail":  "Track A7. Repoint product-promoting content CTAs (Pinterest / Reddit / Shorts) to /learn/; keep the Preply teaching funnel on autopilot. Never steer Preply students off-platform; do steer the content audience to the products.",
+                      "owner":  "claude",
+                      "points":  2,
+                      "col":  "done",
+                      "tags":  [
+                                   "content",
+                                   "funnel"
+                               ],
+                      "doneDate":  "2026-07-12"
+                  },
+                  {
+                      "id":  "T24",
+                      "title":  "Approve Starter Pack + flagship syllabus",
+                      "detail":  "The gate for Track B. Rafael is brainstorming the syllabus in a dedicated chat (kickoff prompt in Syllabus Brainstorm Prompt.md). Locks each module: title, one-line transformation, 3-6 subtopics, key phrases/structures, mapped to the 3-layer method (L1 Survival, L2 Eu self-expression, L3 fluency via pattern expansion). Arrives as content JSON per the T20 schema.",
+                      "owner":  "rafael",
+                      "points":  3,
+                      "col":  "doing",
+                      "tags":  [
+                                   "syllabus",
+                                   "product"
+                               ]
+                  },
+                  {
+                      "id":  "T25",
+                      "title":  "Flagship course content build ($97-197)",
+                      "detail":  "ON HOLD until the Starter Pack (T10) records its FIRST SALES. Do not start building until money comes in from the Starter Pack; proving demand before investing the big build is the new direction. Track B. The full method end to end, L1 -\u003e L2 -\u003e L3: the product that replaces taking lessons with Rafael. Workbook PDFs + audio (TTS), optional short video/slides. Built through the T20 pipeline once un-held.",
+                      "owner":  "fable5",
+                      "points":  8,
+                      "col":  "backlog",
+                      "tags":  [
+                                   "product",
+                                   "flagship",
+                                   "on-hold"
+                               ],
+                      "blockedBy":  [
+                                        "T10"
+                                    ]
+                  },
+                  {
+                      "id":  "T26",
+                      "title":  "Publish Starter Pack buy section (launch)",
+                      "detail":  "Milestone M2. Replace the store\u0027s Starter Pack coming-soon rung with its real buy section so the Pack is purchasable; this is the launch that opens the door to the first sale. Refocused to the Starter Pack only (unblocked from the flagship). Flagship buy section + the real bundle move to T25\u0027s follow-up once the flagship comes off hold.",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "backlog",
+                      "tags":  [
+                                   "launch",
+                                   "site"
+                               ],
+                      "blockedBy":  [
+                                        "T10"
+                                    ]
+                  },
+                  {
+                      "id":  "T30",
+                      "title":  "First-sale push: platform posts + funnel",
+                      "detail":  "Milestone M3, the engine for the first sale. Once the Starter Pack is live, make online presence + sales funnel the TOP priority: ramp platform posting (Pinterest, Reddit/Quora, YouTube Shorts) pointing at /learn/, tune the email welcome/nurture sequence to soft-pitch the Pack, and read analytics (T12) to turn traffic into the first Starter Pack sale. Iterate offer/copy until it converts.",
+                      "owner":  "claude",
+                      "points":  5,
+                      "col":  "backlog",
+                      "tags":  [
+                                   "funnel",
+                                   "content"
+                               ],
+                      "blockedBy":  [
+                                        "T26"
+                                    ]
+                  },
+                  {
+                      "id":  "T27",
+                      "title":  "Fix live Kit listing + covers wording",
+                      "detail":  "Handoff open item. Product description FIXED by Rafael 2026-07-13 (no more human-voice claim). Remaining: re-render the PDF covers that still say \u0027spoken by a Brazilian\u0027 and re-upload the corrected PDFs to Payhip.",
+                      "owner":  "rafael",
+                      "points":  1,
+                      "col":  "done",
+                      "tags":  [
+                                   "kit",
+                                   "launch"
+                               ],
+                      "doneDate":  "2026-07-13"
+                  },
+                  {
+                      "id":  "T28",
+                      "title":  "Resolve open product decisions",
+                      "detail":  "RESOLVED by Rafael 2026-07-13. (1) Flagship format: Payhip PDF + audio bundle. (2) Email provider: Payhip. (3) Own domain: stay on GitHub Pages for now, move to a dedicated domain once sales start.",
+                      "owner":  "rafael",
+                      "points":  1,
+                      "col":  "done",
+                      "tags":  [
+                                   "decision"
+                               ],
+                      "doneDate":  "2026-07-13"
+                  },
+                  {
+                      "id":  "T29",
+                      "title":  "URGENT: connect Stripe or PayPal in Payhip",
+                      "detail":  "DONE 2026-07-13: Rafael connected BOTH PayPal and Stripe to Payhip. Checkout is now unblocked account-wide, buy/download buttons render, Kit sales and email capture can happen. Milestone M1 (checkout works) reached. Was blocking everything since launch (0 orders explained).",
+                      "owner":  "rafael",
+                      "points":  1,
+                      "col":  "done",
+                      "tags":  [
+                                   "launch",
+                                   "urgent"
+                               ],
+                      "doneDate":  "2026-07-13"
+                  },
+                  {
+                      "id":  "T31",
+                      "title":  "Survival Kit two-voice audio revoice",
+                      "detail":  "Replaced the single Antonio audio with a student voice choice: Donato (male) and Brenda (female). Full Azure TTS regen per voice: 127 phrases x 3 speeds + 11 category tracks + 7 game tracks + a ~12s intro (798 clips + 2 intros, 0 failures). README + both workbook PDFs refreshed with a pick-a-voice note, zip rebuilt (803 entries) and re-uploaded to Payhip; listing description updated for the male/female choice. Antonio pack archived, not shipped.",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "done",
+                      "tags":  [
+                                   "kit"
+                               ],
+                      "doneDate":  "2026-07-13"
+                  },
+                  {
+                      "id":  "T32",
+                      "title":  "Starter Pack - Modules",
+                      "detail":  "Main body of the course. 18 modules, L2 self-expression anchored on Eu, built from content/modules/m01-m18.json via assemble.py. Dark + light workbooks BUILT (142pp, 1018 phrases) but Rafael is reworking the look himself in the editable .docx, so the layout is not signed off. Module audio NOT built: the old 2349-clip Antonio run was parked and is gone from disk, so it needs a fresh run under the Marcelo + Fernanda standard. When it runs it MUST follow the preply-course-audio skill: Marcelo is normal-only (his slow/slower derive by ffmpeg atempo 0.75/0.60 from approved normals, never Azure), every approved take gets sha256-locked before anything else runs, and packaging ships an allowlist. Deriving cuts the API calls to ~1/3 and collapses the Marcelo QC asymmetry (approve one normal, the slow tiers inherit it).",
+                      "owner":  "claude",
+                      "points":  5,
+                      "col":  "doing",
+                      "tags":  [
+                                   "product",
+                                   "starter-pack"
+                               ]
+                  },
+                  {
+                      "id":  "T33",
+                      "title":  "Starter Pack - Support material",
+                      "detail":  "Companion material. 1004-word Vocabulary Bank + full verb tables + 6 grammar flowcharts; Companion dark + light PDFs built (42pp). AUDIO COMPLETE 2026-07-16: 6024 clips (1004 words x 3 speeds x Fernanda + Marcelo) + 210 category tracks, Rafael flag-passed both voices (196 Marcelo words re-run and picked; 29 Fernanda words fixed via phoneme-corrected Brenda or revoiced to Thalita under her mask), folders masked to fernanda/marcelo. Ships inside build/Brazilian-Portuguese-Starter-Pack.zip (216.2 MB, 6241 entries, audited: 0 voice-id leaks, 0 rejected takes). WARNING before touching this again: 3099 clips are hand-approved and CANNOT be regenerated (Marcelo/Thalita re-roll on every request); they are sha256-locked and the builder refuses to overwrite them. Read the preply-course-audio skill first.",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "done",
+                      "tags":  [
+                                   "product",
+                                   "starter-pack",
+                                   "audio"
+                               ],
+                      "doneDate":  "2026-07-16"
+                  },
+                  {
+                      "id":  "T34",
+                      "title":  "Starter Pack - Homework material",
+                      "detail":  "Exercises per module. Not started, nothing on disk, never scoped until now. Needs a call from Rafael before it can be estimated properly: which exercise types per module, whether the answer key ships in the same PDF or separately, and whether homework rides inside the course workbook or becomes a third PDF alongside the course and the Companion.",
+                      "owner":  "claude",
+                      "points":  5,
+                      "col":  "todo",
+                      "tags":  [
+                                   "product",
+                                   "starter-pack"
+                               ]
+                  },
+                  {
+                      "id":  "T35",
+                      "title":  "Automated posting engine (cadence + approval pipeline)",
+                      "detail":  "DONE 2026-07-20. The reusable machine that runs distribution without Rafael touching a platform. LEADER/FOLLOWER model (Rafael\u0027s call, not a shared clock): Pinterest LEADS at 10 posts / 7 days via cadence.json and never waits; other channels FOLLOW by mirror-by-id (post an item only once the leader has posted that same id from pinterest-posted.json), so a follower can never get ahead. Self-contained Node poster + Windows Scheduled Task per platform (replaced the n8n poster after its binary handoff errored in Rafael\u0027s build); this script+task pattern is the template for every next channel. APPROVAL PIPELINE: the Approval Queue is split by content-sharing platform group (Pinterest-Bsky-Threads-Instagram / Reddit-Quora / YouTube), each with Approval Queue/ (pending) + Approved/ (approved) subfolders; posting/approve_batch.js is the SINGLE writer of queue population, moving an approved batch to Approved/ and appending it to both platform queues (same ids -\u003e mirror). Full contract in posting/CADENCE-SPEC.md.",
+                      "owner":  "claude",
+                      "points":  5,
+                      "col":  "done",
+                      "tags":  [
+                                   "reach",
+                                   "ops"
+                               ],
+                      "doneDate":  "2026-07-20"
+                  },
+                  {
+                      "id":  "T36",
+                      "title":  "Reach channel 1: Bluesky LIVE",
+                      "detail":  "DONE 2026-07-20. First of the four reach channels (easiest first). Account @speaklikeyourself.bsky.social created; approved Batch-01 pin shipped and verified via the public API (image + alt + link facet + 2 tag facets by UTF-8 byte offset). Runs as the FOLLOWER in the leader/follower model: bluesky_post.js ignores cadence.json and mirrors Pinterest by id, fires 3x/day (10:00/14:00/18:00) to backfill then throttles to the leader\u0027s pace. Bots are allowed on Bluesky (self-labeled). This proved the script+Scheduled-Task template that channels 2-4 reuse.",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "done",
+                      "tags":  [
+                                   "reach",
+                                   "bluesky"
+                               ],
+                      "doneDate":  "2026-07-20"
+                  },
+                  {
+                      "id":  "T37",
+                      "title":  "Content batches + Monday cadence (2 weeks ahead)",
+                      "detail":  "Ongoing. Rafael reviews batches every Monday and wants to stay a week ahead: TWO batches in hand each Monday (current + upcoming week) = a 20-unit runway target, 10-unit floor. The content engine was IDLE since 07-09; restarted 2026-07-20. The working pin pipeline (batch 02/03 proved it): author units.json (phrase|versus|quiz from the approved Survival Kit corpus, no theme repeats) -\u003e scripts/render_pins.py -\u003e queue-items.json -\u003e on approval node approve_batch.js loads both queues. Batches 01, 02, 03 all authored + approved; both queues hold 30 mirrored items = runway 22 = TWO WEEKS AHEAD, buffer flag OK. Footer CTA locked across all three: \u0027Free Survival Phrases . Trial lessons: link in bio\u0027 (middle dot, no \u0027+\u0027, so \u0027Free\u0027 does not read as covering the paid trial). OWNER of the Monday generate+flag job = HERMES (primary), Claude Code = BACKUP (batch_buffer_watch.js scheduled Mondays 09:30 flags if runway runs short or no Monday batch landed; it never auto-generates). OPEN GAP: draft_factory.py emits ONE templated concept per run, not 10 shippable units + captions, so it is not yet wired to this pipeline; batches 02/03 were hand-authored. Hermes needs a 10-unit generator to own Mondays cleanly.",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "doing",
+                      "tags":  [
+                                   "reach",
+                                   "content"
+                               ]
+                  },
+                  {
+                      "id":  "T38",
+                      "title":  "Reach channel 2: Threads",
+                      "detail":  "Next channel after Bluesky is fully running (build order: Bluesky -\u003e Threads -\u003e Instagram -\u003e blog). Reuses the same pin cards (already named in the Pinterest-Bsky-Threads-Instagram content group) and the script+Scheduled-Task template from T35/T36. Meta app in dev mode gives Standard Access with NO app review for the own professional account; add it as a follower in the leader/follower model. Not started; starts when Bluesky is confirmed steady-state.",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "todo",
+                      "tags":  [
+                                   "reach",
+                                   "threads"
+                               ]
+                  },
+                  {
+                      "id":  "T39",
+                      "title":  "Reach channel 3: Instagram",
+                      "detail":  "Channel 3 of 4. Same Meta app as Threads (dev-mode Standard Access, no app review for the own professional account, 100 posts/24h), same pin cards, same follower pattern. Backlog until Threads is running.",
+                      "owner":  "claude",
+                      "points":  3,
+                      "col":  "backlog",
+                      "tags":  [
+                                   "reach",
+                                   "instagram"
+                               ]
+                  },
+                  {
+                      "id":  "T40",
+                      "title":  "Reach channel 4: own blog hub",
+                      "detail":  "Channel 4 of 4, the owned surface. Long-form (deliberately NOT in the shared pin group), approval-gated auto-publish. Governed by Google\u0027s scaled-content policy, so curated 1-2 pages/week only, not bulk. Backlog until Instagram is running.",
+                      "owner":  "claude",
+                      "points":  5,
+                      "col":  "backlog",
+                      "tags":  [
+                                   "reach",
+                                   "blog"
+                               ]
+                  },
+                  {
+                      "id":  "T41",
+                      "title":  "Mission Control dashboard",
+                      "detail":  "Requested by Rafael 2026-07-20: a single-page dark-mode one-stop-shop to run the whole post workflow without opening new chats. Platform status strip (LIVE/PLANNED + total posts per platform), latest-post-per-platform cards, batch approval section split current/upcoming week with skimmable PNG carousels + per-batch Approve button (POST -\u003e existing approve_batch.js) + per-batch Flag textbox that writes a note into the batch folder, post-overview schedule (date + pin, due-timing from cadence.json), per-platform analytics panels. Handed to Fable 5 as an extensive build prompt, specced as a small local Node server + one HTML page (a static file cannot approve a batch or persist a flag), wired to the real queue/ledger/batch-folder JSON. Not built yet; awaiting Fable 5.",
+                      "owner":  "fable5",
+                      "points":  5,
+                      "col":  "doing",
+                      "tags":  [
+                                   "reach",
+                                   "ops"
+                               ]
+                  }
+              ],
+    "log":  [
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "Sprint opened. Kit data model parsed (T01 done)."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "Survival Kit PDFs built: dark + light, 13 pages, linked trial CTA (T02 done)."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "Sprint board built and deployed (T03 done)."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "Model routing set: Codex takes T04 (audio pack); Claude keeps T06/T10; Hermes keeps T07/T15."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "codex",
+                    "what":  "T04 synthesis running: state file live, audio/ folders created."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "Payhip listing copy + dual-cover product thumbnail shipped (T06 done)."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "T04 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "T05 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "Added T16: Opus orchestrator system."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "T16 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "codex",
+                    "what":  "T04 done: 272 audio files, 0 failures. package-kit.ps1 verified + zipped 6.8 MB (T05 done)."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "T11 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "hermes",
+                    "what":  "T07 Kit language QA complete: both PDFs reviewed, 0 issues. Kit is upload-ready."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "T12 promoted backlog -\u003e todo (funnel-measurable pillar)."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "hermes",
+                    "what":  "T15 -\u003e doing; Reddit/Quora mining notes created with queue-ready drafts."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "codex",
+                    "what":  "T04 rev2: added slower audio tier (+127 files). Pack now 399 MP3s, 0 failures."
+                },
+                {
+                    "date":  "2026-07-08",
+                    "who":  "claude",
+                    "what":  "T10 progress: Starter System structure staged (manifest, 90-day TOC, gap list). Component builds still missing. Stays Doing."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "rafael",
+                    "what":  "Rafael approvals: Pinterest Batch 01 pins + Reddit/Quora drafts approved. T15 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "rafael",
+                    "what":  "Orchestrator cron confirmed live (n8n import + Telegram cred + CHAT_ID done). T16 fully set."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "claude",
+                    "what":  "Added T17: rebuild favorite-capture trigger (Preply killed favorite notification emails)."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "claude",
+                    "what":  "T13 -\u003e done: Pinterest app (ID 1587877) created, form finished, dev-support ticket submitted."
+                },
+                {
+                    "date":  "2026-07-09",
+                    "who":  "claude",
+                    "what":  "T17 built (Option B): MacroDroid -\u003e Apps Script -\u003e Sheet -\u003e n8n -\u003e template + Telegram + 72h follow-up."
+                },
+                {
+                    "date":  "2026-07-10",
+                    "who":  "claude",
+                    "what":  "T13 reviewer response handled: privacy.html rewritten with Pinterest-API disclosures + website claimed. App awaiting re-review."
+                },
+                {
+                    "date":  "2026-07-10",
+                    "who":  "rafael",
+                    "what":  "T08 -\u003e done: Survival Kit LIVE on Payhip (https://payhip.com/b/F5bcR). Unblocks T09."
+                },
+                {
+                    "date":  "2026-07-10",
+                    "who":  "rafael",
+                    "what":  "PDF stamping ENABLED on Payhip. Anti-piracy layer live; T08 fully closed."
+                },
+                {
+                    "date":  "2026-07-10",
+                    "who":  "claude",
+                    "what":  "T14: completed Pinterest OAuth (write scopes) and proved the poster pipeline end-to-end. Blocked on Trial-\u003eStandard access upgrade (403 code 29)."
+                },
+                {
+                    "date":  "2026-07-10",
+                    "who":  "claude",
+                    "what":  "T09 -\u003e done: Survival Kit buy section shipped on the landing page (Payhip overlay button F5bcR, $19 vs $180-240/yr anchor). Audio described as three speeds, no human-voice claim."
+                },
+                {
+                    "date":  "2026-07-11",
+                    "who":  "claude",
+                    "what":  "T12 -\u003e doing (landing analytics)."
+                },
+                {
+                    "date":  "2026-07-12",
+                    "who":  "claude",
+                    "what":  "Sprint reframed to S02 \u0027Flagship Sprint\u0027 (2026-07-08 -\u003e 08-11, dated from the real project start) toward a standalone product business + launched flagship course, per the Fable5 Product Build Handoff."
+                },
+                {
+                    "date":  "2026-07-12",
+                    "who":  "claude",
+                    "what":  "S01 work folded onto the SAME board (same project, bigger goal): T01-T17 kept with original IDs. Carryovers stay open: T10 (now Starter Pack build, blocked on syllabus+pipeline), T12 analytics, T14 Pinterest Trial-\u003eStandard, T17 favorite-capture. New Track A/B work added as T18-T28."
+                },
+                {
+                    "date":  "2026-07-12",
+                    "who":  "claude",
+                    "what":  "T18 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-12",
+                    "who":  "claude",
+                    "what":  "T19 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-12",
+                    "who":  "claude",
+                    "what":  "T21 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-12",
+                    "who":  "claude",
+                    "what":  "T12 -\u003e review."
+                },
+                {
+                    "date":  "2026-07-12",
+                    "who":  "claude",
+                    "what":  "T22 -\u003e doing."
+                },
+                {
+                    "date":  "2026-07-12",
+                    "who":  "claude",
+                    "what":  "T20 -\u003e doing."
+                },
+                {
+                    "date":  "2026-07-12",
+                    "who":  "fable5",
+                    "what":  "Track A ships: /learn/ store LIVE (T18), email list live via Payhip $0 product nrNlU w/ 20% Kit cross-sell (T19, T22 plumbing), GoatCounter wired both pages pending Rafael registering site code speaklikeyourself (T12 review), SEO/OG/favicon polish live (T21). Pipeline build T20 -\u003e doing."
+                },
+                {
+                    "date":  "2026-07-12",
+                    "who":  "claude",
+                    "what":  "T20 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-12",
+                    "who":  "claude",
+                    "what":  "T22 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-12",
+                    "who":  "claude",
+                    "what":  "T23 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-12",
+                    "who":  "fable5",
+                    "what":  "T20 pipeline DONE: products/pipeline/ (content schema + validators, workbook PDF gen, edge-tts audio gen, gallery gen, listing gen, store buy-section gen). Survival Kit re-expressed in the schema rebuilds 1:1 (13pp PDFs, 399-file audio plan); mini module full-build incl. audio passed 0 failures. T22 plumbing done (cross-sell live, bundle waits on Track B). T23 done: pin queue + draft factory CTAs repointed to /learn/, trial-CTA wording removed from content drafts."
+                },
+                {
+                    "date":  "2026-07-12",
+                    "who":  "claude",
+                    "what":  "Added T29: URGENT: connect Stripe or PayPal in Payhip (rafael, 1 pts)."
+                },
+                {
+                    "date":  "2026-07-12",
+                    "who":  "claude",
+                    "what":  "T10 -\u003e doing."
+                },
+                {
+                    "date":  "2026-07-12",
+                    "who":  "claude",
+                    "what":  "T10: Starter syllabus locked by Rafael; all 18 modules mapped to verified source files (Starter Pack/00 - Source File Match Map.md). Drafting waits on Rafael\u0027s map approval."
+                },
+                {
+                    "date":  "2026-07-12",
+                    "who":  "claude",
+                    "what":  "T10: all 18 Starter Pack module blueprints drafted from the approved source map (C:\\Projects\\Preply\\Starter Pack\\modules\\), with Rafael\u0027s 3 map edits applied. Next: content JSON for the T20 pipeline."
+                },
+                {
+                    "date":  "2026-07-13",
+                    "who":  "claude",
+                    "what":  "T10: Starter Pack course BUILT. 94-page dark+light workbooks (18 modules, minimal-pair system, TOC, audio-numbered lines), gallery + listing + buy section done; 2349-clip 3-speed audio pack generating in background. Rafael\u0027s L7/L8 adjustments applied. Remaining: audio completion + zip + Payhip upload."
+                },
+                {
+                    "date":  "2026-07-13",
+                    "who":  "claude",
+                    "what":  "T10: workbook redesigned per Rafael\u0027s review: numbering now restarts per table (didactic), audio pack reorganized into topic folders matching the book (phrases/06-requests/03.mp3), STREET labels renamed NATIVE, airier type. 610 existing clips migrated, audio resuming in background. Dark PDF staged (viewer lock), light replaced."
+                },
+                {
+                    "date":  "2026-07-13",
+                    "who":  "claude",
+                    "what":  "DIRECTION CHANGE (Rafael): the FIRST SALE is now the final goal. Sprint renamed \u0027First Sale Sprint\u0027; goal + milestones reframed to M1 checkout works (T29), M2 Starter Pack launched (T10 + T26), M3 online-presence + funnel push (T30). Done tasks and score kept as-is."
+                },
+                {
+                    "date":  "2026-07-13",
+                    "who":  "claude",
+                    "what":  "T25 flagship -\u003e ON HOLD until the Starter Pack (T10) records its first sales (blockedBy T10, on-hold tag). Prove demand before the big build."
+                },
+                {
+                    "date":  "2026-07-13",
+                    "who":  "claude",
+                    "what":  "T26 refocused on publishing the Starter Pack buy section only (unblocked from the flagship, now blockedBy T10); flagship buy section + real bundle deferred to when T25 comes off hold."
+                },
+                {
+                    "date":  "2026-07-13",
+                    "who":  "claude",
+                    "what":  "Added T30: first-sale push (platform posts + sales funnel), the M3 engine, priority once the Starter Pack is launched (blockedBy T26)."
+                },
+                {
+                    "date":  "2026-07-13",
+                    "who":  "rafael",
+                    "what":  "T29 -\u003e DONE: PayPal AND Stripe connected to Payhip. Checkout unblocked account-wide. MILESTONE M1 (checkout works) REACHED."
+                },
+                {
+                    "date":  "2026-07-13",
+                    "who":  "rafael",
+                    "what":  "T28 -\u003e done: product decisions resolved. (1) flagship = Payhip PDF+audio bundle, (2) email = Payhip, (3) domain = GitHub Pages for now, own domain when sales start."
+                },
+                {
+                    "date":  "2026-07-13",
+                    "who":  "rafael",
+                    "what":  "T27 -\u003e doing: product description fixed on the live listing; PDF covers re-render + re-upload still remaining."
+                },
+                {
+                    "date":  "2026-07-13",
+                    "who":  "rafael",
+                    "what":  "T17 (favorite-capture trigger) removed from the board on Rafael\u0027s word: no longer relevant."
+                },
+                {
+                    "date":  "2026-07-13",
+                    "who":  "claude",
+                    "what":  "Added T31: Survival Kit two-voice audio revoice (claude, 3 pts)."
+                },
+                {
+                    "date":  "2026-07-13",
+                    "who":  "claude",
+                    "what":  "T31 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-13",
+                    "who":  "claude",
+                    "what":  "T27 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-14",
+                    "who":  "claude",
+                    "what":  "T12 -\u003e done."
+                },
+                {
+                    "date":  "2026-07-14",
+                    "who":  "claude",
+                    "what":  "T12 follow-up: GoatCounter views cheat sheet (bookmarkable filters + manual funnel reads) saved at products/site-assets/goatcounter-views.md"
+                },
+                {
+                    "date":  "2026-07-15",
+                    "who":  "claude",
+                    "what":  "T10 SPLIT on Rafael\u0027s call, for a better overview and more tangible steps: T32 Starter Pack - Modules, T33 Starter Pack - Support material, T34 Starter Pack - Homework material. T10 stays as a 0-point umbrella blockedBy the three, so M2 and T25/T26 keep gating on the same id. Its stale blockers dropped (T20 done; T24 syllabus locked in practice, all 18 modules built)."
+                },
+                {
+                    "date":  "2026-07-15",
+                    "who":  "claude",
+                    "what":  "T33 -\u003e doing: the Vocabulary Bank audio pack is the Starter Pack\u0027s support material. 6024 clips (1004 words x 3 speeds x Fernanda + Marcelo) generating, Companion PDFs already built. Remaining: category tracks, Rafael\u0027s flag pass, the repair tool, and the voice-name mask before it ships."
+                },
+                {
+                    "date":  "2026-07-15",
+                    "who":  "claude",
+                    "what":  "T32 -\u003e doing: workbooks built but the module audio pack is missing (the old Antonio run was parked and is off disk), so it needs a fresh run under the Marcelo + Fernanda standard. Added T34: homework material, never scoped before, needs Rafael\u0027s exercise-format call. Board total moves 8 -\u003e 13 pts: homework and the module audio rerun were work nobody had counted."
+                },
+                {
+                    "date":  "2026-07-17",
+                    "who":  "claude",
+                    "what":  "T33 -\u003e done (2026-07-16): Vocabulary Bank audio complete for both voices and packaged into the Starter Pack zip (216.2 MB, audited clean of voice-id leaks and rejected takes). The card detail was stale and actively dangerous: it still read \"audio pack generating now\" with the flag pass, repair tool and voice mask listed as pending, all long done. Also closed the two blockers that made the pack unshippable: a builder that would have re-rolled 2008 approved clips, and a packaging script that threw on line 1. 3099 unreproducible clips are now sha256-locked. Knowledge captured as the preply-course-audio vault skill; T32 detail now points at it before the module audio run."
+                },
+                {
+                    "date":  "2026-07-20",
+                    "who":  "claude",
+                    "what":  "Board caught up with the reach/distribution workstream it was blind to. Goal augmented with the PARALLEL REACH BUILD (Rafael\u0027s Divide \u0026 Conquer: build distribution now, do not wait for M2; one channel at a time, Bluesky -\u003e Threads -\u003e Instagram -\u003e blog)."
+                },
+                {
+                    "date":  "2026-07-20",
+                    "who":  "claude",
+                    "what":  "T14 -\u003e done: Pinterest Standard access GRANTED (App 1587877) after two declines; production POST /v5/pins works. Poster ownership handed to the parallel Pinterest chat (leader, 10/7 via cadence.json), single-owner-per-platform."
+                },
+                {
+                    "date":  "2026-07-20",
+                    "who":  "claude",
+                    "what":  "Added T35 Automated posting engine (cadence + approval pipeline) -\u003e done: leader/follower mirror, per-platform Node poster + Scheduled Task template, approve_batch.js single-writer approval flow, Approval Queue split by platform group. Contract in posting/CADENCE-SPEC.md."
+                },
+                {
+                    "date":  "2026-07-20",
+                    "who":  "claude",
+                    "what":  "Added T36 Reach channel 1: Bluesky -\u003e done. @speaklikeyourself.bsky.social live, approved pins posting + verified, runs as the follower (mirror-by-id, 3x/day). Proved the script+Scheduled-Task template for channels 2-4."
+                },
+                {
+                    "date":  "2026-07-20",
+                    "who":  "claude",
+                    "what":  "Added T37 Content batches + Monday cadence -\u003e doing. Engine restarted after idling since 07-09: batches 01/02/03 authored + approved, both queues at 30 mirrored items = 22 runway = two weeks ahead, buffer flag OK. Footer CTA locked across all three (\u0027Free Survival Phrases . Trial lessons: link in bio\u0027, middle dot not \u0027+\u0027). Hermes owns Mondays, Claude backup (batch_buffer_watch.js). Open gap: draft_factory emits 1 concept, not 10 units."
+                },
+                {
+                    "date":  "2026-07-20",
+                    "who":  "claude",
+                    "what":  "Added the remaining reach channels as cards: T38 Threads (todo, next), T39 Instagram (backlog), T40 own blog hub (backlog). Each reuses the T35/T36 poster template and (for Threads/IG) the shared pin cards."
+                },
+                {
+                    "date":  "2026-07-20",
+                    "who":  "claude",
+                    "what":  "Added T41 Mission Control dashboard (fable5) -\u003e doing: one-page dark-mode control board for the whole post workflow (platform status, latest posts, batch-approval carousels with Approve + Flag, schedule, analytics). Prompt handed to Fable 5 as a local Node server + HTML page wired to the real queue/ledger/batch JSON. Not built yet."
+                },
+                {
+                    "date":  "2026-07-23",
+                    "who":  "claude",
+                    "what":  "Orchestrator board-blindness resolved: board-digest.ps1 now wired into orchestrate.ps1, full leg status visible. M2 pivot from hold to execution; fresh leg inventory dispatched."
+                }
+            ]
 }
