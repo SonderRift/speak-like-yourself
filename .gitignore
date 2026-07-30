@@ -1,0 +1,5 @@
+# Local-only working files — not part of the published site
+sprint/
+AGENTS.md
+CLAUDE.md
+*.orig.png
