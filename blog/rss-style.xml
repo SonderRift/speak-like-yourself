@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+  <xsl:output method="html" encoding="UTF-8" doctype-system="about:legacy-compat" />
+  <xsl:template match="/">
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><xsl:value-of select="rss/channel/title" /></title>
+        <style>
+          :root{color-scheme:light dark;--paper:#fff8ec;--ink:#25170f;--muted:#725d4b;--line:#ead8bd;--card:#fffdf7;--coral:#e65f46;--green:#1f7a5c;--shadow:0 18px 50px rgba(67,38,16,.12)}
+          @media (prefers-color-scheme:dark){:root{--paper:#17120e;--ink:#fff4e5;--muted:#cbb69f;--line:#3a2b22;--card:#211913;--shadow:0 18px 50px rgba(0,0,0,.35)}}
+          *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at top left,rgba(230,95,70,.16),transparent 34rem),var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55} a{color:var(--green);text-decoration:none;font-weight:750} a:hover{text-decoration:underline}.wrap{max-width:980px;margin:0 auto;padding:42px 22px}.hero{padding:58px 22px 30px;text-align:center}.eyebrow{display:inline-flex;gap:.65rem;align-items:center;color:var(--coral);font-size:.78rem;font-weight:850;letter-spacing:.14em;text-transform:uppercase}.eyebrow:before,.eyebrow:after{content:"";width:34px;height:1px;background:var(--coral)}h1{font-family:Georgia,serif;font-size:clamp(2.25rem,6vw,4.7rem);line-height:.96;margin:18px auto 14px;max-width:780px}.lede{max-width:680px;margin:0 auto;color:var(--muted);font-size:1.08rem}.actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:.84rem 1.1rem;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow)}.btn.primary{background:var(--coral);color:white;border-color:transparent}.note{margin:28px auto 0;max-width:720px;border:1px solid var(--line);background:var(--card);border-radius:22px;padding:18px;color:var(--muted)}.feed{display:grid;gap:16px}.item{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:24px;box-shadow:var(--shadow)}.item h2{font-family:Georgia,serif;font-size:clamp(1.45rem,3vw,2.15rem);line-height:1.05;margin:0 0 10px}.meta{color:var(--coral);font-size:.82rem;font-weight:850;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}.desc{color:var(--muted);margin:0 0 16px}.foot{padding:30px 22px 60px;text-align:center;color:var(--muted);font-size:.92rem}
+        </style>
+      </head>
+      <body>
+        <main>
+          <section class="hero">
+            <span class="eyebrow">RSS feed</span>
+            <h1><xsl:value-of select="rss/channel/title" /></h1>
+            <p class="lede"><xsl:value-of select="rss/channel/description" /></p>
+            <div class="actions">
+              <a class="btn primary" href="https://sonderrift.github.io/speak-like-yourself/blog/">Read the blog</a>
+              <a class="btn" href="https://sonderrift.github.io/speak-like-yourself/blog/rss.xml">Copy RSS URL</a>
+            </div>
+            <p class="note">This is an RSS feed. Paste this URL into Feedly, Inoreader, NetNewsWire, Readwise Reader, or any RSS app to follow new Speak Like Yourself posts.</p>
+          </section>
+          <section class="wrap feed">
+            <xsl:for-each select="rss/channel/item">
+              <article class="item">
+                <div class="meta"><xsl:value-of select="substring(pubDate,1,16)" /></div>
+                <h2><a href="{link}"><xsl:value-of select="title" /></a></h2>
+                <p class="desc"><xsl:value-of select="description" /></p>
+                <a href="{link}">Read this guide</a>
+              </article>
+            </xsl:for-each>
+          </section>
+        </main>
+        <footer class="foot">Speak Like Yourself, real Brazilian Portuguese by Rafael.</footer>
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>
