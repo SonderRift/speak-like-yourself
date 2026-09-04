@@ -3,3 +3,5 @@ sprint/
 AGENTS.md
 CLAUDE.md
 *.orig.png
+text_*.json
+research-eeat/
