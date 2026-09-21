@@ -128,22 +128,28 @@
         body.theme-dark .sly-consent{--slc-surface:#0C3323;--slc-ink:#EFE9D8;--slc-ink-soft:#C9D8CC;
           --slc-line:rgba(239,233,216,.2);--slc-coral:#FF6B4A;--slc-coral-2:#FF8A63;
           --slc-shadow:0 18px 44px -16px rgba(0,0,0,.55);}
-        .sly-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:520px;margin:0 auto;
+        .sly-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:400px;margin:0 auto;
           background:color-mix(in srgb,var(--slc-surface) 96%,transparent);color:var(--slc-ink);
-          border:1px solid var(--slc-line);border-radius:20px;
-          padding:16px 18px;box-shadow:var(--slc-shadow);
+          border:1px solid var(--slc-line);border-radius:18px;
+          padding:20px 22px;box-shadow:var(--slc-shadow);
           backdrop-filter:blur(14px) saturate(1.2);font-size:14px;line-height:1.5;}
         .sly-consent p{margin:0;color:var(--slc-ink-soft);}
-        .sly-consent .slc-lead{color:var(--slc-ink);font-weight:600;}
-        .sly-consent .slc-points{list-style:none;margin:10px 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 18px;}
-        .sly-consent .slc-points li{display:flex;align-items:center;gap:7px;color:var(--slc-ink);}
-        .sly-consent .slc-points li::before{content:"";flex:none;width:16px;height:16px;border-radius:50%;
+        .sly-consent .slc-lead{color:var(--slc-ink);font-weight:600;font-size:15.5px;line-height:1.4;}
+        .sly-consent .slc-points{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 22px;}
+        .sly-consent .slc-points li{display:flex;align-items:center;gap:9px;color:var(--slc-ink);font-weight:600;}
+        /* X mark = these things are absent */
+        .sly-consent .slc-points li::before{content:"";flex:none;width:17px;height:17px;border-radius:50%;
+          background:linear-gradient(180deg,var(--slc-coral-2),var(--slc-coral));
+          -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-width='3.2' stroke-linecap='round' d='M7 7l10 10M17 7L7 17'/%3E%3C/svg%3E") center/11px no-repeat;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-width='3.2' stroke-linecap='round' d='M7 7l10 10M17 7L7 17'/%3E%3C/svg%3E") center/11px no-repeat;}
+        /* check mark = the one thing we do want */
+        .sly-consent .slc-close{margin-top:14px;font-size:13.5px;display:flex;align-items:center;gap:9px;}
+        .sly-consent .slc-close::before{content:"";flex:none;width:17px;height:17px;border-radius:50%;
           background:linear-gradient(180deg,var(--slc-coral-2),var(--slc-coral));
           -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4 10-11'/%3E%3C/svg%3E") center/12px no-repeat;
           mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4 10-11'/%3E%3C/svg%3E") center/12px no-repeat;}
-        .sly-consent .slc-close{margin-bottom:14px;font-size:13px;}
-        .sly-consent-btns{display:flex;gap:10px;justify-content:flex-end;}
-        .sly-consent button{cursor:pointer;border-radius:999px;padding:7px 16px;font:inherit;font-weight:700;
+        .sly-consent-btns{display:flex;gap:12px;margin-top:20px;padding-top:16px;border-top:1px solid var(--slc-line);}
+        .sly-consent button{flex:1;cursor:pointer;border-radius:999px;padding:9px 16px;font:inherit;font-weight:700;
           font-size:.9rem;border:1px solid transparent;transition:transform .2s ease,box-shadow .2s,border-color .2s,color .2s;}
         .sly-consent button:hover{transform:translateY(-1px);}
         .sly-consent .ghost{background:transparent;color:var(--slc-ink-soft);border-color:var(--slc-line);}
