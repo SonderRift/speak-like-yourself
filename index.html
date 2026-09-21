@@ -223,6 +223,19 @@
     .kit-visual{max-width:360px;margin:0 auto}
   }
 </style>
+<!-- Google Analytics 4 with Consent Mode v2 (mirrors the blog: analytics_storage stays denied until the visitor accepts). -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('consent', 'default', {
+    ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+    analytics_storage: 'denied', wait_for_update: 500
+  });
+  try { if (localStorage.getItem('sly-consent') === 'granted') gtag('consent','update',{ analytics_storage:'granted' }); } catch (e) {}
+  gtag('config', 'G-WSM5Q3EV2Q', { anonymize_ip: true });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WSM5Q3EV2Q"></script>
 </head>
 <body>
 
@@ -510,6 +523,52 @@
      registered by Rafael at goatcounter.com; until then this no-ops harmlessly.
      Click events: trial-cta-nav, trial-cta-hero, trial-cta-final, free-pdf-download, store-link. -->
 <script data-goatcounter="https://speaklikeyourself.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+
+<!-- Cookie consent banner (drives GA4 Consent Mode v2). Mirrors the blog. -->
+<div id="sly-consent" class="sly-consent" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+  <p>We use analytics cookies to understand what's useful and improve the site. No ads, no selling your data.</p>
+  <div class="sly-consent-btns">
+    <button type="button" data-consent="denied" class="ghost">Decline</button>
+    <button type="button" data-consent="granted" class="solid">Accept</button>
+  </div>
+</div>
+<style>
+  .sly-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:520px;margin:0 auto;
+    background:rgba(13,58,39,.96);color:#EFE9D8;border:1px solid rgba(239,233,216,.18);border-radius:14px;
+    padding:16px 18px;box-shadow:0 10px 30px rgba(0,0,0,.35);backdrop-filter:blur(14px) saturate(1.2);font-size:14px;line-height:1.5}
+  .sly-consent p{margin:0 0 12px;color:#CFE3D6}
+  .sly-consent-btns{display:flex;gap:10px;justify-content:flex-end}
+  .sly-consent button{cursor:pointer;border-radius:999px;padding:7px 16px;font:inherit;font-weight:700;font-size:.9rem;border:1px solid transparent;transition:transform .2s ease,border-color .2s,color .2s}
+  .sly-consent button:hover{transform:translateY(-1px)}
+  .sly-consent .ghost{background:transparent;color:#CFE3D6;border-color:rgba(239,233,216,.28)}
+  .sly-consent .ghost:hover{color:#FF6B4A;border-color:#FF6B4A}
+  .sly-consent .solid{background:#FF6B4A;color:#fff;box-shadow:0 6px 16px -6px rgba(219,81,39,.5)}
+</style>
+<script>
+  (function () {
+    var el = document.getElementById('sly-consent'); if (!el) return;
+    var choice = null; try { choice = localStorage.getItem('sly-consent'); } catch (e) {}
+    if (choice !== 'granted' && choice !== 'denied') el.hidden = false;
+    el.addEventListener('click', function (ev) {
+      var b = ev.target.closest('[data-consent]'); if (!b) return;
+      var v = b.getAttribute('data-consent');
+      try { localStorage.setItem('sly-consent', v); } catch (e) {}
+      if (typeof gtag === 'function') gtag('consent', 'update', { analytics_storage: v });
+      el.hidden = true;
+    });
+  })();
+  // Funnel bridge: every GoatCounter-marked CTA also fires a GA4 cta_click (1:1 with the blog markers).
+  (function () {
+    document.addEventListener('click', function (ev) {
+      var a = ev.target.closest('[data-goatcounter-click]'); if (!a || typeof gtag !== 'function') return;
+      gtag('event', 'cta_click', {
+        cta_id: a.getAttribute('data-goatcounter-click') || '',
+        link_url: a.getAttribute('href') || '',
+        link_text: (a.textContent || '').trim().slice(0, 80)
+      });
+    }, true);
+  })();
+</script>
 
 </body>
 </html>
