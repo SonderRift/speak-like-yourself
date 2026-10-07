@@ -764,7 +764,7 @@
       var stages = [].slice.call(document.querySelectorAll('[data-phrase-stage]'));
       var rots = [].slice.call(document.querySelectorAll('[data-phrase-rot]'));
       var pi = 0, timer = null;
-      // Marcelo (native) audio for each hero phrase, in PH[] order: audio/hero/marcelo/NN.mp3
+      // Marcelo TTS take (Azure text-to-speech) for each hero phrase, in PH[] order: audio/hero/marcelo/NN.mp3
       var heroAudioBase = document.body.getAttribute('data-hero-audio') || '';
       var heroAudio = null;
       function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
@@ -790,7 +790,7 @@
           PH.forEach(function (_, i) { var b = document.createElement('i'); b.addEventListener('click', function () { pi = i; renderPhrase(pi); restart(); }); r.appendChild(b); });
         });
         renderPhrase(0); restart();
-        // The hero play button speaks the phrase currently on stage (Marcelo, native).
+        // The hero play button plays the Marcelo TTS take for the phrase currently on stage.
         document.querySelectorAll('.mast-phrase .play').forEach(function (b) {
           b.addEventListener('click', playHero);
         });
